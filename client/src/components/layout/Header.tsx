@@ -118,7 +118,7 @@ const Header = () => {
                   transition-colors duration-200 ${location === '/numerology' ? 'font-bold text-amber-400' : ''} cursor-pointer relative group`}
                   onClick={closeMenu}
                 >
-                  Numerologia
+                  {t('nav.numerology')}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
                 </div>
               </Link>
@@ -135,7 +135,7 @@ const Header = () => {
                   onClick={closeMenu}
                 >
                   <Sparkles className="h-4 w-4" />
-                  <span>Premium</span>
+                  <span>{t('nav.premium')}</span>
                 </div>
               </Link>
             </li>
@@ -163,7 +163,7 @@ const Header = () => {
                     <Link href="/profile">
                       <DropdownMenuItem className="text-amber-50 hover:text-amber-400 cursor-pointer focus:bg-gray-800 focus:text-amber-400">
                         <User className="mr-2 h-4 w-4" />
-                        <span>Mój profil</span>
+                        <span>{t('nav.profile')}</span>
                       </DropdownMenuItem>
                     </Link>
                     <DropdownMenuSeparator className="bg-amber-800/30" />
@@ -172,7 +172,7 @@ const Header = () => {
                       className="text-amber-50 hover:text-amber-400 cursor-pointer focus:bg-gray-800 focus:text-amber-400"
                     >
                       <LogIn className="mr-2 h-4 w-4" />
-                      <span>Wyloguj się</span>
+                      <span>{t('nav.logout')}</span>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
@@ -186,7 +186,7 @@ const Header = () => {
                     onClick={closeMenu}
                   >
                     <LogIn className="h-4 w-4 mr-1" />
-                    <span>Zaloguj</span>
+                    <span>{t('nav.login')}</span>
                   </div>
                 </Link>
               </li>

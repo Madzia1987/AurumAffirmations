@@ -2,8 +2,11 @@ import { Link } from 'wouter';
 import DailyCard from './DailyCard';
 import { Sparkles } from 'lucide-react';
 import diamondBgImage from '@assets/1745453267353.png';
+import { useLanguage } from '@/hooks/use-language';
 
 const HomeBanner = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative py-20 px-4 md:px-6 lg:px-8 min-h-[80vh] flex items-center overflow-hidden">
       <div className="absolute inset-0 bg-gray-900/50 z-10"></div>
@@ -23,13 +26,12 @@ const HomeBanner = () => {
           </div>
           
           <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6 fade-in">
-            <span className="block text-white">Twoja Droga do</span>
-            <span className="gold-text-gradient">Wewnętrznego Bogactwa</span>
+            <span className="block text-white">{t('home.title1')}</span>
+            <span className="gold-text-gradient">{t('home.title2')}</span>
           </h1>
           
           <p className="text-amber-50/90 text-lg md:text-xl max-w-2xl mx-auto fade-in leading-relaxed">
-            Odkryj ekskluzywne afirmacje, horoskopy i osobiste analizy numerologiczne, które 
-            transformują Twoje życie w dzieło sztuki pełne obfitości i doskonałości.
+            {t('home.subtitle')}
           </p>
         </div>
         
@@ -42,7 +44,7 @@ const HomeBanner = () => {
               transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
               <div className="flex items-center space-x-2">
                 <Sparkles className="h-5 w-5 group-hover:scale-110 transition-transform" />
-                <span>Odblokuj pełny dostęp premium</span>
+                <span>{t('home.cta')}</span>
               </div>
             </div>
           </Link>
