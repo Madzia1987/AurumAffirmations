@@ -5,6 +5,11 @@ import axios from "axios";
 import { storage } from "./storage";
 import { insertUserSchema, insertSubscriptionSchema } from "@shared/schema";
 import { z } from "zod";
+import { setupAuth, verifyToken } from "./auth";
+import jwt from "jsonwebtoken";
+
+// Klucz tajny do JWT
+const JWT_SECRET = process.env.JWT_SECRET || "aurum-affirmations-secret-key";
 
 const API_KEYS = {
   horoscope: process.env.API_KEY_HOROSCOPE || "0da58ce5bdmsh0998ff758b71b1ep164a5bjsna9a4ca3fd638",
@@ -41,6 +46,26 @@ const numerologyOptions = {
 };
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Middleware do odczytywania tokenu JWT i ustawiania użytkownika w req.user
+  // Nie zwraca błędu w przypadku braku tokenu - używane dla ścieżek, które nie wymagają autentykacji
+  app.use(async (req, res, next) => {
+    try {
+      const token = req.cookies.token || req.headers.authorization?.split(" ")[1];
+      
+      if (token) {
+        const decoded = jwt.verify(token, JWT_SECRET || "aurum-affirmations-secret-key") as { id: number };
+        const user = await storage.getUserById(decoded.id);
+        
+        if (user) {
+          req.user = user;
+        }
+      }
+      next();
+    } catch (error) {
+      // Ignoruj błąd weryfikacji tokenu dla niechronionych ścieżek
+      next();
+    }
+  });
   // Daily affirmations
   app.get("/api/daily-affirmation", async (req, res) => {
     try {
@@ -194,8 +219,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Check premium status
   app.get("/api/check-premium", async (req, res) => {
     try {
-      const userId = req.query.userId ? parseInt(req.query.userId as string) : undefined;
-      // For demo, we'll use a dummy user if not provided
+      let userId: number | undefined;
+      
+      // Jeśli użytkownik jest zalogowany, użyj jego ID
+      if (req.user) {
+        userId = req.user.id;
+      } else {
+        // W przeciwnym razie użyj ID z zapytania, jeśli istnieje
+        userId = req.query.userId ? parseInt(req.query.userId as string) : undefined;
+      }
+      
       const isPremium = await storage.checkPremiumStatus(userId || 1);
       res.json({ isPremium });
     } catch (error: any) {
@@ -257,53 +290,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Mock signup for demonstration
-  app.post("/api/auth/signup", async (req, res) => {
-    try {
-      const validatedData = insertUserSchema.parse(req.body);
-      
-      const existingUser = await storage.getUserByEmail(validatedData.email);
-      
-      if (existingUser) {
-        return res.status(409).json({ message: "User already exists" });
-      }
-      
-      // In a real app, you would hash the password
-      const user = await storage.createUser(validatedData);
-      
-      res.json({ success: true, user: { id: user.id, username: user.username, email: user.email } });
-    } catch (error: any) {
-      if (error instanceof z.ZodError) {
-        return res.status(400).json({ errors: error.errors });
-      }
-      
-      res.status(500).json({ message: "Error creating user: " + error.message });
-    }
-  });
-
-  // Mock login for demonstration
-  app.post("/api/auth/login", async (req, res) => {
-    try {
-      const { email, password } = req.body;
-      
-      if (!email || !password) {
-        return res.status(400).json({ message: "Email and password are required" });
-      }
-      
-      const user = await storage.getUserByEmail(email);
-      
-      if (!user || user.password !== password) { // In a real app, you would compare hashed passwords
-        return res.status(401).json({ message: "Invalid credentials" });
-      }
-      
-      res.json({ 
-        success: true,
-        user: { id: user.id, username: user.username, email: user.email }
-      });
-    } catch (error: any) {
-      res.status(500).json({ message: "Error logging in: " + error.message });
-    }
-  });
+  // Use our setupAuth function to configure authentication routes
+  setupAuth(app);
 
   // Create HTTP server
   const httpServer = createServer(app);
