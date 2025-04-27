@@ -663,76 +663,122 @@ export class DatabaseStorage implements IStorage {
   }
   
   async getArticles(category?: string): Promise<Article[]> {
-    await this.ensureArticlesExist();
-    
-    let query = db.select({
-      id: articles.id,
-      title: articles.title,
-      excerpt: articles.excerpt,
-      content: articles.content,
-      image: articles.image,
-      category: articles.category,
-      date: articles.date,
-      readTime: articles.readTime,
-      isPremium: articles.isPremium
-    })
-    .from(articles)
-    .orderBy(desc(articles.date));
-    
-    if (category) {
-      query = query.where(eq(articles.category, category));
+    try {
+      await this.ensureArticlesExist();
+      
+      const query = db.select({
+        id: articles.id,
+        title: articles.title,
+        excerpt: articles.excerpt,
+        content: articles.content,
+        image: articles.image,
+        category: articles.category,
+        date: articles.date,
+        readTime: articles.readTime,
+        isPremium: articles.isPremium
+      })
+      .from(articles);
+      
+      let results;
+      if (category) {
+        results = await query.where(eq(articles.category, category));
+      } else {
+        results = await query;
+      }
+      
+      // Convert date to string format - note: date could be a string already based on schema
+      return results.map(article => {
+        try {
+          const formattedDate = typeof article.date === 'string' 
+            ? article.date 
+            : article.date instanceof Date 
+              ? article.date.toISOString().split('T')[0]
+              : new Date().toISOString().split('T')[0];
+              
+          return {
+            ...article,
+            date: formattedDate
+          };
+        } catch (error) {
+          console.error('Error formatting article date:', error, article);
+          return {
+            ...article,
+            date: new Date().toISOString().split('T')[0]
+          };
+        }
+      });
+    } catch (error) {
+      console.error('Error in getArticles:', error);
+      return []; // Return empty array instead of failing
     }
-    
-    const results = await query;
-    
-    return results.map(article => ({
-      ...article,
-      date: article.date.toISOString().split('T')[0]
-    }));
   }
   
   async getArticleById(id: number): Promise<Article | undefined> {
-    const [article] = await db.select({
-      id: articles.id,
-      title: articles.title,
-      excerpt: articles.excerpt,
-      content: articles.content,
-      image: articles.image,
-      category: articles.category,
-      date: articles.date,
-      readTime: articles.readTime,
-      isPremium: articles.isPremium
-    })
-    .from(articles)
-    .where(eq(articles.id, id));
-    
-    if (!article) return undefined;
-    
-    return {
-      ...article,
-      date: article.date.toISOString().split('T')[0]
-    };
+    try {
+      const [article] = await db.select({
+        id: articles.id,
+        title: articles.title,
+        excerpt: articles.excerpt,
+        content: articles.content,
+        image: articles.image,
+        category: articles.category,
+        date: articles.date,
+        readTime: articles.readTime,
+        isPremium: articles.isPremium
+      })
+      .from(articles)
+      .where(eq(articles.id, id));
+      
+      if (!article) return undefined;
+      
+      // Format date safely
+      const formattedDate = typeof article.date === 'string' 
+        ? article.date 
+        : article.date instanceof Date 
+          ? article.date.toISOString().split('T')[0]
+          : new Date().toISOString().split('T')[0];
+      
+      return {
+        ...article,
+        date: formattedDate
+      };
+    } catch (error) {
+      console.error('Error in getArticleById:', error);
+      return undefined;
+    }
   }
   
   async getHoroscopeBySign(sign: string): Promise<HoroscopeResponse | undefined> {
-    await this.ensureHoroscopesExist();
-    
-    const [horoscope] = await db.select()
-      .from(horoscopes)
-      .where(eq(sql`lower(${horoscopes.sign})`, sign.toLowerCase()))
-      .limit(1);
-    
-    if (!horoscope) return undefined;
-    
-    return {
-      sign: horoscope.sign,
-      date: horoscope.date.toISOString().split('T')[0],
-      general: horoscope.general,
-      love: horoscope.love,
-      career: horoscope.career,
-      health: horoscope.health,
-      lucky: horoscope.lucky as { numbers: string[], colors: string[], times: string[] }
-    };
+    try {
+      await this.ensureHoroscopesExist();
+      
+      const [horoscope] = await db.select()
+        .from(horoscopes)
+        .where(eq(sql`lower(${horoscopes.sign})`, sign.toLowerCase()))
+        .limit(1);
+      
+      if (!horoscope) return undefined;
+      
+      // Format date safely
+      const formattedDate = typeof horoscope.date === 'string' 
+        ? horoscope.date 
+        : horoscope.date instanceof Date 
+          ? horoscope.date.toISOString().split('T')[0]
+          : new Date().toISOString().split('T')[0];
+      
+      return {
+        sign: horoscope.sign,
+        date: formattedDate,
+        general: horoscope.general,
+        love: horoscope.love,
+        career: horoscope.career,
+        health: horoscope.health,
+        lucky: horoscope.lucky as { numbers: string[], colors: string[], times: string[] }
+      };
+    } catch (error) {
+      console.error('Error in getHoroscopeBySign:', error);
+      return undefined;
+    }
   }
   
   async getDailyNumerology(date: string): Promise<NumerologyResponse> {
