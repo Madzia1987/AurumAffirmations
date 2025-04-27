@@ -174,12 +174,14 @@ export function setupAuth(app: Express) {
   });
 
   // Endpoint pobierania danych użytkownika
-  app.get("/api/auth/user", verifyToken, (req, res) => {
+  app.get("/api/auth/user", (req, res) => {
     try {
+      // Jeśli użytkownik nie jest zalogowany, zwróć null (nie błąd)
       if (!req.user) {
-        return res.status(401).json({ message: "Nie jesteś zalogowany" });
+        return res.status(200).json(null);
       }
 
+      // Jeśli użytkownik jest zalogowany, zwróć jego dane
       return res.status(200).json({
         id: req.user.id,
         username: req.user.username,
