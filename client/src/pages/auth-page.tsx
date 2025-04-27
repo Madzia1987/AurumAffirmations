@@ -25,6 +25,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { useLanguage } from "@/hooks/use-language";
 
 // Login Schema
 const loginSchema = z.object({
@@ -44,6 +45,7 @@ export default function AuthPage() {
   const { user, loginMutation, registerMutation } = useAuth();
   const [, navigate] = useLocation();
   const { toast } = useToast();
+  const { t } = useLanguage();
 
   // If user is already logged in, redirect to home page
   if (user) {
@@ -125,10 +127,10 @@ export default function AuthPage() {
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid w-full grid-cols-2 mb-8">
               <TabsTrigger value="login" className="text-base">
-                Logowanie
+                {t('auth.login')}
               </TabsTrigger>
               <TabsTrigger value="register" className="text-base">
-                Rejestracja
+                {t('auth.register')}
               </TabsTrigger>
             </TabsList>
 
@@ -136,9 +138,9 @@ export default function AuthPage() {
             <TabsContent value="login">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-2xl">Zaloguj się</CardTitle>
+                  <CardTitle className="text-2xl">{t('auth.login')}</CardTitle>
                   <CardDescription>
-                    Zaloguj się, aby uzyskać dostęp do swojego konta
+                    {t('auth.loginBtn')}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -152,7 +154,7 @@ export default function AuthPage() {
                         name="email"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Email</FormLabel>
+                            <FormLabel>{t('auth.email')}</FormLabel>
                             <FormControl>
                               <Input
                                 placeholder="twoj@email.com"
@@ -169,7 +171,7 @@ export default function AuthPage() {
                         name="password"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Hasło</FormLabel>
+                            <FormLabel>{t('auth.password')}</FormLabel>
                             <FormControl>
                               <Input
                                 placeholder="********"
@@ -205,9 +207,9 @@ export default function AuthPage() {
             <TabsContent value="register">
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-2xl">Utwórz konto</CardTitle>
+                  <CardTitle className="text-2xl">{t('auth.register')}</CardTitle>
                   <CardDescription>
-                    Zarejestruj się, aby rozpocząć swoją podróż z Aurum Affirmations
+                    {t('auth.registerBtn')}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -221,7 +223,7 @@ export default function AuthPage() {
                         name="username"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Imię</FormLabel>
+                            <FormLabel>{t('auth.username')}</FormLabel>
                             <FormControl>
                               <Input placeholder="Jan" {...field} />
                             </FormControl>
