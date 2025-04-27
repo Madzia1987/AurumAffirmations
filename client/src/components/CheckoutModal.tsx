@@ -103,32 +103,55 @@ function CheckoutForm({ clientSecret, plan, onSuccess, onCancel }: CheckoutFormP
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <PaymentElement />
+    <form onSubmit={handleSubmit} className="space-y-8">
+      <div className="border border-gray-200 rounded-xl p-4 bg-white shadow-sm">
+        <PaymentElement />
+      </div>
       
-      <div className="flex justify-end space-x-2 mt-4">
+      <div className="flex justify-end space-x-4 mt-6">
         <Button 
           type="button" 
           variant="outline" 
           onClick={onCancel}
           disabled={isProcessing}
+          className="px-6 py-5 border-gray-300 hover:bg-gray-50 text-gray-700"
         >
           Anuluj
         </Button>
         <Button 
           type="submit"
           disabled={!stripe || !elements || isProcessing}
-          className="bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800"
+          className={`px-10 py-5 rounded-xl transition-all duration-300 ${
+            isProcessing
+              ? 'bg-amber-600'
+              : 'bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30'
+          }`}
         >
           {isProcessing ? (
-            <>
-              <span className="mr-2">Przetwarzanie...</span>
-              <div className="animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full" />
-            </>
+            <div className="flex items-center">
+              <div className="animate-spin w-5 h-5 border-2 border-white border-t-transparent rounded-full mr-3" />
+              <span>Przetwarzanie płatności...</span>
+            </div>
           ) : (
-            "Zapłać teraz"
+            <div className="flex items-center">
+              <span className="mr-2">Zatwierdź płatność</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" 
+                stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </div>
           )}
         </Button>
+      </div>
+      
+      <div className="flex items-center justify-center text-xs text-gray-500 mt-4 space-x-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" 
+          stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+        <span>Bezpieczna płatność przez Stripe</span>
       </div>
     </form>
   );
@@ -223,53 +246,91 @@ function CheckoutModal({ isOpen, onClose, plan = 'monthly', onSuccess }: Checkou
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle className="text-center font-serif text-2xl font-bold text-amber-700">
-            Wybierz plan premium
+      <DialogContent className="sm:max-w-xl p-0 overflow-hidden bg-gradient-to-b from-gray-50 to-white border-none shadow-2xl">
+        {/* Top Decorative Border */}
+        <div className="h-1 w-full bg-gradient-to-r from-amber-700 via-amber-400 to-amber-700"></div>
+        
+        <DialogHeader className="p-6 pb-2">
+          <DialogTitle className="text-center font-serif text-3xl font-bold mb-2">
+            <span className="gold-text-gradient">Premium</span> Członkostwo
           </DialogTitle>
-          <DialogDescription className="text-center">
-            Odblokuj pełny dostęp do premium treści Aurum Affirmations
+          <DialogDescription className="text-center text-gray-700 max-w-md mx-auto">
+            Odblokuj pełny dostęp do premium treści i dołącz do ekskluzywnej społeczności Aurum Affirmations
           </DialogDescription>
         </DialogHeader>
         
-        <div className="py-4">
+        <div className="px-6 py-4">
           <RadioGroup 
             value={selectedPlan} 
             onValueChange={handlePlanChange}
-            className="grid grid-cols-1 gap-4 sm:grid-cols-3"
+            className="grid grid-cols-1 gap-4 md:grid-cols-4"
             disabled={isLoading}
           >
-            {Object.entries(PREMIUM_PLANS).map(([id, planDetails]) => (
-              <div 
-                key={id}
-                className={`relative flex flex-col rounded-lg border p-4 shadow-sm transition-all
-                  ${selectedPlan === id ? 'border-amber-600 bg-amber-50' : 'border-gray-200'}
-                `}
-              >
-                <RadioGroupItem value={id} id={id} className="sr-only" />
-                <Label htmlFor={id} className="cursor-pointer">
-                  <div className="font-semibold text-amber-800">{planDetails.name}</div>
-                  <div className="mt-1 flex items-baseline">
-                    <span className="text-xl font-bold text-gray-900">{planDetails.price} zł</span>
-                    <span className="ml-1 text-sm text-gray-500">/{planDetails.period}</span>
-                  </div>
-                  <ul className="mt-2 text-sm text-gray-700 space-y-1">
-                    {planDetails.features.map((feature, i) => (
-                      <li key={i}>✓ {feature}</li>
-                    ))}
-                  </ul>
-                </Label>
-              </div>
-            ))}
+            {Object.entries(PREMIUM_PLANS).map(([id, planDetails]) => {
+              const isSelected = selectedPlan === id;
+              return (
+                <div 
+                  key={id}
+                  className={`relative flex flex-col rounded-xl border p-4 transition-all duration-300
+                    ${isSelected 
+                      ? 'border-amber-500 bg-gradient-to-b from-amber-50/80 to-white shadow-md ring-1 ring-amber-300/50' 
+                      : 'border-gray-200 hover:border-amber-200 hover:shadow-sm'
+                    }
+                  `}
+                >
+                  <RadioGroupItem value={id} id={id} className="sr-only" />
+                  
+                  {isSelected && (
+                    <div className="absolute -top-1 -right-1 h-6 w-6 bg-amber-500 rounded-full flex items-center justify-center shadow-sm">
+                      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 6L5 7.5L8.5 4" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  )}
+                  
+                  <Label htmlFor={id} className="cursor-pointer flex flex-col h-full">
+                    <div className="font-semibold text-lg text-gray-900">{planDetails.name}</div>
+                    <div className="text-sm text-gray-500">{planDetails.description}</div>
+                    
+                    <div className="mt-4 mb-3 flex items-baseline">
+                      <span className={`text-2xl font-bold ${isSelected ? 'text-amber-800' : 'text-gray-900'}`}>
+                        {planDetails.price} zł
+                      </span>
+                      <span className="ml-1 text-sm text-gray-500">/{planDetails.period}</span>
+                    </div>
+                    
+                    <div className="mt-auto">
+                      <div className={`h-0.5 w-full ${isSelected ? 'bg-amber-200' : 'bg-gray-100'} mb-3`}></div>
+                      <ul className="text-sm text-gray-600 space-y-2">
+                        {planDetails.features.slice(0, 2).map((feature, i) => (
+                          <li key={i} className="flex items-start">
+                            <svg className={`h-4 w-4 mr-2 mt-0.5 ${isSelected ? 'text-amber-500' : 'text-gray-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </Label>
+                </div>
+              );
+            })}
           </RadioGroup>
         </div>
 
         {isLoading ? (
-          <div className="flex justify-center py-4">
-            <div className="animate-spin w-8 h-8 border-4 border-amber-600 border-t-transparent rounded-full" />
+          <div className="flex justify-center py-8">
+            <div className="flex flex-col items-center">
+              <div className="animate-spin w-10 h-10 border-3 border-amber-500 border-t-transparent rounded-full mb-4" />
+              <span className="text-sm text-gray-500">Inicjowanie płatności...</span>
+            </div>
           </div>
-        ) : renderCheckoutForm()}
+        ) : (
+          <div className="px-6 pb-6">
+            {renderCheckoutForm()}
+          </div>
+        )}
       </DialogContent>
     </Dialog>
   );

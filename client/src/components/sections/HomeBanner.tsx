@@ -1,29 +1,49 @@
 import { Link } from 'wouter';
 import DailyCard from './DailyCard';
+import { Sparkles } from 'lucide-react';
 
 const HomeBanner = () => {
   return (
-    <section 
-      className="relative py-12 px-4 md:px-6 lg:px-8 bg-no-repeat bg-cover bg-center" 
-      style={{ backgroundImage: "url('https://images.unsplash.com/photo-1536566482680-fca31930a0bd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')" }}
-    >
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-      <div className="relative container mx-auto max-w-5xl">
-        <div className="text-center mb-12">
-          <h2 className="font-playfair text-3xl md:text-5xl font-bold text-white mb-4 fade-in">Twoja Droga do Wewnętrznego Bogactwa</h2>
-          <p className="text-cream text-lg md:text-xl max-w-2xl mx-auto fade-in">Odkryj codzienne afirmacje, horoskopy i osobiste analizy numerologiczne.</p>
+    <section className="relative py-20 px-4 md:px-6 lg:px-8 diamond-bg min-h-[80vh] flex items-center">
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/70 to-gray-900/90"></div>
+      
+      <div className="relative container mx-auto max-w-5xl z-10">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center justify-center mb-6">
+            <div className="h-0.5 w-12 bg-amber-500"></div>
+            <Sparkles className="mx-4 h-6 w-6 text-amber-400" />
+            <div className="h-0.5 w-12 bg-amber-500"></div>
+          </div>
+          
+          <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6 fade-in">
+            <span className="block text-white">Twoja Droga do</span>
+            <span className="gold-text-gradient">Wewnętrznego Bogactwa</span>
+          </h1>
+          
+          <p className="text-amber-50/90 text-lg md:text-xl max-w-2xl mx-auto fade-in leading-relaxed">
+            Odkryj ekskluzywne afirmacje, horoskopy i osobiste analizy numerologiczne, które 
+            transformują Twoje życie w dzieło sztuki pełne obfitości i doskonałości.
+          </p>
         </div>
         
         <DailyCard />
         
-        <div className="text-center">
+        <div className="text-center mt-14">
           <Link href="/premium">
-            <a className="inline-block bg-premium-gradient text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 shine">
-              Odblokuj pełny dostęp premium
-            </a>
+            <div className="inline-block bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 
+              text-white font-semibold py-4 px-10 rounded-full shadow-lg shadow-amber-900/30 hover:shadow-amber-900/50 
+              transition-all duration-300 transform hover:-translate-y-1 group cursor-pointer">
+              <div className="flex items-center space-x-2">
+                <Sparkles className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                <span>Odblokuj pełny dostęp premium</span>
+              </div>
+            </div>
           </Link>
         </div>
       </div>
+      
+      {/* Decorative elements */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/40 to-transparent"></div>
     </section>
   );
 };
