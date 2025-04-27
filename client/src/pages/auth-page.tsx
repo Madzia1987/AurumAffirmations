@@ -98,11 +98,11 @@ export default function AuthPage() {
         description: "Twoje konto zostało pomyślnie utworzone.",
       });
       navigate("/profile");
-    } catch (error) {
+    } catch (error: any) {
       console.error("Registration error:", error);
       toast({
         title: "Błąd rejestracji",
-        description: "Nie można utworzyć konta. Spróbuj ponownie.",
+        description: error.message || "Nie można utworzyć konta. Spróbuj ponownie.",
         variant: "destructive",
       });
     }
