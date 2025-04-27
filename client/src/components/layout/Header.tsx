@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Sparkles, User, LogIn } from 'lucide-react';
+import { Sparkles, User, LogIn, Globe } from 'lucide-react';
 import { useAuth } from '@/hooks/use-auth';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { 
@@ -10,11 +10,13 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger 
 } from '@/components/ui/dropdown-menu';
+import { Button } from '@/components/ui/button';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  const [language, setLanguage] = useState('pl'); // domyślny język: polski
   const { user, logoutMutation } = useAuth();
 
   useEffect(() => {
@@ -39,6 +41,13 @@ const Header = () => {
     setIsMenuOpen(false);
   };
 
+  // Funkcja obsługująca zmianę języka
+  const changeLanguage = (lang: string) => {
+    setLanguage(lang);
+    // Tutaj możemy dodać logikę zmiany języka w całej aplikacji
+    closeMenu();
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -57,7 +66,7 @@ const Header = () => {
             </div>
           </Link>
         </div>
-        <nav className="relative">
+        <nav className="relative flex items-center">
           <button 
             id="menuToggle" 
             className="text-amber-400 focus:outline-none md:hidden"
@@ -181,6 +190,50 @@ const Header = () => {
                 </Link>
               </li>
             )}
+            
+            {/* Przełącznik języka */}
+            <li className="md:ml-2">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <div className="flex items-center py-3 px-5 md:px-2 cursor-pointer text-amber-50 hover:text-amber-400 transition-colors duration-200">
+                    <Globe className="h-5 w-5 mr-1" />
+                    <span className="uppercase">{language}</span>
+                  </div>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-gray-900 border border-amber-800/30">
+                  <DropdownMenuItem 
+                    onClick={() => changeLanguage('pl')}
+                    className={`text-amber-50 cursor-pointer focus:bg-gray-800 ${language === 'pl' ? 'text-amber-400 font-medium' : 'hover:text-amber-400'}`}
+                  >
+                    Polski
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => changeLanguage('en')}
+                    className={`text-amber-50 cursor-pointer focus:bg-gray-800 ${language === 'en' ? 'text-amber-400 font-medium' : 'hover:text-amber-400'}`}
+                  >
+                    English
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => changeLanguage('de')}
+                    className={`text-amber-50 cursor-pointer focus:bg-gray-800 ${language === 'de' ? 'text-amber-400 font-medium' : 'hover:text-amber-400'}`}
+                  >
+                    Deutsch
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => changeLanguage('fr')}
+                    className={`text-amber-50 cursor-pointer focus:bg-gray-800 ${language === 'fr' ? 'text-amber-400 font-medium' : 'hover:text-amber-400'}`}
+                  >
+                    Français
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => changeLanguage('es')}
+                    className={`text-amber-50 cursor-pointer focus:bg-gray-800 ${language === 'es' ? 'text-amber-400 font-medium' : 'hover:text-amber-400'}`}
+                  >
+                    Español
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </li>
           </ul>
         </nav>
       </div>
