@@ -1,0 +1,59 @@
+STRUKTURA PLIKÓW AURUM AFFIRMATIONS (PWA w Replit)
+1. Pliki główne:
+
+Plik	Opis
+index.html	Strona główna (landing page + codzienna afirmacja + darmowy content)
+premium.html	Strona dostępu premium (płatne treści: afirmacje, rytuały, numerologia)
+horoscope.html	Strona horoskopu dziennego (z API)
+numerology.html	Strona numerologii dnia i analizy (z API)
+checkout.html	Strona płatności Stripe (zakupy, subskrypcje)
+2. Pliki JavaScript:
+
+Plik	Opis
+app.js	Logika przełączania sekcji, dynamiczne ładowanie treści z API
+stripe-payment.js	Obsługa płatności Stripe
+quotes-api.js	Pobieranie darmowych cytatów z Quotes API
+horoscope-api.js	Pobieranie horoskopów z Horoscope API
+numerology-api.js	Pobieranie danych numerologicznych z Numerology API
+3. Pliki styli:
+
+Plik	Opis
+styles.css	Ogólny styl aplikacji (kolory, czcionki, złote efekty, siateczka tła)
+animations.css	Animacje przejść, fade-in, parallax tła itd.
+4. Pliki konfiguracyjne:
+
+Plik	Opis
+manifest.json	PWA manifest — ikona, nazwa aplikacji, kolory splashscreen
+service-worker.js	Cache PWA — ładowanie offline treści bazowych
+stripe-config.js	Konfiguracja Stripe Checkout/Portal
+5. Foldery:
+
+Folder	Zawartość
+/assets/	Ikony aplikacji, złota siateczka, logo Aurum Affirmations
+/premium-content/	JSON-y lub pliki tekstowe z treścią afirmacji, rytuałów, ebooków
+/api-responses/	Przykładowe odpowiedzi z API (dla developmentu offline)
+WYMAGANE ELEMENTY W ŚRODKU STRON:
+
+Strona	Co musi być
+index.html	- Logo Aurum, - Codzienna afirmacja (ładowana automatycznie), - Cytat inspirujący, - Button: "Przejdź do Pełnych Treści Premium"
+premium.html	- Lista kategorii (Miłość, Obfitość, Pewność siebie), - Zablokowane treści z komunikatem "Kup dostęp"
+checkout.html	- Integracja Stripe Checkout (zakupy pakietów i subskrypcji)
+horoscope.html	- Codzienny horoskop pobierany przez API
+numerology.html	- Liczba dnia, liczba imienia, analiza (API Numerology)
+WYTYCZNE DESIGN (UX/UI)
+Tło: gradient złota + biel (luxury feeling),
+
+Font główny: Playfair Display, pomocniczy: Lora,
+
+Złota siateczka SVG lekko widoczna w tle,
+
+Przycisk CTA: duży, zaokrąglony, złoty z białym tekstem,
+
+Animacje: delikatne fade-in sekcji.
+
+DODATKOWO:
+Proszę zaprogramować codzienne wyświetlanie innej afirmacji (z listy JSON lub API),
+
+Pokazywać użytkownikowi darmową część horoskopu/numerologii,
+
+Resztę treści blokować, pokazując komunikat premium "Odkryj więcej — dołącz do Aurum Premium".

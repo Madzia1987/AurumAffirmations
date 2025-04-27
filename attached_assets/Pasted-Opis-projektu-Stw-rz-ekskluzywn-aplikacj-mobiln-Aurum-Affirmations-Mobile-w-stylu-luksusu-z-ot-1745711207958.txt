@@ -1,0 +1,96 @@
+Opis projektu:
+Stwórz ekskluzywną aplikację mobilną Aurum Affirmations Mobile (w stylu luksusu, złota, kobiecości) na bazie Replit + Nativator.io (PWA + konwersja do APK).
+Aplikacja ma mieć darmowe treści i rozbudowaną sekcję płatną (premium).
+
+Główne funkcje aplikacji:
+Strona główna z cytatem dnia + afirmacją dnia (darmowa sekcja),
+
+Codzienny horoskop (z API RapidAPI),
+
+Numerologia dnia (z API RapidAPI),
+
+Fragmenty darmowych artykułów o miłości własnej i finansach,
+
+Blokady treści premium: dostęp płatny Stripe.
+
+Powiadomienia push "Twoja Afirmacja Dnia czeka!" (jeśli się da),
+
+Płatności Stripe: subskrypcje i zakupy pojedynczych pakietów.
+
+Kategorie treści:
+Miłość Własna (Self-love),
+
+Pewność Siebie (Confidence),
+
+Bogactwo i Obfitość (Wealth & Abundance),
+
+Sukces w Biznesie (dla kobiet),
+
+Mentalność Bilionerki / Duchowe bogactwo.
+
+Model płatności:
+Mini dostęp – 28 zł / 7 dni,
+
+Miesięczna subskrypcja – 68 zł / miesiąc,
+
+Roczna subskrypcja – 280 zł / rok,
+
+Pakiety tematyczne – 48 zł / pakiet.
+
+Darmowa część:
+
+1 afirmacja dziennie,
+
+fragment darmowego artykułu,
+
+darmowa numerologia dnia.
+
+Płatna część:
+
+Pełne pakiety afirmacji,
+
+Pełne rytuały i medytacje,
+
+Zaawansowane analizy numerologiczne.
+
+Wymagane API:
+Horoscope API (RapidAPI) — horoskopy dzienne,
+
+Numerology API (RapidAPI) — liczby dnia, liczba imienia, cykle życia,
+
+Quotes API — inspirujące cytaty (dla sekcji darmowej),
+
+Stripe API — płatności i subskrypcje.
+
+Styl aplikacji:
+Kolory: złoto, biel, szampan, burgund,
+
+Fonty: Playfair Display + Lora (elegancja i kobiecość),
+
+Styl UX/UI: luksus, minimalizm, świetliste animacje,
+
+Złota siateczka w tle (np. SVG),
+
+Efekty delikatnego przesuwania sekcji.
+
+Szczegóły techniczne:
+Responsywna strona w Replit jako PWA (Progressive Web App),
+
+Dodanie pliku manifest.json (ikona aplikacji, nazwa, splashscreen),
+
+Możliwość późniejszej konwersji na APK przez Nativator.io,
+
+Obsługa języka polskiego jako domyślnego,
+
+Przygotowanie pod SEO aplikacji (meta tagi PWA),
+
+Przygotowanie integracji Stripe (checkout/payment links).
+
+Uwagi dodatkowe:
+Zrób lekką stronę startową typu landing page,
+
+Na stronie głównej zachęta do zakupu dostępu premium,
+
+Zrób miejsce na dodawanie własnych ebooków/pakietów w przyszłości,
+
+Dodaj prostą administrację (np. przez edycję JSON lub CMS typu Supabase).

@@ -1,0 +1,75 @@
+# Aurum Affirmations Mobile App
+
+Projekt: Ekskluzywna aplikacja mobilna PWA (Progressive Web App) — affirmacje, horoskopy, numerologia, dostęp premium.
+
+---
+
+## 1. Główne funkcje:
+
+- Strona główna z afirmacją dnia i cytatem inspirującym
+- Sekcja darmowa: fragmenty artykułów, darmowy horoskop, darmowa numerologia dnia
+- Sekcja premium: pełne afirmacje, pełne rytuały, zaawansowana numerologia
+- Płatności Stripe: subskrypcje miesięczne, roczne i pakiety jednorazowe
+- Responsive design: działa płynnie na telefonach i tabletach
+- Wygląd: luksusowy, złoto-biały, minimalistyczny
+
+---
+
+## 2. Struktura plików:
+
+- `index.html` — strona główna
+- `premium.html` — treści premium
+- `horoscope.html` — horoskop dnia
+- `numerology.html` — numerologia dnia
+- `checkout.html` — płatności
+- `app.js` — główna logika aplikacji
+- `stripe-payment.js` — obsługa Stripe Checkout
+- `styles.css` — style wizualne
+- `animations.css` — animacje UI
+- `manifest.json` — manifest aplikacji PWA
+- `service-worker.js` — cache offline
+- `config/keys.js` — klucze API (do podmiany)
+
+---
+
+## 3. Instrukcje użytkowania:
+
+### Jak zmieniać treści afirmacji, cytatów i artykułów:
+- Pliki JSON w folderze `/premium-content/`
+- Możesz edytować pliki:
+  - `affirmations.json`
+  - `quotes.json`
+  - `articles.json`
+- Dodaj nowe wpisy, zachowując strukturę JSON.
+
+### Jak wprowadzić własne klucze API:
+- Otwórz plik `config/keys.js`
+- Wklej swoje klucze zamiast `"TWÓJ_KLUCZ_HOROSCOPE_API"` i `"TWÓJ_KLUCZ_NUMEROLOGY_API"`
+
+### Jak zmienić kolory/styl aplikacji:
+- Edytuj `styles.css`
+- Znajdziesz tam zmienne kolorów (`--primary-color`, `--background-color` itd.)
+
+### Jak zmienić ikony aplikacji:
+- Zamień pliki graficzne w folderze `/assets/` (np. `logo.png`, `icon.png`)
+
+---
+
+## 4. Wymagania:
+
+- Projekt przygotowany jako PWA
+- Gotowy do konwersji na APK (np. przez Nativator.io)
+- Minimalne wymagania przeglądarki: Chrome 90+, Safari 14+
+
+---
+
+## 5. Dodatkowe uwagi:
+
+- Proszę upewnić się, że cache Service Worker działa poprawnie
+- Stripe Checkout przetestować w trybie testowym przed uruchomieniem na produkcji
+- Kod ma być czytelny, zoptymalizowany, gotowy do rozwoju
+
+---
+
+# Dziękuję za współpracę!  
+Let's create magic with Aurum Affirmations ✨
