@@ -111,16 +111,15 @@ export default function ProfilePage() {
         </div>
 
         {/* Main Content */}
-        <div className="flex flex-col lg:flex-row gap-6">
-          {/* Sidebar */}
-          <div className="w-full lg:w-64">
-            <Tabs
-              value={activeTab}
-              onValueChange={setActiveTab}
-              orientation="vertical"
-              className="w-full"
-            >
-              <TabsList className="flex flex-col h-auto bg-gray-900/50 rounded-xl p-2 space-y-2">
+        <div className="w-full">
+          <Tabs 
+            value={activeTab} 
+            onValueChange={setActiveTab}
+            className="flex flex-col lg:flex-row gap-6"
+          >
+            {/* Sidebar */}
+            <div className="w-full lg:w-64 shrink-0">
+              <TabsList className="flex flex-col h-auto bg-gray-900/50 rounded-xl p-2 space-y-2 w-full">
                 <TabsTrigger
                   value="dashboard"
                   className="flex items-center justify-start text-base py-3 px-4 w-full"
@@ -157,12 +156,11 @@ export default function ProfilePage() {
                   Moje Subskrypcje
                 </TabsTrigger>
               </TabsList>
-            </Tabs>
-          </div>
+            </div>
 
-          {/* Content */}
-          <div className="flex-1 bg-gray-900/50 rounded-xl p-6 border border-amber-800/30 shadow-xl">
-            <TabsContent value="dashboard" className="mt-0 space-y-6">
+            {/* Content */}
+            <div className="flex-1 bg-gray-900/50 rounded-xl p-6 border border-amber-800/30 shadow-xl">
+              <TabsContent value="dashboard" className="mt-0 space-y-6">
               <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-amber-600 mb-6">
                 Mój Profil
               </h2>
@@ -570,7 +568,8 @@ export default function ProfilePage() {
                 </div>
               )}
             </TabsContent>
-          </div>
+            </div>
+          </Tabs>
         </div>
       </div>
     </div>
