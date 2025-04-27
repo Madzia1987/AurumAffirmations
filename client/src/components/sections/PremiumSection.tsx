@@ -7,6 +7,22 @@ import { CheckCircle, Sparkles } from 'lucide-react';
 import { usePremium } from '@/hooks/use-premium';
 import CheckoutModal from '@/components/CheckoutModal';
 
+// Define the plan type to help with TypeScript
+type PlanType = {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  period: string;
+  billingPeriod: string;
+  duration: {
+    value: number;
+    unit: string;
+  };
+  features: string[];
+  featured?: boolean;
+};
+
 export default function PremiumSection() {
   const [, setLocation] = useLocation();
   const { isPremium, refetchPremiumStatus } = usePremium();
@@ -79,49 +95,55 @@ export default function PremiumSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {Object.entries(PREMIUM_PLANS).map(([id, plan]) => (
-            <Card 
-              key={id} 
-              className={`border ${plan.featured ? 'border-amber-400 ring-2 ring-amber-300' : 'border-amber-200'} bg-white relative overflow-hidden`}
-            >
-              {plan.featured && (
-                <div className="absolute top-0 right-0 bg-amber-500 text-white py-1 px-3 text-xs font-semibold transform translate-x-[30%] translate-y-[30%] rotate-45">
-                  Najpopularniejszy
-                </div>
-              )}
-              <CardHeader className={`${plan.featured ? 'bg-gradient-to-r from-amber-50 to-amber-100' : ''}`}>
-                <CardTitle className="font-serif text-xl font-bold text-amber-800">{plan.name}</CardTitle>
-                <CardDescription>{plan.description}</CardDescription>
-                <div className="mt-4">
-                  <span className="text-3xl font-bold text-gray-900">{plan.price} zł</span>
-                  <span className="text-gray-500">/{plan.period}</span>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-3">
-                  {plan.features.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <CheckCircle className="h-5 w-5 text-amber-600 mr-2 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <CardFooter>
-                <Button 
-                  onClick={() => handlePlanSelect(id)}
-                  className={`w-full ${
-                    plan.featured 
-                      ? 'bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800' 
-                      : 'bg-white text-amber-700 border border-amber-300 hover:bg-amber-50'
-                  }`}
-                  variant={plan.featured ? 'default' : 'outline'}
-                >
-                  Wybierz Plan
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
+          {Object.entries(PREMIUM_PLANS).map(([id, planData]) => {
+            // Cast plan to the PlanType to fix TypeScript issues
+            const plan = planData as PlanType;
+            const isFeatured = !!plan.featured;
+            
+            return (
+              <Card 
+                key={id} 
+                className={`border ${isFeatured ? 'border-amber-400 ring-2 ring-amber-300' : 'border-amber-200'} bg-white relative overflow-hidden`}
+              >
+                {isFeatured && (
+                  <div className="absolute top-0 right-0 bg-amber-500 text-white py-1 px-3 text-xs font-semibold transform translate-x-[30%] translate-y-[30%] rotate-45">
+                    Najpopularniejszy
+                  </div>
+                )}
+                <CardHeader className={`${isFeatured ? 'bg-gradient-to-r from-amber-50 to-amber-100' : ''}`}>
+                  <CardTitle className="font-serif text-xl font-bold text-amber-800">{plan.name}</CardTitle>
+                  <CardDescription>{plan.description}</CardDescription>
+                  <div className="mt-4">
+                    <span className="text-3xl font-bold text-gray-900">{plan.price} zł</span>
+                    <span className="text-gray-500">/{plan.period}</span>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    {plan.features.map((feature, index) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-amber-600 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+                <CardFooter>
+                  <Button 
+                    onClick={() => handlePlanSelect(id)}
+                    className={`w-full ${
+                      isFeatured 
+                        ? 'bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800' 
+                        : 'bg-white text-amber-700 border border-amber-300 hover:bg-amber-50'
+                    }`}
+                    variant={isFeatured ? 'default' : 'outline'}
+                  >
+                    Wybierz Plan
+                  </Button>
+                </CardFooter>
+              </Card>
+            );
+          })}
         </div>
       </div>
 
