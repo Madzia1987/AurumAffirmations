@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Jak rozwijać miłość własną i przyciągać obfitość",
+    "excerpt": "Odkryj jak pokochać siebie i otworzyć się na obfitość we wszystkich dziedzinach życia.",
+    "content": "Miłość własna to fundament, na którym budujemy wszystkie pozostałe aspekty naszego życia. Kiedy naprawdę kochamy i akceptujemy siebie, otwieramy się na przypływ obfitości i dobrobytu we wszystkich dziedzinach. Jednym z najskuteczniejszych sposobów rozwijania miłości własnej jest praktyka codziennych afirmacji. Kiedy regularnie powtarzamy pozytywne stwierdzenia na swój temat, stopniowo zmieniamy swoje przekonania i sposób myślenia.",
+    "image": "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "category": "self-love",
+    "date": "28 Października 2023",
+    "readTime": 5,
+    "isPremium": false
+  },
+  {
+    "id": 2,
+    "title": "Mentalność milionerki: Jak myśleć, by przyciągać bogactwo",
+    "excerpt": "Poznaj sekrety myślenia, które przyciąga bogactwo i obfitość do Twojego życia.",
+    "content": "Droga do obfitości zaczyna się w Twoim umyśle. Ludzie sukcesu i milionerzy myślą inaczej niż przeciętna osoba. Ich przekonania, nawyki i sposób podejmowania decyzji tworzą rzeczywistość pełną możliwości i bogactwa. W tym artykule poznasz kluczowe elementy mentalności milionerki i dowiesz się, jak je rozwijać w swoim codziennym życiu.",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "category": "mindset",
+    "date": "15 Października 2023",
+    "readTime": 7,
+    "isPremium": true
+  },
+  {
+    "id": 3,
+    "title": "Jak budować pewność siebie, która przyciąga sukces",
+    "excerpt": "Odkryj sprawdzone metody budowania autentycznej pewności siebie i przyciągania sukcesów.",
+    "content": "Prawdziwa pewność siebie nie jest czymś, z czym się rodzimy – to umiejętność, którą możemy świadomie rozwijać. Kobiety, które emanują autentyczną pewnością siebie, przyciągają do swojego życia więcej możliwości, relacji i sukcesów. W tym artykule poznasz praktyczne techniki budowania wewnętrznej siły i pewności, która będzie promieniować z każdego Twojego kroku.",
+    "image": "https://images.unsplash.com/photo-1507428861205-e8aab693190e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "category": "confidence",
+    "date": "5 Listopada 2023",
+    "readTime": 6,
+    "isPremium": false
+  },
+  {
+    "id": 4,
+    "title": "Kobiecy biznes: Jak budować markę w zgodzie ze sobą",
+    "excerpt": "Poznaj strategie budowania biznesu, który będzie odzwierciedleniem Twoich wartości i kobiecej intuicji.",
+    "content": "Prowadzenie biznesu w zgodzie z kobiecą naturą to potężna strategia sukcesu. Wykorzystanie intuicji, empatii i naturalnych zdolności komunikacyjnych może być Twoją największą przewagą konkurencyjną. W tym artykule dowiesz się, jak budować markę osobistą i firmę, która pozwoli Ci wyrażać siebie i jednocześnie odnosić finansowe sukcesy.",
+    "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "category": "business",
+    "date": "20 Listopada 2023",
+    "readTime": 8,
+    "isPremium": true
+  },
+  {
+    "id": 5,
+    "title": "5 rytuałów, które przyciągają obfitość finansową",
+    "excerpt": "Poznaj praktyczne rytuały, które możesz włączyć do swojej codzienności, aby transformować swoje finanse.",
+    "content": "Nasze codzienne nawyki i rytuały determinują nasze wyniki finansowe bardziej niż zdajemy sobie sprawę. W tym artykule omówimy 5 potężnych praktyk, które zostały naukowo udowodnione jako skuteczne w transformacji naszej relacji z pieniędzmi. Te proste, ale konsekwentnie wykonywane działania mogą otworzyć drzwi do większej obfitości w Twoim życiu.",
+    "image": "https://images.unsplash.com/photo-1513672494107-cd9d848a383e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "category": "wealth",
+    "date": "10 Grudnia 2023",
+    "readTime": 5,
+    "isPremium": true
+  },
+  {
+    "id": 6,
+    "title": "Affirmacje, które zmieniają Twoją rzeczywistość finansową",
+    "excerpt": "Odkryj, jak potężne afirmacje mogą przeprogramować Twój umysł na większy dobrobyt i obfitość.",
+    "content": "Słowa, które wypowiadamy na głos i w myślach, mają ogromny wpływ na nasze finanse. Badania nad neuroplastycznością mózgu pokazują, że regularne powtarzanie pozytywnych afirmacji może dosłownie przeprogramować nasze podświadome przekonania na temat pieniędzy. W tym artykule poznasz najskuteczniejsze afirmacje finansowe i dowiesz się, jak właściwie ich używać.",
+    "image": "https://images.unsplash.com/photo-1561489401-fc2876ced162?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "category": "wealth",
+    "date": "3 Stycznia 2024",
+    "readTime": 4,
+    "isPremium": false
+  }
+]

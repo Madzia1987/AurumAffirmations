@@ -1,0 +1,122 @@
+[
+  {
+    "number": 1,
+    "meaning": "Liczba 1 reprezentuje przywództwo, niezależność i oryginalność. Jest to liczba początków i nowych projektów.",
+    "details": {
+      "personality": "Jesteś naturalnym liderem, innowatorem i pionierem. Posiadasz silną wolę i determinację, które pomagają Ci osiągać cele mimo przeszkód. Twoja niezależność i oryginalność wyróżniają Cię z tłumu.",
+      "health": "Możesz mieć tendencję do przeciążania się pracą i ignorowania sygnałów ciała. Regularna aktywność fizyczna i sport pomogą Ci zrównoważyć intensywną energię umysłową.",
+      "career": "Najlepiej sprawdzasz się na stanowiskach kierowniczych lub jako przedsiębiorca. Twój wrodzony talent do przywództwa i innowacji przyniesie Ci sukces w biznesie, polityce lub jako independent contractor.",
+      "love": "W relacjach cenisz wolność i partnerstwo oparte na wzajemnym szacunku. Potrzebujesz partnera, który będzie wspierał Twoją niezależność i będzie równie ambitny jak Ty."
+    }
+  },
+  {
+    "number": 2,
+    "meaning": "Liczba 2 symbolizuje harmonię, współpracę i równowagę. Jest to liczba partnerstwa i dyplomacji.",
+    "details": {
+      "personality": "Jesteś dyplomatką, mediatorką i osobą intuicyjną. Twoja wrażliwość i empatia pozwalają Ci głęboko rozumieć innych ludzi. Cenisz harmonię i równowagę we wszystkich aspektach życia.",
+      "health": "Twoja wrażliwość może przejawiać się również na poziomie fizycznym. Praktyki łagodzące, jak joga, tai chi czy medytacja, mogą pomóc Ci utrzymać równowagę energetyczną.",
+      "career": "Najlepiej sprawdzasz się w zawodach wymagających współpracy, dyplomacji i intuicji. Doradztwo, mediacja, nauczanie, terapia czy praca w zespole będą dla Ciebie naturalne.",
+      "love": "W relacjach jesteś lojalna i oddana. Potrzebujesz głębokiego emocjonalnego połączenia i szczerej komunikacji. Harmonijne partnerstwo jest dla Ciebie ważniejsze niż indywidualne osiągnięcia."
+    }
+  },
+  {
+    "number": 3,
+    "meaning": "Liczba 3 reprezentuje kreatywność, ekspresję i radość życia. Jest to liczba optymizmu i komunikacji.",
+    "details": {
+      "personality": "Jesteś kreatywna, ekspresyjna i optymistyczna. Twoja naturalność i radość życia przyciągają innych ludzi. Masz dar słowa i potrafisz inspirować swoim entuzjazmem.",
+      "health": "Twoja energia jest zazwyczaj wysoka, ale możesz mieć tendencję do rozpraszania się. Kreatywna ekspresja jest dla Ciebie formą terapii, więc taniec, śpiew czy pisanie będą wspierać Twoje zdrowie.",
+      "career": "Najlepiej sprawdzasz się w zawodach wymagających kreatywności i ekspresji. Sztuka, pisarstwo, marketing, edukacja czy wystąpienia publiczne wykorzystają Twoje naturalne talenty.",
+      "love": "W relacjach wnosisz radość, spontaniczność i kreatywność. Potrzebujesz przestrzeni do wyrażania siebie i partnera, który doceni Twoją żywiołowość. Komunikacja jest kluczem do Twojego szczęścia."
+    }
+  },
+  {
+    "number": 4,
+    "meaning": "Liczba 4 symbolizuje stabilność, porządek i praktyczność. Jest to liczba solidnych fundamentów i ciężkiej pracy.",
+    "details": {
+      "personality": "Jesteś praktyczna, zorganizowana i niezawodna. Twoja ciężka praca i determinacja budują solidne fundamenty dla wszystkiego, co robisz. Cenisz porządek, stabilność i tradycję.",
+      "health": "Twoja silna etyka pracy może prowadzić do przemęczenia. Regularne przerwy i budowanie rutyny dbania o ciało są dla Ciebie kluczowe. Naturalne środowisko działa na Ciebie kojąco.",
+      "career": "Najlepiej sprawdzasz się w strukturalnych rolach wymagających dokładności i odpowiedzialności. Finanse, zarządzanie, inżynieria, architektura czy nauki ścisłe pozwolą Ci wykorzystać naturalne talenty.",
+      "love": "W relacjach jesteś lojalna i oddana. Szukasz stabilnego, długoterminowego partnerstwa opartego na wzajemnym zaufaniu i wspólnych wartościach. Potrzebujesz partnera równie odpowiedzialnego jak Ty."
+    }
+  },
+  {
+    "number": 5,
+    "meaning": "Liczba 5 reprezentuje wolność, przygodę i zmiany. Jest to liczba różnorodności i adaptacji.",
+    "details": {
+      "personality": "Jesteś wszechstronna, adaptacyjna i pełna życia. Twoja naturalna ciekawość i pragnienie wolności prowadzą Cię do różnorodnych doświadczeń. Cenisz przygodę, zmiany i stymulację intelektualną.",
+      "health": "Potrzebujesz różnorodności w aktywności fizycznej i diecie. Twoje zdrowie kwitnie, gdy możesz eksplorować różne podejścia, od sportów ekstremalnych po taniec czy turystykę.",
+      "career": "Najlepiej sprawdzasz się w rolach oferujących różnorodność i wolność. Dziennikarstwo, podróże, handel, marketing czy praca w zmiennym środowisku wykorzystają Twoją adaptacyjność.",
+      "love": "W relacjach cenisz wolność i stymulację intelektualną. Potrzebujesz partnera, który będzie dzielił Twoją pasję do przygód i akceptował Twoją niezależność. Rutyna jest Twoim największym wyzwaniem."
+    }
+  },
+  {
+    "number": 6,
+    "meaning": "Liczba 6 symbolizuje harmonię, odpowiedzialność i służbę. Jest to liczba rodziny i balansu.",
+    "details": {
+      "personality": "Jesteś opiekuńcza, odpowiedzialna i harmonijna. Twoja naturalna troska o innych i poczucie obowiązku czynią z Ciebie doskonałego opiekuna i doradcę. Cenisz piękno, równowagę i sprawiedliwość.",
+      "health": "Twoja tendencja do troski o innych może prowadzić do zaniedbywania własnych potrzeb. Dbanie o siebie jest równie ważne jak dbanie o innych. Otaczanie się harmonią i pięknem wspiera Twoje zdrowie.",
+      "career": "Najlepiej sprawdzasz się w rolach związanych z opieką, doradztwem i tworzeniem harmonii. Nauczanie, doradztwo, mediacja, terapia, projektowanie wnętrz czy sztuka wykorzystają Twoje naturalne talenty.",
+      "love": "W relacjach jesteś oddana i opiekuńcza. Tworzysz ciepły, harmonijny dom i dbasz o potrzeby bliskich. Potrzebujesz partnera, który doceni Twoją troskę i będzie wspierał Twoje poczucie odpowiedzialności."
+    }
+  },
+  {
+    "number": 7,
+    "meaning": "Liczba 7 reprezentuje analizę, duchowość i mądrość. Jest to liczba wewnętrznego poszukiwania i perfekcjonizmu.",
+    "details": {
+      "personality": "Jesteś analityczna, refleksyjna i głęboka. Twoja naturalna skłonność do poszukiwania prawdy i kwestionowania powierzchowności prowadzi Cię do głębszych zrozumień. Cenisz wiedzę, prywatność i duchowość.",
+      "health": "Twój umysł potrzebuje równowagi z ciałem. Praktyki łączące umysł i ciało, jak joga czy tai chi, oraz kontakt z naturą, szczególnie wodą, wspierają Twoje zdrowie.",
+      "career": "Najlepiej sprawdzasz się w rolach wymagających analitycznego myślenia i precyzji. Nauka, badania, technologia, filozofia, psychologia czy duchowe przewodnictwo wykorzystają Twoje naturalne talenty.",
+      "love": "W relacjach cenisz głębię i autentyczność. Potrzebujesz przestrzeni dla swojej prywatności i wewnętrznych poszukiwań. Partner, który rozumie Twoją potrzebę samotności i podziela Twoje intelektualne zainteresowania, będzie dla Ciebie idealny."
+    }
+  },
+  {
+    "number": 8,
+    "meaning": "Liczba 8 symbolizuje siłę, sukces materialny i autorytet. Jest to liczba manifestacji i mocy.",
+    "details": {
+      "personality": "Jesteś zdeterminowana, ambitna i praktyczna. Twoja naturalna zdolność do organizacji i zarządzania prowadzi Cię do sukcesu materialnego i pozycji autorytetu. Cenisz osiągnięcia, stabilność i uznanie.",
+      "health": "Twoja intensywna natura może prowadzić do stresu i napięć. Równowaga między pracą a odpoczynkiem jest kluczowa. Praktyki uziemiające i regularna aktywność fizyczna wspierają Twoje zdrowie.",
+      "career": "Najlepiej sprawdzasz się w rolach związanych z biznesem, finansami i zarządzaniem. Przedsiębiorczość, inwestowanie, przywództwo czy doradztwo finansowe wykorzystają Twoje naturalne talenty.",
+      "love": "W relacjach jesteś lojalna i odpowiedzialna. Cenisz partnera, który wspiera Twoje ambicje i dzieli Twoje pragnienie sukcesu. Równowaga między dawaniem a braniem jest dla Ciebie kluczowa w związku."
+    }
+  },
+  {
+    "number": 9,
+    "meaning": "Liczba 9 reprezentuje humanitaryzm, mądrość i zakończenia. Jest to liczba uniwersalnej miłości i służby ludzkości.",
+    "details": {
+      "personality": "Jesteś współczująca, idealistyczna i mądra. Twoja naturalna empatia i troska o ludzkość prowadzą Cię do działań na rzecz dobra wspólnego. Cenisz sprawiedliwość, miłość i duchową ewolucję.",
+      "health": "Twoja wrażliwość na cierpienie świata może wpływać na Twoje zdrowie. Praktyki oczyszczające, zarówno fizyczne jak i emocjonalne, oraz łączenie się z wyższym celem wspierają Twój dobrostan.",
+      "career": "Najlepiej sprawdzasz się w rolach związanych z pomocą innym i działaniem dla wyższego dobra. Sztuka, nauczanie, medycyna, doradztwo, praca społeczna czy działalność humanitarna wykorzystają Twoje naturalne talenty.",
+      "love": "W relacjach jesteś bezwarunkowa i wielkoduszna. Potrzebujesz partnera, który podziela Twoje wartości i ideały. Związek oparty na wzajemnym szacunku i wspólnej misji będzie dla Ciebie najszczęśliwszy."
+    }
+  },
+  {
+    "number": 11,
+    "meaning": "Liczba 11 jest liczbą mistrzowską, reprezentującą intuicję, inspirację i duchowe oświecenie. Jest to liczba wizjonerów i nauczycieli duchowych.",
+    "details": {
+      "personality": "Jesteś intuicyjna, wrażliwa i inspirująca. Masz dostęp do wyższych poziomów świadomości i potrafisz łączyć świat materialny z duchowym. Twoja wrażliwość i mądrość czynią z Ciebie naturalnego przewodnika dla innych.",
+      "health": "Twoja wysoka wrażliwość może prowadzić do przeciążenia energetycznego. Regularne praktyki oczyszczające, medytacja i kontakt z naturą są niezbędne dla Twojego dobrostanu.",
+      "career": "Najlepiej sprawdzasz się w rolach wymagających intuicji i inspiracji. Psychologia, doradztwo duchowe, sztuka, muzyka, pisarstwo czy każda forma kreatywnej ekspresji wykorzystają Twoje naturalne talenty.",
+      "love": "W relacjach jesteś głęboka i duchowa. Potrzebujesz partnera, który rozumie Twoją wrażliwość i podziela Twoje duchowe zainteresowania. Związek oparty na wzajemnym duchowym wzroście będzie dla Ciebie najszczęśliwszy."
+    }
+  },
+  {
+    "number": 22,
+    "meaning": "Liczba 22 jest liczbą mistrzowską, reprezentującą praktyczną wizję i zdolność do budowania na wielką skalę. Jest to liczba mistrzowskich budowniczych.",
+    "details": {
+      "personality": "Jesteś wizjonerką z praktycznym podejściem. Potrafisz przekształcać wielkie marzenia w konkretne osiągnięcia. Twoja kombinacja duchowej mądrości i praktycznych umiejętności pozwala Ci realizować projekty o dużym wpływie na świat.",
+      "health": "Twoja intensywna natura i wielkie aspiracje mogą prowadzić do stresu. Równowaga między wizją a działaniem, odpowiedzialnością a odpoczynkiem jest kluczowa dla Twojego zdrowia.",
+      "career": "Najlepiej sprawdzasz się w rolach łączących wizję z praktycznym działaniem. Architektura, inżynieria, biznes o pozytywnym wpływie społecznym, przywództwo czy innowacyjne projekty wykorzystają Twoje naturalne talenty.",
+      "love": "W relacjach jesteś oddana i odpowiedzialna. Potrzebujesz partnera, który wspiera Twoje wielkie wizje i rozumie Twoją potrzebę służenia wyższemu celowi. Związek, który pozwala Ci realizować Twoją misję, będzie dla Ciebie najszczęśliwszy."
+    }
+  },
+  {
+    "number": 33,
+    "meaning": "Liczba 33 jest najwyższą liczbą mistrzowską, reprezentującą bezwarunkową miłość, uzdrawianie i duchowe nauczanie. Jest to liczba duchowych mistrzów.",
+    "details": {
+      "personality": "Jesteś głęboko współczująca, kochająca i mądra. Twoja zdolność do bezwarunkowej miłości i służby innym czyni z Ciebie naturalnego uzdrowiciela i nauczyciela. Inspirujesz innych do podnoszenia swojej świadomości i życia z serca.",
+      "health": "Twoja wrażliwość i tendencja do poświęcania się dla innych mogą wpływać na Twoje zdrowie. Praktyki samo-miłości, uziemienia i ochrony energetycznej są niezbędne dla Twojego dobrostanu.",
+      "career": "Najlepiej sprawdzasz się w rolach związanych z uzdrawianiem, nauczaniem i inspirowaniem innych. Medycyna holistyczna, duchowe przewodnictwo, sztuka uzdrawiająca czy każda forma pozytywnej transformacji wykorzystają Twoje naturalne talenty.",
+      "love": "W relacjach jesteś bezwarunkowa i wspierająca. Potrzebujesz partnera, który rozumie Twoją duchową misję i podziela Twoje oddanie dla dobra ludzkości. Związek oparty na wzajemnym duchowym wzroście i służbie będzie dla Ciebie najszczęśliwszy."
+    }
+  }
+]

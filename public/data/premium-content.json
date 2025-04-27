@@ -1,0 +1,336 @@
+{
+  "affirmations": [
+    {
+      "category": "self-love",
+      "items": [
+        "Jestem doskonała taka, jaka jestem, ze wszystkimi moimi zaletami i niedoskonałościami.",
+        "Z każdym dniem odkrywam w sobie nowe powody do kochania siebie.",
+        "Moje ciało jest świątynią, którą szanuję i uwielbiam.",
+        "Akceptuję siebie bezwarunkowo, bez względu na zewnętrzne opinie.",
+        "Jestem wystarczająca. Nie muszę niczego robić, aby zasłużyć na miłość.",
+        "Pozwalam sobie na popełnianie błędów i wyciąganie z nich nauki.",
+        "Kocham każdą część siebie, nawet te, które dopiero uczę się akceptować.",
+        "Dbanie o siebie jest moim priorytetem i nie czuję się z tym winna.",
+        "Moje granice są ważne i godne szacunku.",
+        "Z każdym oddechem napełniam się jeszcze większą miłością do siebie."
+      ]
+    },
+    {
+      "category": "confidence",
+      "items": [
+        "Staję w swojej pełnej mocy, bez przepraszania za swoją siłę.",
+        "Mam odwagę być sobą w każdej sytuacji.",
+        "Mój głos jest ważny i zasługuje na to, by być usłyszany.",
+        "Podejmuję decyzje z pełną pewnością siebie i zaufaniem.",
+        "Z każdym wyzwaniem rośnie moja wewnętrzna siła.",
+        "Jestem pewna swoich umiejętności i talentów.",
+        "Mam odwagę mówić 'nie' i stawiać zdrowe granice.",
+        "Moje myśli i opinie są wartościowe i zasługują na szacunek.",
+        "Działam z pewnością siebie, nawet gdy czuję strach.",
+        "Promieniuję pewnością siebie, która przyciąga szacunek innych."
+      ]
+    },
+    {
+      "category": "wealth",
+      "items": [
+        "Jestem magnesem na pieniądze, przyciągam je do siebie z łatwością i radością.",
+        "Moje dochody rosną każdego dnia, niezależnie od zewnętrznych okoliczności.",
+        "Bogactwo płynie do mnie wieloma kanałami, często w nieoczekiwany sposób.",
+        "Zasługuję na obfitość finansową i otwieram się na jej przyjęcie.",
+        "Pieniądze są energią, która swobodnie przepływa przez moje życie.",
+        "Moje portfele, konta i kieszenie zawsze są pełne pieniędzy.",
+        "Z każdą zapłaconą fakturą, więcej pieniędzy wraca do mnie zwielokrotnione.",
+        "Jestem finansowo wolna i niezależna.",
+        "Moja wartość finansowa rośnie z każdym dniem.",
+        "Mam nieskończony potencjał do generowania bogactwa."
+      ]
+    },
+    {
+      "category": "business",
+      "items": [
+        "Mój biznes przyciąga idealnych klientów, którzy doceniają moją wartość.",
+        "Podejmuję mądre decyzje biznesowe, które zwiększają moje przychody.",
+        "Moja oferta jest unikalna i niezbędna dla moich klientów.",
+        "Z łatwością tworzę nowe, lukratywne źródła dochodu.",
+        "Mój biznes rozwija się harmonijnie, dostarczając wartość i generując obfitość.",
+        "Jestem wizjonerką w swojej branży, wyprzedzam trendy i wyznaczam standardy.",
+        "Współpracuję tylko z ludźmi, którzy podzielają moje wartości i wspierają moją wizję.",
+        "Moje produkty i usługi zmieniają życie moich klientów na lepsze.",
+        "Z łatwością buduję zespół wspierający rozwój mojego biznesu.",
+        "Mój biznes jest kanałem, przez który przepływa obfitość do świata."
+      ]
+    },
+    {
+      "category": "mindset",
+      "items": [
+        "Mój umysł jest zaprogramowany na sukces i obfitość.",
+        "Widzę możliwości tam, gdzie inni widzą przeszkody.",
+        "Każde wyzwanie to szansa na rozwój i transformację.",
+        "Moje myśli kreują moją rzeczywistość, więc wybieram myśli pełne obfitości.",
+        "Jestem odpowiedzialna za swoje myśli i świadomie wybieram te, które mnie wzmacniają.",
+        "Mój umysł jest potężnym narzędziem manifestacji moich pragnień.",
+        "Z każdym dniem moje przekonania o bogactwie stają się silniejsze.",
+        "Uwalniam wszelkie ograniczające przekonania na temat pieniędzy i sukcesu.",
+        "Mój umysł jest otwarty na nowe możliwości i rozwiązania.",
+        "Myślę jak bilionerka, więc przyciągam bogactwo bilionerki."
+      ]
+    }
+  ],
+  "rituals": [
+    {
+      "title": "Poranny Rytuał Obfitości",
+      "description": "Ten prosty, ale potężny rytuał pomoże Ci rozpocząć dzień w stanie głębokiego połączenia z energią obfitości i bogactwa.",
+      "category": "wealth",
+      "steps": [
+        "Zaraz po przebudzeniu, zostań przez chwilę w łóżku z zamkniętymi oczami. Weź 3 głębokie oddechy.",
+        "Połóż dłonie na sercu i podziękuj za 3 rzeczy w swoim życiu, które już przynoszą Ci obfitość.",
+        "Wizualizuj przez 2 minuty, jak Twój dzień przebiega idealnie, pełen obfitości i sukcesów.",
+        "Wypowiedz na głos 3 wybrane afirmacje obfitości z naszej listy.",
+        "Wykonaj 5-minutową medytację obfitości (dostępna w sekcji medytacji).",
+        "Zapisz w dzienniku obfitości 3 działania, które podejmiesz dziś, aby przyciągnąć więcej bogactwa."
+      ],
+      "frequency": "Codzienny",
+      "duration": "15-20 minut"
+    },
+    {
+      "title": "Rytuał Manifestacji Nowego Miesiąca",
+      "description": "Ten rytuał najlepiej wykonywać przy nowiu księżyca, aby wykorzystać naturalne energie wspierające nowe początki i manifestację.",
+      "category": "mindset",
+      "steps": [
+        "Przygotuj spokojne miejsce, zapal świecę i utwórz intencję na nowy miesiąc.",
+        "Na kartce papieru napisz, co chcesz przyciągnąć do swojego życia w nadchodzącym miesiącu (bądź bardzo konkretna).",
+        "Poniżej napisz, jaką osobą musisz się stać, aby to przyciągnąć (jakie cechy, nawyki, przekonania musisz rozwinąć).",
+        "Wykonaj 10-minutową medytację manifestacji, wizualizując, że Twoje pragnienia już się spełniły.",
+        "Zakończ rytuał afirmacją: \"Jestem otwarta na otrzymywanie wszystkiego, co najlepsze. To lub coś lepszego przychodzi do mnie z łatwością i radością.\"",
+        "Schowaj kartkę w specjalnym miejscu i przeglądaj ją codziennie przez miesiąc."
+      ],
+      "frequency": "Raz w miesiącu (przy nowiu)",
+      "duration": "30-40 minut"
+    },
+    {
+      "title": "Rytuał Uwalniania Blokad Finansowych",
+      "description": "Ten rytuał pomoże Ci zidentyfikować i uwolnić podświadome blokady, które mogą ograniczać Twój przepływ finansowy.",
+      "category": "wealth",
+      "steps": [
+        "Przygotuj spokojne miejsce, zapal świecę i utwórz intencję uwolnienia blokad finansowych.",
+        "Na kartce papieru zapisz wszystkie negatywne przekonania o pieniądzach, które możesz mieć (np. \"Pieniądze są źródłem zła\", \"Bogaci ludzie są chciwi\").",
+        "Obok każdego negatywnego przekonania zapisz nowe, wspierające przekonanie (np. \"Pieniądze są energią, która może służyć dobru\", \"Jako osoba zamożna mogę pomagać innym\").",
+        "Wykonaj medytację uwalniania blokad finansowych (dostępna w sekcji medytacji).",
+        "Symbolicznie spal lub podrzyj kartkę z negatywnymi przekonaniami, mówiąc: \"Uwalniam wszystkie ograniczające przekonania o pieniądzach. Jestem wolna.\"",
+        "Zapisz nowe, wspierające przekonania w dzienniku obfitości i czytaj je codziennie przez 21 dni."
+      ],
+      "frequency": "Raz na kwartał lub w razie potrzeby",
+      "duration": "45-60 minut"
+    },
+    {
+      "title": "Wieczorny Rytuał Wdzięczności i Manifestacji",
+      "description": "Ten rytuał pomoże Ci zakończyć dzień w stanie głębokiej wdzięczności i przygotować Twoją podświadomość na przyjęcie obfitości podczas snu.",
+      "category": "mindset",
+      "steps": [
+        "Przed snem znajdź spokojne miejsce, zapal świecę lub kadzidło.",
+        "W dzienniku zapisz 5 rzeczy, za które jesteś wdzięczna dzisiaj (bądź bardzo konkretna).",
+        "Zapisz 3 małe lub duże finansowe błogosławieństwa, które otrzymałaś dzisiaj (nawet drobne znalezisko czy oszczędność).",
+        "Zapisz 3 kroki, które podjęłaś dziś w kierunku swoich celów i marzeń.",
+        "Wykonaj krótką medytację wdzięczności (dostępna w sekcji medytacji).",
+        "Zakończ afirmacją: \"Podczas gdy śpię, moja podświadomość przyciąga do mnie obfitość, bogactwo i spełnienie.\""
+      ],
+      "frequency": "Codzienny",
+      "duration": "15-20 minut"
+    },
+    {
+      "title": "Rytuał Świętowania Finansowych Sukcesów",
+      "description": "Ten rytuał pomoże Ci docenić i wzmocnić energię finansowych sukcesów, które już osiągnęłaś, przyciągając w ten sposób więcej obfitości.",
+      "category": "wealth",
+      "steps": [
+        "Wybierz moment, kiedy osiągnęłaś finansowy sukces (duży lub mały).",
+        "Przygotuj miejsce celebracji - może to być specjalna kolacja, kąpiel, czy czas tylko dla siebie.",
+        "Zapisz szczegółowo, co osiągnęłaś i jakie kroki doprowadziły Cię do tego sukcesu.",
+        "Poświęć czas na pełne docenienie siebie i swojej pracy - powiedz na głos, z czego jesteś dumna.",
+        "Wykonaj medytację obfitości, wizualizując, jak ten sukces mnoży się i przyciąga jeszcze więcej obfitości.",
+        "Zakończ afirmacją: \"Dziękuję za ten sukces. Jestem gotowa na jeszcze większe błogosławieństwa i obfitość.\""
+      ],
+      "frequency": "Po każdym finansowym sukcesie",
+      "duration": "Dowolna"
+    }
+  ],
+  "meditations": [
+    {
+      "title": "Medytacja Przyciągania Obfitości",
+      "description": "Ta medytacja pomoże Ci otworzyć się na energię obfitości i przyciągnąć więcej bogactwa do swojego życia.",
+      "category": "wealth",
+      "duration": "15 minut",
+      "audioUrl": "/meditations/abundance-meditation.mp3",
+      "transcriptExcerpt": "Usiądź wygodnie, zamknij oczy i weź kilka głębokich oddechów... Z każdym wdechem, pozwól swojemu ciału się rozluźnić... Z każdym wydechem, uwolnij wszelkie napięcie... Wyobraź sobie teraz, że jesteś otoczona złotym światłem obfitości..."
+    },
+    {
+      "title": "Medytacja Budowania Pewności Siebie",
+      "description": "Ta medytacja wzmocni Twoją wewnętrzną siłę i pewność siebie, pomagając Ci stanąć w swojej pełnej mocy.",
+      "category": "confidence",
+      "duration": "12 minut",
+      "audioUrl": "/meditations/confidence-meditation.mp3",
+      "transcriptExcerpt": "Usiądź wygodnie, zamknij oczy i skieruj swoją uwagę do wnętrza... Poczuj, jak z każdym oddechem wzrasta Twoja wewnętrzna siła... Wyobraź sobie, że w centrum Twojej klatki piersiowej znajduje się jasne, złote światło..."
+    },
+    {
+      "title": "Medytacja Uwalniania Blokad Finansowych",
+      "description": "Ta medytacja pomoże Ci zidentyfikować i uwolnić podświadome blokady, które mogą ograniczać Twój przepływ finansowy.",
+      "category": "wealth",
+      "duration": "20 minut",
+      "audioUrl": "/meditations/financial-blocks-meditation.mp3",
+      "transcriptExcerpt": "Zamknij oczy i weź kilka głębokich oddechów... Skieruj swoją uwagę do swojego ciała... Zapytaj siebie: gdzie w moim ciele przechowuję blokady związane z pieniędzmi?..."
+    },
+    {
+      "title": "Medytacja Miłości Własnej",
+      "description": "Ta medytacja pomoże Ci pogłębić relację ze sobą i wzmocnić bezwarunkową miłość do siebie.",
+      "category": "self-love",
+      "duration": "18 minut",
+      "audioUrl": "/meditations/self-love-meditation.mp3",
+      "transcriptExcerpt": "Usiądź wygodnie i pozwól sobie być w pełni obecną... Połóż dłoń na sercu i poczuj jego ciepło... Z każdym oddechem, wysyłaj miłość do swojego serca..."
+    },
+    {
+      "title": "Medytacja Manifestacji Biznesowej",
+      "description": "Ta medytacja pomoże Ci przyciągnąć idealne możliwości biznesowe i klientów, którzy docenią Twoją wartość.",
+      "category": "business",
+      "duration": "15 minut",
+      "audioUrl": "/meditations/business-manifestation.mp3",
+      "transcriptExcerpt": "Wyobraź sobie swój idealny biznes... Jak wygląda Twój dzień?... Kto są Twoi idealni klienci?... Jak się czujesz, prowadząc ten biznes?..."
+    }
+  ],
+  "numerologyAnalysis": {
+    "lifePathDetails": {
+      "1": {
+        "personality": "Jesteś naturalnym liderem, innowatorem i pionierem. Posiadasz silną wolę i determinację, które pomagają Ci osiągać cele mimo przeszkód. Twoja niezależność i oryginalność wyróżniają Cię z tłumu.",
+        "health": "Możesz mieć tendencję do przeciążania się pracą i ignorowania sygnałów ciała. Regularna aktywność fizyczna i sport pomogą Ci zrównoważyć intensywną energię umysłową.",
+        "career": "Najlepiej sprawdzasz się na stanowiskach kierowniczych lub jako przedsiębiorca. Twój wrodzony talent do przywództwa i innowacji przyniesie Ci sukces w biznesie, polityce lub jako independent contractor.",
+        "love": "W relacjach cenisz wolność i partnerstwo oparte na wzajemnym szacunku. Potrzebujesz partnera, który będzie wspierał Twoją niezależność i będzie równie ambitny jak Ty."
+      },
+      "2": {
+        "personality": "Jesteś dyplomatką, mediatorką i osobą intuicyjną. Twoja wrażliwość i empatia pozwalają Ci głęboko rozumieć innych ludzi. Cenisz harmonię i równowagę we wszystkich aspektach życia.",
+        "health": "Twoja wrażliwość może przejawiać się również na poziomie fizycznym. Praktyki łagodzące, jak joga, tai chi czy medytacja, mogą pomóc Ci utrzymać równowagę energetyczną.",
+        "career": "Najlepiej sprawdzasz się w zawodach wymagających współpracy, dyplomacji i intuicji. Doradztwo, mediacja, nauczanie, terapia czy praca w zespole będą dla Ciebie naturalne.",
+        "love": "W relacjach jesteś lojalna i oddana. Potrzebujesz głębokiego emocjonalnego połączenia i szczerej komunikacji. Harmonijne partnerstwo jest dla Ciebie ważniejsze niż indywidualne osiągnięcia."
+      },
+      "3": {
+        "personality": "Jesteś kreatywna, ekspresyjna i optymistyczna. Twoja naturalność i radość życia przyciągają innych ludzi. Masz dar słowa i potrafisz inspirować swoim entuzjazmem.",
+        "health": "Twoja energia jest zazwyczaj wysoka, ale możesz mieć tendencję do rozpraszania się. Kreatywna ekspresja jest dla Ciebie formą terapii, więc taniec, śpiew czy pisanie będą wspierać Twoje zdrowie.",
+        "career": "Najlepiej sprawdzasz się w zawodach wymagających kreatywności i ekspresji. Sztuka, pisarstwo, marketing, edukacja czy wystąpienia publiczne wykorzystają Twoje naturalne talenty.",
+        "love": "W relacjach wnosisz radość, spontaniczność i kreatywność. Potrzebujesz przestrzeni do wyrażania siebie i partnera, który doceni Twoją żywiołowość. Komunikacja jest kluczem do Twojego szczęścia."
+      },
+      "4": {
+        "personality": "Jesteś praktyczna, zorganizowana i niezawodna. Twoja ciężka praca i determinacja budują solidne fundamenty dla wszystkiego, co robisz. Cenisz porządek, stabilność i tradycję.",
+        "health": "Twoja silna etyka pracy może prowadzić do przemęczenia. Regularne przerwy i budowanie rutyny dbania o ciało są dla Ciebie kluczowe. Naturalne środowisko działa na Ciebie kojąco.",
+        "career": "Najlepiej sprawdzasz się w strukturalnych rolach wymagających dokładności i odpowiedzialności. Finanse, zarządzanie, inżynieria, architektura czy nauki ścisłe pozwolą Ci wykorzystać naturalne talenty.",
+        "love": "W relacjach jesteś lojalna i oddana. Szukasz stabilnego, długoterminowego partnerstwa opartego na wzajemnym zaufaniu i wspólnych wartościach. Potrzebujesz partnera równie odpowiedzialnego jak Ty."
+      },
+      "5": {
+        "personality": "Jesteś wszechstronna, adaptacyjna i pełna życia. Twoja naturalna ciekawość i pragnienie wolności prowadzą Cię do różnorodnych doświadczeń. Cenisz przygodę, zmiany i stymulację intelektualną.",
+        "health": "Potrzebujesz różnorodności w aktywności fizycznej i diecie. Twoje zdrowie kwitnie, gdy możesz eksplorować różne podejścia, od sportów ekstremalnych po taniec czy turystykę.",
+        "career": "Najlepiej sprawdzasz się w rolach oferujących różnorodność i wolność. Dziennikarstwo, podróże, handel, marketing czy praca w zmiennym środowisku wykorzystają Twoją adaptacyjność.",
+        "love": "W relacjach cenisz wolność i stymulację intelektualną. Potrzebujesz partnera, który będzie dzielił Twoją pasję do przygód i akceptował Twoją niezależność. Rutyna jest Twoim największym wyzwaniem."
+      },
+      "6": {
+        "personality": "Jesteś opiekuńcza, odpowiedzialna i zrównoważona. Twoja naturalna troska o innych i poczucie piękna czynią Cię doskonałą mentorką i przyjaciółką. Cenisz harmonię w domu i relacjach.",
+        "health": "Najlepiej dbasz o siebie, gdy dbasz też o innych. Zrównoważona dieta, umiarkowane ćwiczenia i dbanie o swoje otoczenie są dla Ciebie naturalne. Unikaj brania na siebie zbyt wielu obowiązków.",
+        "career": "Najlepiej sprawdzasz się w rolach opiekuńczych i doradczych. Nauczanie, terapia, doradztwo, projektowanie wnętrz, zarządzanie domem czy zawody medyczne wykorzystają Twoje naturalne talenty.",
+        "love": "W relacjach jesteś oddana i troskliwa. Tworzysz ciepły, harmonijny dom i głębokie więzi. Potrzebujesz partnera, który doceni Twoją troskę i weźmie odpowiedzialność za wspólne życie."
+      },
+      "7": {
+        "personality": "Jesteś analityczna, refleksyjna i duchowa. Twoja naturalna mądrość i zdolność do głębokiej analizy pozwalają Ci dostrzegać to, co ukryte dla innych. Cenisz prawdę, wiedzę i wewnętrzny rozwój.",
+        "health": "Twoje zdrowie jest ściśle związane z równowagą umysłową i duchową. Medytacja, kontemplacja w naturze i intelektualna stymulacja są równie ważne dla Twojego dobrostanu jak aktywność fizyczna.",
+        "career": "Najlepiej sprawdzasz się w rolach wymagających analizy i specjalistycznej wiedzy. Nauka, badania, technologia, psychologia, duchowość czy praca wymagająca samodzielności wykorzystają Twoje talenty.",
+        "love": "W relacjach potrzebujesz głębokiego intelektualnego i duchowego połączenia. Preferujesz jakość nad ilością i możesz potrzebować więcej czasu dla siebie niż inni. Szukasz partnera o podobnej głębi."
+      },
+      "8": {
+        "personality": "Jesteś zdeterminowana, ambita i masz naturalny talent do biznesu. Twoja praktyczność i umiejętność organizacji pozwalają Ci osiągać materialne sukcesy. Cenisz efektywność, władzę i wyniki.",
+        "health": "Twoje zdrowie jest powiązane z równowagą między ambicją a samoopieką. Regularne, zdyscyplinowane ćwiczenia i odżywianie pomogą Ci utrzymać energię na wysokim poziomie, jakiego potrzebujesz.",
+        "career": "Najlepiej sprawdzasz się w biznesie, finansach i na stanowiskach kierowniczych. Przedsiębiorczość, zarządzanie, inwestycje, prawo czy każda rola wymagająca autorytetu wykorzystają Twoje talenty.",
+        "love": "W relacjach cenisz praktyczność i wzajemne wsparcie. Potrzebujesz partnera, który rozumie Twoje ambicje i ma własne cele. Stabilność finansowa i materialny sukces są dla Ciebie wyrazem miłości i zaangażowania."
+      },
+      "9": {
+        "personality": "Jesteś współczująca, altruistyczna i masz szerokie horyzonty. Twoja naturalna mądrość i humanitaryzm pozwalają Ci widzieć szerszą perspektywę. Cenisz sprawiedliwość, piękno i duchowe wartości.",
+        "health": "Twoje zdrowie jest powiązane z poczuciem celu i służby innym. Praktyki łączące ciało i ducha, jak joga, tai chi czy qi gong, oraz działania na rzecz innych wspierają Twój dobrostan.",
+        "career": "Najlepiej sprawdzasz się w rolach humanitarnych i kreatywnych. Praca społeczna, nauczanie, doradztwo, sztuka, medycyna naturalna czy działalność międzynarodowa wykorzystają Twoje talenty.",
+        "love": "W relacjach jesteś romantyczna i bezinteresowna. Potrzebujesz partnera, który podziela Twoje ideały i chęć czynienia świata lepszym. Szukasz głębokiego, duchowego połączenia i uniwersalnej miłości."
+      },
+      "11": {
+        "personality": "Jesteś intuicyjna, inspirująca i masz wysoką wrażliwość duchową. Jako posiadaczka liczby mistrzowskiej, masz zdolność do łączenia świata materialnego z duchowym. Cenisz głębokie zrozumienie i oświecenie.",
+        "health": "Twoja wrażliwość wymaga specjalnej troski o równowagę energetyczną. Praktyki duchowe, medytacja i przebywanie w harmonijnym otoczeniu są kluczowe dla Twojego zdrowia fizycznego i psychicznego.",
+        "career": "Najlepiej sprawdzasz się w rolach związanych z duchowością, inspiracją i transformacją. Nauczanie duchowe, psychologia, sztuka, muzyka, doradztwo czy uzdrawianie wykorzystają Twoje unikalne dary.",
+        "love": "W relacjach szukasz głębokiego duchowego połączenia. Potrzebujesz partnera, który rozumie Twoją wrażliwość i duchową naturę. Twoja relacja ma potencjał wykraczający poza zwykłe partnerstwo, stając się kanałem transformacji."
+      },
+      "22": {
+        "personality": "Jesteś wizjonerką, posiadasz praktyczną mądrość i potencjał do realizacji wielkich projektów. Jako posiadaczka liczby mistrzowskiej 22, łączysz duchową mądrość 11 z praktycznością 4, co daje Ci wyjątkową moc manifestacji.",
+        "health": "Twoje zdrowie wymaga równowagi między wizją a działaniem. Praktyczna duchowość, regularne uziemianie energii i aktywność fizyczna pomagają Ci zharmonizować wysokie wibracje, których doświadczasz.",
+        "career": "Najlepiej sprawdzasz się w rolach łączących wizję z praktyczną realizacją. Architektura, inżynieria, rozwój organizacji, przywództwo transformacyjne czy wielkie projekty społeczne wykorzystają Twoje talenty.",
+        "love": "W relacjach szukasz partnera, który wspiera Twoją misję i rozumie Twoją dwoistą naturę - praktyczną i wizjonerską. Potrzebujesz związku, który jest platformą do realizacji większego dobra w świecie."
+      },
+      "33": {
+        "personality": "Jesteś nauczycielką duchową, posiadasz niezwykłe współczucie i zdolność do bezwarunkowej miłości. Jako posiadaczka najwyższej liczby mistrzowskiej, łączysz mądrość 11 i praktyczność 22 z głębokim oddaniem służbie.",
+        "health": "Twoje zdrowie jest ściśle związane z równowagą dawania i otrzymywania. Praktyki samowspółczucia, granice i świadome przyjmowanie są równie ważne jak Twoje naturalne dawanie i służba innym.",
+        "career": "Najlepiej sprawdzasz się w rolach związanych z duchowym nauczaniem, uzdrawianiem i transformacją świata. Mentoring, coaching, nauczanie duchowe, pisarstwo inspiracyjne czy projekty humanitarne wykorzystają Twoje dary.",
+        "love": "W relacjach jesteś zdolna do niezwykłej głębi i bezwarunkowej miłości. Potrzebujesz partnera, który podziela Twoje oddanie służbie i rozumie Twoją uniwersalną misję. Twoja relacja może stać się katalizatorem transformacji dla wielu."
+      }
+    },
+    "nameDetails": {
+      "1": {
+        "personality": "Twoje imię nadaje Ci cechy pioniera i przywódcy. Jesteś niezależna, oryginalna i pełna inicjatywy. Masz naturalną zdolność do torowania nowych ścieżek i inspirowania innych.",
+        "expression": "Wyrażasz się w bezpośredni, czasem autorytarny sposób. Twoja komunikacja jest jasna, zwięzła i zorientowana na działanie. Lubisz przejmować inicjatywę w rozmowach.",
+        "influence": "Wpływasz na innych poprzez swoją pewność siebie i zdecydowanie. Inspirujesz do działania i podejmowania ryzyka. Twoja obecność motywuje innych do wyjścia ze strefy komfortu."
+      },
+      "2": {
+        "personality": "Twoje imię nadaje Ci cechy dyplomatki i mediatorki. Jesteś wrażliwa, intuicyjna i współpracująca. Masz naturalną zdolność do łączenia ludzi i tworzenia harmonii.",
+        "expression": "Wyrażasz się w łagodny, taktowny sposób. Twoja komunikacja jest pełna empatii i zrozumienia. Słuchasz uważnie i potrafisz dostrzec niuanse w wypowiedziach innych.",
+        "influence": "Wpływasz na innych poprzez swoją łagodność i umiejętność budowania konsensusu. Twoja obecność uspokaja napięcia i tworzy poczucie bezpieczeństwa emocjonalnego."
+      },
+      "3": {
+        "personality": "Twoje imię nadaje Ci cechy artystki i osoby towarzyskiej. Jesteś kreatywna, ekspresyjna i optymistyczna. Masz naturalną zdolność do inspirowania i rozweselania innych.",
+        "expression": "Wyrażasz się w kreatywny, entuzjastyczny sposób. Twoja komunikacja jest pełna życia, humoru i inspiracji. Potrafisz opowiadać fascynujące historie i przyciągać uwagę.",
+        "influence": "Wpływasz na innych poprzez swoją radość życia i kreatywność. Inspirujesz do wyrażania siebie i dostrzegania piękna. Twoja obecność rozjaśnia atmosferę i podnosi energię."
+      },
+      "4": {
+        "personality": "Twoje imię nadaje Ci cechy budowniczej i osoby praktycznej. Jesteś niezawodna, zorganizowana i pracowita. Masz naturalną zdolność do tworzenia solidnych fundamentów i struktur.",
+        "expression": "Wyrażasz się w metodyczny, rzeczowy sposób. Twoja komunikacja jest jasna, praktyczna i oparta na faktach. Preferujesz konkrety zamiast abstrakcji.",
+        "influence": "Wpływasz na innych poprzez swoją niezawodność i konsekwencję. Dajesz poczucie stabilności i porządku. Twoja obecność wprowadza strukturę i poczucie bezpieczeństwa."
+      },
+      "5": {
+        "personality": "Twoje imię nadaje Ci cechy poszukiwaczki przygód i agentki zmian. Jesteś wszechstronna, adaptacyjna i pełna życia. Masz naturalną zdolność do wprowadzania zmian i doświadczania różnorodności.",
+        "expression": "Wyrażasz się w żywy, zmienny sposób. Twoja komunikacja jest fascynująca, pełna anegdot i niekonwencjonalnych pomysłów. Potrafisz dostosować swój styl do różnych audytoriów.",
+        "influence": "Wpływasz na innych poprzez swoją energię i entuzjazm dla życia. Inspirujesz do poszukiwania nowych doświadczeń i wychodzenia poza schematy. Twoja obecność przynosi powiew świeżości i ekscytacji."
+      },
+      "6": {
+        "personality": "Twoje imię nadaje Ci cechy opiekunki i strażniczki harmonii. Jesteś troskliwa, odpowiedzialna i sprawiedliwa. Masz naturalną zdolność do tworzenia piękna i równowagi wokół siebie.",
+        "expression": "Wyrażasz się w ciepły, troskliwy sposób. Twoja komunikacja jest pełna równowagi między szczerością a taktem. Masz dar doradzania i pocieszania.",
+        "influence": "Wpływasz na innych poprzez swoją troskę i poczucie odpowiedzialności. Tworzysz atmosferę ciepła i akceptacji. Twoja obecność zachęca do dbania o innych i szukania harmonii."
+      },
+      "7": {
+        "personality": "Twoje imię nadaje Ci cechy myślicielki i poszukiwaczki prawdy. Jesteś analityczna, refleksyjna i duchowa. Masz naturalną zdolność do głębokiego rozumienia i wnikliwości.",
+        "expression": "Wyrażasz się w przemyślany, głęboki sposób. Twoja komunikacja jest pełna mądrości i oryginalnych spostrzeżeń. Zadajesz istotne pytania i szukasz głębszego znaczenia.",
+        "influence": "Wpływasz na innych poprzez swoją mądrość i głębię. Inspirujesz do zadawania pytań i poszukiwania prawdy. Twoja obecność zachęca do refleksji i wewnętrznego spokoju."
+      },
+      "8": {
+        "personality": "Twoje imię nadaje Ci cechy wizjonerki i menedżerki. Jesteś zdeterminowana, ambitna i skuteczna. Masz naturalną zdolność do osiągania materialnego sukcesu i wywierania wpływu.",
+        "expression": "Wyrażasz się w autorytatywny, zdecydowany sposób. Twoja komunikacja jest zorientowana na cel i wyniki. Potrafisz przekonywać innych i negocjować z pozycji siły.",
+        "influence": "Wpływasz na innych poprzez swoją pewność siebie i zdolności organizacyjne. Inspirujesz do dążenia do sukcesu i podejmowania wyzwań. Twoja obecność wprowadza poczucie możliwości i obfitości."
+      },
+      "9": {
+        "personality": "Twoje imię nadaje Ci cechy humanistki i wizjonerki. Jesteś współczująca, wielkoduszna i wszechstronna. Masz naturalną zdolność do widzenia szerszego obrazu i służenia większemu dobru.",
+        "expression": "Wyrażasz się w inspirujący, uniwersalny sposób. Twoja komunikacja łączy mądrość z empatią. Potrafisz przemawiać do serc i umysłów ludzi z różnych środowisk.",
+        "influence": "Wpływasz na innych poprzez swoje współczucie i szerokość wizji. Inspirujesz do działania na rzecz lepszego świata i dostrzegania piękna w różnorodności. Twoja obecność przynosi poczucie jedności i wyższego celu."
+      },
+      "11": {
+        "personality": "Twoje imię nadaje Ci cechy intuicyjnego lidera i inspiratora. Jako posiadaczka liczby mistrzowskiej, łączysz intuicję z charyzmatycznym wpływem. Masz naturalną zdolność do inspirowania transformacji.",
+        "expression": "Wyrażasz się w inspirujący, pełen wglądu sposób. Twoja komunikacja ma wymiar duchowy i intuicyjny. Potrafisz poruszać głębokie struny w ludziach i przewidywać trendy.",
+        "influence": "Wpływasz na innych poprzez swoją duchową mądrość i charyzmę. Inspirujesz do przekraczania ograniczeń i dostrzegania większych możliwości. Twoja obecność podnosi wibracje i świadomość otoczenia."
+      },
+      "22": {
+        "personality": "Twoje imię nadaje Ci cechy mistrzyni manifestacji i praktycznej wizjonerki. Jako posiadaczka liczby mistrzowskiej, łączysz duchową mądrość z praktyczną skutecznością. Masz zdolność do realizacji wielkich wizji.",
+        "expression": "Wyrażasz się w praktyczny, a jednocześnie wizjonerski sposób. Twoja komunikacja łączy konkretne rozwiązania z szerszą perspektywą. Potrafisz przekładać wielkie idee na wykonalne plany.",
+        "influence": "Wpływasz na innych poprzez swoją zdolność do przekształcania wizji w rzeczywistość. Inspirujesz do podejmowania ambitnych projektów z praktycznym podejściem. Twoja obecność łączy ziemię z niebem, pragmatyzm z wizją."
+      },
+      "33": {
+        "personality": "Twoje imię nadaje Ci cechy mistrzyni duchowej i uzdrowicielki. Jako posiadaczka najwyższej liczby mistrzowskiej, masz wyjątkową zdolność do bezwarunkowej miłości i transformacji świata. Jesteś nauczycielką w najwyższym tego słowa znaczeniu.",
+        "expression": "Wyrażasz się w sposób pełen miłości, mądrości i praktycznej duchowości. Twoja komunikacja ma moc transformacji i uzdrawiania. Potrafisz docierać do serc i dusz, jednocześnie oferując praktyczne wsparcie.",
+        "influence": "Wpływasz na innych poprzez swoją bezwarunkową miłość i zdolność do widzenia boskiego potencjału w każdym. Twoja obecność jest katalizatorem głębokiej przemiany i uzdrawiania na wszystkich poziomach."
+      }
+    }
+  }
+}

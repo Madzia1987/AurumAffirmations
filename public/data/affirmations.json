@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "text": "Jestem magnesem na bogactwo i obfitość. Przyciągam do siebie wszystko, czego potrzebuję i pragnę.",
+    "category": "wealth",
+    "isPremium": false
+  },
+  {
+    "id": 2,
+    "text": "Każdego dnia, pod każdym względem, staję się coraz lepsza i bogatsza.",
+    "category": "wealth",
+    "isPremium": false
+  },
+  {
+    "id": 3,
+    "text": "Moje życie wypełnione jest obfitością. Pieniądze przychodzą do mnie łatwo i regularnie.",
+    "category": "wealth",
+    "isPremium": false
+  },
+  {
+    "id": 4,
+    "text": "Kocham siebie bezwarunkowo i akceptuję każdą część mojej istoty.",
+    "category": "self-love",
+    "isPremium": false
+  },
+  {
+    "id": 5,
+    "text": "Z każdym oddechem wypełniam się coraz większą pewnością siebie.",
+    "category": "confidence",
+    "isPremium": false
+  },
+  {
+    "id": 6,
+    "text": "Zasługuję na sukces, bogactwo i spełnienie wszystkich moich pragnień.",
+    "category": "wealth",
+    "isPremium": false
+  },
+  {
+    "id": 7,
+    "text": "Jestem potężną kreatorką swojego życia i przeznaczenia.",
+    "category": "confidence",
+    "isPremium": false
+  },
+  {
+    "id": 8,
+    "text": "Promieniuję pewnością siebie i przyciągam do siebie pozytywnych ludzi.",
+    "category": "confidence",
+    "isPremium": false
+  },
+  {
+    "id": 9,
+    "text": "Mój biznes rozwija się i przynosi mi satysfakcję oraz obfitość.",
+    "category": "business",
+    "isPremium": false
+  },
+  {
+    "id": 10,
+    "text": "Jestem wdzięczna za wszystkie pieniądze, które do mnie płyną.",
+    "category": "wealth",
+    "isPremium": false
+  },
+  {
+    "id": 11,
+    "text": "Moja wartość jest niezależna od opinii innych ludzi.",
+    "category": "self-love",
+    "isPremium": false
+  },
+  {
+    "id": 12,
+    "text": "Mój umysł jest skupiony na obfitości i bogactwie.",
+    "category": "mindset",
+    "isPremium": false
+  },
+  {
+    "id": 13,
+    "text": "Jestem godna wszystkiego, co najlepsze i życie mi to dostarcza.",
+    "category": "self-love",
+    "isPremium": false
+  },
+  {
+    "id": 14,
+    "text": "Z każdym dniem przyciągam do siebie coraz więcej pieniędzy i możliwości.",
+    "category": "wealth",
+    "isPremium": false
+  },
+  {
+    "id": 15,
+    "text": "Moje podświadomość jest zaprogramowana na sukces i obfitość.",
+    "category": "mindset",
+    "isPremium": true
+  },
+  {
+    "id": 16,
+    "text": "Mam potężną moc manifestowania wszystkiego, czego pragnę w moim życiu.",
+    "category": "mindset",
+    "isPremium": true
+  },
+  {
+    "id": 17,
+    "text": "Mój biznes przyciąga idealnych klientów, którzy doceniają moją wartość.",
+    "category": "business",
+    "isPremium": true
+  },
+  {
+    "id": 18,
+    "text": "Kiedy dbam o siebie i swoje potrzeby, mogę lepiej służyć innym.",
+    "category": "self-love",
+    "isPremium": true
+  },
+  {
+    "id": 19,
+    "text": "Moje ciało jest świątynią mojej duszy i traktuję je z miłością i szacunkiem.",
+    "category": "self-love",
+    "isPremium": true
+  },
+  {
+    "id": 20,
+    "text": "Jestem potężną manifestacją boskiej kobiecości.",
+    "category": "self-love",
+    "isPremium": true
+  },
+  {
+    "id": 21,
+    "text": "Jestem magnesem na wielkie możliwości i lukratywne kontrakty.",
+    "category": "business",
+    "isPremium": true
+  },
+  {
+    "id": 22,
+    "text": "Doświadczam coraz większego sukcesu z każdym projektem, którego się podejmuję.",
+    "category": "business",
+    "isPremium": true
+  },
+  {
+    "id": 23,
+    "text": "Moja pewność siebie jest niezachwiana, niezależnie od okoliczności.",
+    "category": "confidence",
+    "isPremium": true
+  },
+  {
+    "id": 24,
+    "text": "Pieniądze płyną do mnie z różnych źródeł, często w nieoczekiwany sposób.",
+    "category": "wealth",
+    "isPremium": true
+  },
+  {
+    "id": 25,
+    "text": "Każda komórka mojego ciała wibruje na częstotliwości bogactwa i obfitości.",
+    "category": "wealth",
+    "isPremium": true
+  },
+  {
+    "id": 26,
+    "text": "Myślę, działam i żyję jak milionerka, przyciągając tę rzeczywistość do siebie.",
+    "category": "mindset",
+    "isPremium": true
+  },
+  {
+    "id": 27,
+    "text": "Mój biznes jest kanałem, przez który przepływa obfitość do mojego życia.",
+    "category": "business",
+    "isPremium": true
+  },
+  {
+    "id": 28,
+    "text": "Jestem odważna i pewna siebie we wszystkich moich decyzjach finansowych.",
+    "category": "confidence",
+    "isPremium": true
+  },
+  {
+    "id": 29,
+    "text": "Każdy dzień jest nową szansą, by przyciągnąć do siebie więcej bogactwa.",
+    "category": "wealth",
+    "isPremium": true
+  },
+  {
+    "id": 30,
+    "text": "Moje myśli kreują moją rzeczywistość. Myślę jak bilionerka, więc żyję jak bilionerka.",
+    "category": "mindset",
+    "isPremium": true
+  }
+]

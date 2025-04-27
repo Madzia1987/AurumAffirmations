@@ -1,0 +1,158 @@
+[
+  {
+    "sign": "aries",
+    "date": "28 Października 2023",
+    "general": "Dzień pełen energii i optymizmu. Gwiazdy sprzyjają odważnym decyzjom i nowym przedsięwzięciom. Możesz odczuwać większą pewność siebie i chęć do działania.",
+    "love": "W relacjach miłosnych czeka Cię dzisiaj niespodzianka. Otwórz się na nowe możliwości i pozwól sobie na spontaniczność.",
+    "career": "Dobry moment na przedstawienie swoich pomysłów przełożonym. Twoja inicjatywa zostanie dostrzeżona i doceniona. Finanse mogą się poprawić dzięki nieoczekiwanej propozycji.",
+    "health": "Energia dnia sprzyja aktywnościom fizycznym. Zadbaj o ruch na świeżym powietrzu, to wzmocni Twoje siły witalne.",
+    "lucky": {
+      "numbers": ["3", "7", "12"],
+      "colors": ["czerwony", "złoty"],
+      "times": ["poranek", "późne popołudnie"]
+    }
+  },
+  {
+    "sign": "taurus",
+    "date": "28 Października 2023",
+    "general": "Dzień sprzyja stabilizacji i budowaniu trwałych podstaw. To dobry czas na planowanie długoterminowych inwestycji i zabezpieczanie swojej przyszłości.",
+    "love": "W relacjach partnerskich poczujesz potrzebę większej bliskości i bezpieczeństwa. Rozmowa o wspólnej przyszłości może przynieść wiele dobrego.",
+    "career": "Twoja wytrwałość zostanie nagrodzona. Możliwe uznanie ze strony współpracowników lub przełożonych. Finanse będą stabilne, z tendencją wzrostową.",
+    "health": "Zadbaj o harmonię między ciałem a duchem. Praktyki relaksacyjne, jak joga czy medytacja, przyniosą Ci ukojenie i równowagę.",
+    "lucky": {
+      "numbers": ["6", "15", "24"],
+      "colors": ["zielony", "brązowy"],
+      "times": ["południe", "wieczór"]
+    }
+  },
+  {
+    "sign": "gemini",
+    "date": "28 Października 2023",
+    "general": "Dzień pełen intelektualnej stymulacji i ciekawych rozmów. Twój umysł będzie wyjątkowo bystry, co pomoże Ci rozwiązać nawet skomplikowane problemy.",
+    "love": "Komunikacja będzie kluczem do harmonii w związku. Wyrażaj swoje myśli jasno, ale też słuchaj uważnie partnera. Singielki mogą spotkać kogoś interesującego podczas towarzyskiego wydarzenia.",
+    "career": "Twoje pomysły i zdolności komunikacyjne będą dzisiaj Twoim największym atutem. Wykorzystaj to w negocjacjach i prezentacjach. Możliwe korzystne zmiany w finansach.",
+    "health": "Umysł i ciało potrzebują równowagi. Zadbaj o aktywność intelektualną, ale nie zapominaj o ruchu fizycznym.",
+    "lucky": {
+      "numbers": ["5", "14", "23"],
+      "colors": ["żółty", "niebieski"],
+      "times": ["ranek", "późny wieczór"]
+    }
+  },
+  {
+    "sign": "cancer",
+    "date": "28 Października 2023",
+    "general": "Dzień sprzyja introspekcji i głębszemu połączeniu z własnymi emocjami. Intuicja będzie Twoim przewodnikiem w ważnych decyzjach.",
+    "love": "W sferze uczuć możesz odczuwać większą wrażliwość i potrzebę bliskości. To dobry moment na głębokie, szczere rozmowy z partnerem lub budowanie emocjonalnej więzi.",
+    "career": "Twoja intuicja w sprawach zawodowych będzie dzisiaj niezawodna. Zaufaj wewnętrznemu głosowi przy podejmowaniu decyzji finansowych. Możliwe niespodziewane źródło dochodu.",
+    "health": "Emocjonalne samopoczucie wpływa na Twoje zdrowie fizyczne. Dbaj o równowagę emocjonalną poprzez relaksację i kontakt z naturą, szczególnie wodą.",
+    "lucky": {
+      "numbers": ["2", "9", "18"],
+      "colors": ["srebrny", "biały"],
+      "times": ["wschód słońca", "zmierzch"]
+    }
+  },
+  {
+    "sign": "leo",
+    "date": "28 Października 2023",
+    "general": "Dzień pełen entuzjazmu i twórczej energii. Gwiazdy sprzyjają wyrażaniu siebie i podejmowaniu inicjatywy. Twoja naturalna charyzma będzie przyciągać innych.",
+    "love": "W sferze uczuć możesz błyszczeć i przyciągać adoratorów. Jeśli jesteś w związku, zaskocz partnera romantycznym gestem lub spontanicznym wyjściem.",
+    "career": "Twoje przywódcze umiejętności zostaną dostrzeżone. To dobry moment na prezentację swoich pomysłów i branie odpowiedzialności za projekty. Finanse mogą się poprawić dzięki kreatywnym przedsięwzięciom.",
+    "health": "Energia dnia sprzyja aktywnościom, które sprawiają Ci radość. Taniec, sport czy kreatywna ekspresja pomogą Ci utrzymać witalność.",
+    "lucky": {
+      "numbers": ["1", "10", "19"],
+      "colors": ["złoty", "pomarańczowy"],
+      "times": ["południe", "zachód słońca"]
+    }
+  },
+  {
+    "sign": "virgo",
+    "date": "28 Października 2023",
+    "general": "Dzień sprzyja porządkowaniu i dopracowywaniu szczegółów. Twoja analityczna natura pomoże Ci dostrzec to, co inni przeoczyli, i znaleźć praktyczne rozwiązania.",
+    "love": "W relacjach zwróć uwagę na małe gesty i szczegóły, które budują codzienną bliskość. Praktyczne wsparcie może być dziś najlepszym wyrazem uczuć.",
+    "career": "Twoja dokładność i pracowitość zostaną docenione. To dobry dzień na organizację przestrzeni pracy i dopracowywanie projektów. Finanse wymagają dokładnego planowania.",
+    "health": "Zadbaj o rutynę zdrowotną i regularne posiłki. Twoje ciało potrzebuje porządku i przewidywalności, aby funkcjonować optymalnie.",
+    "lucky": {
+      "numbers": ["4", "13", "22"],
+      "colors": ["granatowy", "beżowy"],
+      "times": ["wczesny poranek", "wczesny wieczór"]
+    }
+  },
+  {
+    "sign": "libra",
+    "date": "28 Października 2023",
+    "general": "Dzień sprzyja harmonii, pięknu i równowadze. Twój naturalny urok i dyplomacja pomogą Ci nawigować przez różne sytuacje społeczne z gracją.",
+    "love": "W sferze uczuć poszukujesz harmonii i partnerstwa. To dobry moment na głębokie rozmowy i budowanie wspólnych planów. Singielki mogą przyciągać adoratorów dzięki swojemu urokowi.",
+    "career": "Twoje umiejętności dyplomatyczne i poczucie estetyki będą dzisiaj wyjątkowo cenne. To dobry moment na negocjacje i współpracę. Finanse mogą wymagać bardziej zrównoważonego podejścia.",
+    "health": "Równowaga jest kluczem do Twojego dobrostanu. Zadbaj o harmonię między aktywnością a odpoczynkiem, pracą a przyjemnością.",
+    "lucky": {
+      "numbers": ["6", "15", "24"],
+      "colors": ["pastelowy róż", "błękit"],
+      "times": ["popołudnie", "wieczór"]
+    }
+  },
+  {
+    "sign": "scorpio",
+    "date": "28 Października 2023",
+    "general": "Dzień sprzyja głębokim przemianom i odkrywaniu ukrytych prawd. Twoja intensywność i przenikliwość pomogą Ci dostrzec to, co znajduje się pod powierzchnią.",
+    "love": "W sferze uczuć możesz odczuwać głębsze emocje i pragnienie autentycznego połączenia. To dobry moment na szczere rozmowy i intymność. Unikaj zazdrości i kontroli.",
+    "career": "Twoja determinacja i strategiczne myślenie będą dzisiaj Twoim atutem. To dobry moment na badania, analizy i planowanie transformacji. Finanse mogą się poprawić dzięki odkryciu ukrytych zasobów.",
+    "health": "Twoja energia potrzebuje świadomego kierowania. Praktyki transformacyjne, jak joga czy medytacja, pomogą Ci zharmonizować intensywne emocje.",
+    "lucky": {
+      "numbers": ["8", "17", "26"],
+      "colors": ["głęboka czerwień", "czerń"],
+      "times": ["północ", "świt"]
+    }
+  },
+  {
+    "sign": "sagittarius",
+    "date": "28 Października 2023",
+    "general": "Dzień sprzyja ekspansji, przygodzie i odkrywaniu nowych horyzontów. Twój optymizm i entuzjazm będą zaraźliwe, inspirując innych do podążania za Tobą.",
+    "love": "W sferze uczuć cenisz wolność i autentyczność. To dobry moment na dzielenie się swoimi marzeniami i filozofią życiową z partnerem. Singielki mogą spotkać kogoś podczas podróży lub nauki.",
+    "career": "Twoja wizja i entuzjazm będą dzisiaj szczególnie widoczne. To dobry moment na ekspansję, naukę i podejmowanie nowych wyzwań. Finanse mogą się poprawić dzięki międzynarodowym kontaktom lub edukacji.",
+    "health": "Twoje ciało potrzebuje przestrzeni i ruchu. Aktywności na świeżym powietrzu, jak wędrówki czy jazda na rowerze, pomogą Ci utrzymać energię na wysokim poziomie.",
+    "lucky": {
+      "numbers": ["3", "12", "21"],
+      "colors": ["purpurowy", "indygo"],
+      "times": ["wczesny poranek", "zachód słońca"]
+    }
+  },
+  {
+    "sign": "capricorn",
+    "date": "28 Października 2023",
+    "general": "Dzień sprzyja ambicji, dyscyplinie i budowaniu trwałych struktur. Twoja wytrwałość i praktyczne podejście pomogą Ci osiągnąć długoterminowe cele.",
+    "love": "W sferze uczuć cenisz stabilność i odpowiedzialność. To dobry moment na budowanie trwałych podstaw związku i planowanie wspólnej przyszłości.",
+    "career": "Twoja pracowość i ambicja zostaną dostrzeżone i docenione. To dobry moment na awans, planowanie kariery i budowanie profesjonalnego wizerunku. Finanse będą stabilne, z tendencją wzrostową dzięki konsekwentnym działaniom.",
+    "health": "Twoje ciało potrzebuje struktury i dyscypliny. Regularne ćwiczenia, zdrowa dieta i odpowiedni odpoczynek pomogą Ci utrzymać energię i witalność.",
+    "lucky": {
+      "numbers": ["4", "13", "22"],
+      "colors": ["brązowy", "ciemna zieleń"],
+      "times": ["świt", "zmierzch"]
+    }
+  },
+  {
+    "sign": "aquarius",
+    "date": "28 Października 2023",
+    "general": "Dzień sprzyja innowacjom, oryginalności i kontaktom społecznym. Twoje niekonwencjonalne pomysły i wizjonerskie podejście mogą inspirować innych do myślenia poza schematami.",
+    "love": "W sferze uczuć cenisz wolność i intelektualną stymulację. To dobry moment na dzielenie się swoimi wizjami i ideami z partnerem lub przyjaciółmi. Singielki mogą spotkać kogoś wyjątkowego w grupie o podobnych zainteresowaniach.",
+    "career": "Twoje innowacyjne pomysły i społeczne podejście będą dzisiaj szczególnie cenne. To dobry moment na współpracę, networking i projekty technologiczne. Finanse mogą się poprawić dzięki niekonwencjonalnym rozwiązaniom lub współpracy grupowej.",
+    "health": "Twoje ciało i umysł potrzebują stymulacji i wolności. Eksperymentuj z nowymi formami ruchu lub medytacji, które łączą ciało z umysłem w niekonwencjonalny sposób.",
+    "lucky": {
+      "numbers": ["7", "16", "25"],
+      "colors": ["elektryczny niebieski", "srebrny"],
+      "times": ["późny wieczór", "północ"]
+    }
+  },
+  {
+    "sign": "pisces",
+    "date": "28 Października 2023",
+    "general": "Dzień sprzyja intuicji, kreatywności i duchowemu połączeniu. Twoja wrażliwość i empatia pomogą Ci głęboko zrozumieć innych i siebie.",
+    "love": "W sferze uczuć jesteś romantyczna i empatyczna. To dobry moment na głębokie połączenie duchowe i emocjonalne z partnerem. Singielki mogą przyciągać adoratorów dzięki swojej tajemniczości i głębi.",
+    "career": "Twoja kreatywność i intuicja będą dzisiaj szczególnie silne. To dobry moment na artystyczne projekty, pracę pomagającą innym i duchowe poszukiwania. Finanse mogą wymagać większej uważności i granic.",
+    "health": "Twoje zdrowie jest silnie związane ze stanem emocjonalnym i duchowym. Zadbaj o granice energetyczne i praktykuj techniki uziemiające, jak chodzenie boso czy kontakt z naturą.",
+    "lucky": {
+      "numbers": ["3", "12", "21"],
+      "colors": ["morski", "lawendowy"],
+      "times": ["świt", "zmierzch"]
+    }
+  }
+]

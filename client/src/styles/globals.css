@@ -1,0 +1,89 @@
+/* Custom component styles here */
+
+.premium-card {
+  @apply rounded-lg shadow-lg overflow-hidden border border-gold-light hover:border-gold transition-colors duration-300;
+}
+
+.bg-gold {
+  background-color: #D4AF37;
+}
+
+.bg-gold-light {
+  background-color: #F7E7CE;
+}
+
+.bg-gold-dark {
+  background-color: #CFB53B;
+}
+
+.bg-burgundy {
+  background-color: #800020;
+}
+
+.bg-cream {
+  background-color: #FFFAF0;
+}
+
+.bg-champagne {
+  background-color: #F7E7CE;
+}
+
+.text-gold {
+  color: #D4AF37;
+}
+
+.text-gold-dark {
+  color: #CFB53B;
+}
+
+.text-burgundy {
+  color: #800020;
+}
+
+.text-cream {
+  color: #FFFAF0;
+}
+
+.border-gold {
+  border-color: #D4AF37;
+}
+
+.border-gold-light {
+  border-color: #F7E7CE;
+}
+
+.border-gold-dark {
+  border-color: #CFB53B;
+}
+
+.border-burgundy {
+  border-color: #800020;
+}
+
+.hover\:bg-gold:hover {
+  background-color: #D4AF37;
+}
+
+.hover\:bg-gold-dark:hover {
+  background-color: #CFB53B;
+}
+
+.hover\:bg-burgundy:hover {
+  background-color: #800020;
+}
+
+.hover\:text-gold:hover {
+  color: #D4AF37;
+}
+
+.hover\:text-burgundy:hover {
+  color: #800020;
+}
+
+.hover\:text-white:hover {
+  color: #FFFFFF;
+}
+
+.hover\:border-gold:hover {
+  border-color: #D4AF37;
+}
