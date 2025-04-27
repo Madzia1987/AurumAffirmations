@@ -98,14 +98,33 @@
   color: #2a1a05;
   font-weight: 600;
   border: none;
-  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3), inset 0 1px 3px rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.gold-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e2c05d 0%, #fae395 50%, #d4af37 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
 }
 
 .gold-btn:hover {
-  background: linear-gradient(135deg, #b8860b 0%, #f9d77e 50%, #b8860b 100%);
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.5), inset 0 1px 3px rgba(255, 255, 255, 0.7);
   transform: translateY(-1px);
+}
+
+.gold-btn:hover::before {
+  opacity: 1;
 }
 
 .burgundy-btn {
@@ -176,6 +195,64 @@
   color: transparent;
   text-shadow: 0px 2px 4px rgba(0,0,0,0.15);
   animation: shine-text 4s linear infinite;
+}
+
+/* Nowe gradienty złota inspirowane przesłanymi obrazami */
+.luxury-gold-gradient-1 {
+  background: linear-gradient(to right, #d7b740, #f9e789, #d7b740);
+  background-size: 200% 100%;
+}
+
+.luxury-gold-gradient-2 {
+  background: linear-gradient(to right, #bb9a30, #e0c94e, #f5e382, #e0c94e, #bb9a30);
+  background-size: 200% 100%;
+}
+
+.luxury-gold-gradient-3 {
+  background: linear-gradient(135deg, #cc9933 0%, #e6c059 25%, #f9e789 50%, #e6c059 75%, #cc9933 100%);
+  background-size: 200% 100%;
+}
+
+.luxury-gold-gradient-vertical {
+  background: linear-gradient(to bottom, #d7b740, #f9e789, #d7b740);
+  background-size: 100% 200%;
+}
+
+.luxury-gold-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-gold-shine::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+  transform: skewX(-25deg);
+  animation: luxury-shine 3s infinite;
+}
+
+@keyframes luxury-shine {
+  0% { left: -100%; }
+  20% { left: 100%; }
+  100% { left: 100%; }
+}
+
+.premium-gold-banner {
+  background: linear-gradient(to right, #bb9a30, #e0c94e, #f5e382, #e0c94e, #bb9a30);
+  background-size: 200% 100%;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: gold-shimmer 3s infinite linear;
+}
+
+@keyframes gold-shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes shine-text {

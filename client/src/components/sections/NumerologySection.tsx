@@ -91,36 +91,37 @@ const NumerologySection = ({ isPremium = false }) => {
   };
   
   return (
-    <section id="numerology" className="py-12 px-4 md:px-6 lg:px-8">
+    <section id="numerology" className="py-12 px-4 md:px-6 lg:px-8 luxury-gold-gradient-3">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="font-playfair text-3xl font-bold text-center mb-8">Numerologia</h2>
+        <h2 className="font-playfair text-4xl font-bold text-center mb-8 text-[#3a2f0b] drop-shadow-sm">Numerologia</h2>
         <div className="text-center mb-10">
-          <p className="max-w-2xl mx-auto">Odkryj znaczenie liczb w swoim życiu i jak wpływają na Twoją codzienność.</p>
+          <p className="max-w-2xl mx-auto text-[#3a2f0b] font-medium">Odkryj znaczenie liczb w swoim życiu i jak wpływają na Twoją codzienność.</p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden border border-[#d4af37]/30 relative">
+          <div className="absolute top-0 left-0 right-0 h-1 luxury-gold-gradient-1"></div>
           <div className="p-6 md:p-8">
             {/* Daily Number */}
-            <div className="text-center mb-10">
-              <h3 className="font-playfair text-xl mb-3">Liczba Dnia</h3>
+            <div className="text-center mb-12">
+              <h3 className="font-playfair text-2xl mb-4 text-[#bb9a30]">Liczba Dnia</h3>
               
               {isLoading ? (
                 <div className="flex justify-center items-center py-6">
-                  <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-gold"></div>
+                  <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-[#d4af37]"></div>
                 </div>
               ) : (
                 <>
-                  <div className="inline-block rounded-full bg-gold w-16 h-16 flex items-center justify-center mb-4">
-                    <span className="text-white text-2xl font-bold">{dailyNumber}</span>
+                  <div className="inline-block rounded-full premium-gold-banner w-20 h-20 flex items-center justify-center mb-5 shadow-lg">
+                    <span className="text-white text-3xl font-bold">{dailyNumber}</span>
                   </div>
-                  <p className="max-w-md mx-auto">{dailyMeaning}</p>
+                  <p className="max-w-md mx-auto text-gray-800">{dailyMeaning}</p>
                 </>
               )}
             </div>
             
             {/* Name Numerology Calculator */}
-            <div className="mb-10">
-              <h3 className="font-playfair text-xl mb-4 text-center">Odkryj Numerologię Swojego Imienia</h3>
+            <div className="mb-12 p-6 bg-[#fdfbf5] rounded-lg shadow-sm border border-[#d4af37]/10 luxury-gold-shine">
+              <h3 className="font-playfair text-2xl mb-6 text-center text-[#bb9a30]">Odkryj Numerologię Swojego Imienia</h3>
               
               <div className="max-w-md mx-auto">
                 <div className="mb-4">
@@ -128,7 +129,7 @@ const NumerologySection = ({ isPremium = false }) => {
                   <input 
                     type="text" 
                     id="nameInput" 
-                    className="w-full px-4 py-3 border-2 border-gold-light focus:border-gold focus:ring-0 rounded-md" 
+                    className="w-full px-4 py-3 border-2 border-[#d4af37] focus:border-[#bb9a30] focus:ring-[#e6c059] rounded-md shadow-inner bg-white/90" 
                     placeholder="Np. Anna"
                     value={nameInput}
                     onChange={handleNameInputChange}
@@ -136,13 +137,13 @@ const NumerologySection = ({ isPremium = false }) => {
                 </div>
                 
                 <button 
-                  className="w-full bg-gold hover:bg-gold-dark text-white font-semibold py-3 px-4 rounded-md transition duration-300"
+                  className="w-full gold-btn py-3 px-4 rounded-md text-[#3a2f0b] font-semibold"
                   onClick={calculateName}
                   disabled={nameLoading}
                 >
                   {nameLoading ? (
                     <span className="flex items-center justify-center">
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-[#3a2f0b]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
@@ -154,16 +155,19 @@ const NumerologySection = ({ isPremium = false }) => {
               
               {/* Name Results */}
               {nameResults && (
-                <div className="mt-6 p-5 border border-gold-light rounded-lg">
-                  <div className="text-center mb-4">
-                    <h4 className="font-playfair text-lg mb-2">Numerologia imienia: <span className="font-bold">{nameNumber}</span></h4>
-                    <p className="text-sm text-gray-500">{nameInput}</p>
+                <div className="mt-8 p-6 border border-[#d4af37]/20 rounded-lg bg-gradient-to-r from-[#f7f2e2] to-[#f9f6eb] shadow-md">
+                  <div className="text-center mb-5">
+                    <div className="inline-block premium-gold-banner rounded-full py-2 px-6 shadow-md mb-3">
+                      <span className="text-white font-bold text-xl">{nameNumber}</span>
+                    </div>
+                    <h4 className="font-playfair text-xl mb-1 text-[#3a2f0b]">Numerologia imienia</h4>
+                    <p className="text-sm text-gray-600 italic">{nameInput}</p>
                   </div>
                   
                   {/* Free Preview Content */}
                   <div className="mb-6">
-                    <h4 className="text-gold font-medium mb-2">Podstawowe znaczenie:</h4>
-                    <p>{nameBasicMeaning}</p>
+                    <h4 className="text-[#bb9a30] font-medium mb-2 text-lg">Podstawowe znaczenie:</h4>
+                    <p className="text-gray-800">{nameBasicMeaning}</p>
                   </div>
                   
                   {/* Premium Content */}
@@ -180,8 +184,8 @@ const NumerologySection = ({ isPremium = false }) => {
             </div>
             
             {/* Life Path Calculator */}
-            <div>
-              <h3 className="font-playfair text-xl mb-4 text-center">Oblicz Swoją Ścieżkę Życia</h3>
+            <div className="p-6 bg-[#fdfbf5] rounded-lg shadow-sm border border-[#d4af37]/10 luxury-gold-shine">
+              <h3 className="font-playfair text-2xl mb-6 text-center text-[#bb9a30]">Oblicz Swoją Ścieżkę Życia</h3>
               
               <div className="max-w-md mx-auto">
                 <div className="mb-4">
@@ -189,20 +193,20 @@ const NumerologySection = ({ isPremium = false }) => {
                   <input 
                     type="date" 
                     id="birthdate" 
-                    className="w-full px-4 py-3 border-2 border-gold-light focus:border-gold focus:ring-0 rounded-md"
+                    className="w-full px-4 py-3 border-2 border-[#d4af37] focus:border-[#bb9a30] focus:ring-[#e6c059] rounded-md shadow-inner bg-white/90"
                     value={birthdate}
                     onChange={handleBirthdateChange}
                   />
                 </div>
                 
                 <button 
-                  className="w-full bg-gold hover:bg-gold-dark text-white font-semibold py-3 px-4 rounded-md transition duration-300"
+                  className="w-full gold-btn py-3 px-4 rounded-md text-[#3a2f0b] font-semibold" 
                   onClick={calculateLifePath}
                   disabled={lifePathLoading}
                 >
                   {lifePathLoading ? (
                     <span className="flex items-center justify-center">
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-[#3a2f0b]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
@@ -214,16 +218,19 @@ const NumerologySection = ({ isPremium = false }) => {
               
               {/* Life Path Results */}
               {lifePathResults && (
-                <div className="mt-6 p-5 border border-gold-light rounded-lg">
-                  <div className="text-center mb-4">
-                    <h4 className="font-playfair text-lg mb-2">Twoja ścieżka życia: <span className="font-bold">{lifePathNumber}</span></h4>
-                    <p className="text-sm text-gray-500">{birthdate && formatShortDate(new Date(birthdate))}</p>
+                <div className="mt-8 p-6 border border-[#d4af37]/20 rounded-lg bg-gradient-to-r from-[#f7f2e2] to-[#f9f6eb] shadow-md">
+                  <div className="text-center mb-5">
+                    <div className="inline-block premium-gold-banner rounded-full py-2 px-6 shadow-md mb-3">
+                      <span className="text-white font-bold text-xl">{lifePathNumber}</span>
+                    </div>
+                    <h4 className="font-playfair text-xl mb-1 text-[#3a2f0b]">Twoja ścieżka życia</h4>
+                    <p className="text-sm text-gray-600 italic">{birthdate && formatShortDate(new Date(birthdate))}</p>
                   </div>
                   
                   {/* Free Preview Content */}
                   <div className="mb-6">
-                    <h4 className="text-gold font-medium mb-2">Podstawowe znaczenie:</h4>
-                    <p>{lifePathBasicMeaning}</p>
+                    <h4 className="text-[#bb9a30] font-medium mb-2 text-lg">Podstawowe znaczenie:</h4>
+                    <p className="text-gray-800">{lifePathBasicMeaning}</p>
                   </div>
                   
                   {/* Premium Content */}
@@ -237,6 +244,13 @@ const NumerologySection = ({ isPremium = false }) => {
                   />
                 </div>
               )}
+            </div>
+
+            {/* Dekoracyjne elementy */}
+            <div className="absolute bottom-3 right-3 opacity-10">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-24 w-24 text-[#d4af37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.5} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+              </svg>
             </div>
           </div>
         </div>
