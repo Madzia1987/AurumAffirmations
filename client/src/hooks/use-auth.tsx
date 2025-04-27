@@ -57,9 +57,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Login mutation
   const loginMutation = useMutation({
     mutationFn: async (credentials: LoginData) => {
-      const res = await apiRequest("POST", "/api/auth/login", credentials);
-      const data = await res.json();
-      return data.user;
+      try {
+        const res = await apiRequest("POST", "/api/auth/login", credentials);
+        // Klonujemy odpowiedź, by nie zużyć body
+        const clonedRes = res.clone();
+        const data = await clonedRes.json();
+        return data.user;
+      } catch (error) {
+        console.error("Login error:", error);
+        throw error;
+      }
     },
     onSuccess: (user: User) => {
       queryClient.setQueryData(["/api/auth/user"], user);
@@ -76,9 +83,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // Register mutation
   const registerMutation = useMutation({
     mutationFn: async (userData: RegisterData) => {
-      const res = await apiRequest("POST", "/api/auth/signup", userData);
-      const data = await res.json();
-      return data.user;
+      try {
+        const res = await apiRequest("POST", "/api/auth/signup", userData);
+        // Klonujemy odpowiedź, by nie zużyć body
+        const clonedRes = res.clone();
+        const data = await clonedRes.json();
+        return data.user;
+      } catch (error) {
+        console.error("Registration error:", error);
+        throw error;
+      }
     },
     onSuccess: (user: User) => {
       queryClient.setQueryData(["/api/auth/user"], user);

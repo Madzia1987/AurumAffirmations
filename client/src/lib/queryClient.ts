@@ -1,18 +1,28 @@
 import { QueryClient, QueryFunction } from "@tanstack/react-query";
 
-async function throwIfResNotOk(res: Response) {
+async function throwIfResNotOk(res: Response): Promise<Response | undefined> {
   if (!res.ok) {
     try {
-      const data = await res.json();
+      // Klonujemy odpowiedź, aby nie zużyć oryginalnego body
+      const clonedRes = res.clone();
+      const data = await clonedRes.json();
       if (data && data.message) {
         throw new Error(data.message);
       }
     } catch (e) {
       // Jeśli JSON parsing się nie powiedzie, użyj tekstu
-      const text = await res.text() || res.statusText;
-      throw new Error(`${res.status}: ${text}`);
+      try {
+        const clonedRes = res.clone();
+        const text = await clonedRes.text() || res.statusText;
+        throw new Error(`${res.status}: ${text}`);
+      } catch (textError) {
+        throw new Error(`${res.status}: ${res.statusText}`);
+      }
     }
+    // Jeśli nie złapaliśmy wyjątku do tej pory, rzuć ogólny błąd
+    throw new Error(`${res.status}: ${res.statusText}`);
   }
+  return res;
 }
 
 export async function apiRequest(
@@ -27,6 +37,7 @@ export async function apiRequest(
     credentials: "include",
   });
 
+  // Sprawdź, czy odpowiedź jest poprawna (nie rzuci wyjątku)
   await throwIfResNotOk(res);
   return res;
 }
@@ -46,7 +57,15 @@ export const getQueryFn: <T>(options: {
     }
 
     await throwIfResNotOk(res);
-    return await res.json();
+    
+    try {
+      // Klonujemy odpowiedź przed przetworzeniem JSON
+      const clonedRes = res.clone();
+      return await clonedRes.json();
+    } catch (error) {
+      console.error("Error parsing JSON in getQueryFn:", error);
+      throw new Error("Problem z przetwarzaniem odpowiedzi z serwera");
+    }
   };
 
 export const queryClient = new QueryClient({
