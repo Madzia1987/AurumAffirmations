@@ -1,9 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
+import { Sparkles } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [location] = useLocation();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 10;
+      if (isScrolled !== scrolled) {
+        setScrolled(isScrolled);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [scrolled]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -14,19 +30,27 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gradient-to-r from-amber-700 to-amber-800 shadow-md z-10 relative">
-      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? 'bg-gradient-to-r from-gray-900 to-gray-800 shadow-lg backdrop-blur-md bg-opacity-90' 
+          : 'bg-gradient-to-r from-gray-900/90 to-gray-800/90 backdrop-blur-sm'
+      }`}
+    >
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/">
-            <div className="text-white font-serif font-bold text-xl md:text-2xl cursor-pointer">
-              Aurum <span className="font-light italic">Affirmations</span>
+            <div className="gold-text-gradient font-serif font-bold text-2xl md:text-3xl cursor-pointer flex items-center">
+              <span className="mr-1">Aurum</span> 
+              <span className="font-light italic">Affirmations</span>
+              <Sparkles className="h-5 w-5 ml-1 text-amber-400" />
             </div>
           </Link>
         </div>
-        <nav>
+        <nav className="relative">
           <button 
             id="menuToggle" 
-            className="text-white focus:outline-none md:hidden"
+            className="text-amber-400 focus:outline-none md:hidden"
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Zamknij menu" : "Otwórz menu"}
           >
@@ -40,45 +64,58 @@ const Header = () => {
           </button>
           
           <ul 
-            className={`${isMenuOpen ? 'block' : 'hidden'} absolute top-full left-0 right-0 bg-amber-700 shadow-lg md:shadow-none md:static md:flex md:bg-transparent md:flex-row z-50`}
+            className={`${isMenuOpen ? 'block' : 'hidden'} absolute top-full mt-3 right-0 bg-gray-900 border border-amber-900/50 shadow-lg md:shadow-none rounded-lg overflow-hidden
+            md:flex md:static md:bg-transparent md:border-none md:flex-row md:mt-0 z-50`}
           >
-            <li className="border-b border-amber-600 md:border-none md:mr-4">
+            <li className="md:mx-2">
               <Link href="/">
                 <div 
-                  className={`block py-3 px-4 text-white hover:bg-amber-600 md:hover:bg-transparent md:hover:text-amber-200 transition-colors duration-200 ${location === '/' ? 'font-bold' : ''} cursor-pointer`}
+                  className={`block py-3 px-5 text-amber-50 hover:bg-gray-800 md:hover:bg-transparent md:hover:text-amber-400
+                  transition-colors duration-200 ${location === '/' ? 'font-bold text-amber-400' : ''} cursor-pointer relative group`}
                   onClick={closeMenu}
                 >
                   Home
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
                 </div>
               </Link>
             </li>
-            <li className="border-b border-amber-600 md:border-none md:mr-4">
+            <li className="md:mx-2">
               <Link href="/horoscope">
                 <div 
-                  className={`block py-3 px-4 text-white hover:bg-amber-600 md:hover:bg-transparent md:hover:text-amber-200 transition-colors duration-200 ${location === '/horoscope' ? 'font-bold' : ''} cursor-pointer`}
+                  className={`block py-3 px-5 text-amber-50 hover:bg-gray-800 md:hover:bg-transparent md:hover:text-amber-400
+                  transition-colors duration-200 ${location === '/horoscope' ? 'font-bold text-amber-400' : ''} cursor-pointer relative group`}
                   onClick={closeMenu}
                 >
                   Horoskop
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
                 </div>
               </Link>
             </li>
-            <li className="border-b border-amber-600 md:border-none md:mr-4">
+            <li className="md:mx-2">
               <Link href="/numerology">
                 <div 
-                  className={`block py-3 px-4 text-white hover:bg-amber-600 md:hover:bg-transparent md:hover:text-amber-200 transition-colors duration-200 ${location === '/numerology' ? 'font-bold' : ''} cursor-pointer`}
+                  className={`block py-3 px-5 text-amber-50 hover:bg-gray-800 md:hover:bg-transparent md:hover:text-amber-400
+                  transition-colors duration-200 ${location === '/numerology' ? 'font-bold text-amber-400' : ''} cursor-pointer relative group`}
                   onClick={closeMenu}
                 >
                   Numerologia
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
                 </div>
               </Link>
             </li>
-            <li>
+            <li className="md:ml-6">
               <Link href="/premium">
                 <div 
-                  className={`block py-3 px-4 text-white bg-amber-600 rounded md:bg-amber-600 hover:bg-amber-500 transition-colors duration-200 ${location === '/premium' ? 'font-bold' : ''} cursor-pointer`}
+                  className={`block py-3 px-5 text-white 
+                  md:bg-gradient-to-r md:from-amber-600 md:to-amber-700 md:hover:from-amber-700 md:hover:to-amber-800
+                  md:rounded-full md:border md:border-amber-500/30 md:shadow-lg md:shadow-amber-900/20
+                  transition-all duration-300 hover:shadow-amber-600/30 
+                  ${location === '/premium' ? 'bg-gradient-to-r from-amber-700 to-amber-800 md:from-amber-600 md:to-amber-700' : 'bg-gray-800 hover:bg-gray-700'} 
+                  cursor-pointer flex items-center space-x-1`}
                   onClick={closeMenu}
                 >
-                  Premium
+                  <Sparkles className="h-4 w-4" />
+                  <span>Premium</span>
                 </div>
               </Link>
             </li>

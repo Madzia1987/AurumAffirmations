@@ -49,9 +49,9 @@ function App() {
 
   return (
     <TooltipProvider>
-      <div className="flex flex-col min-h-screen gold-grid">
+      <div className="flex flex-col min-h-screen gold-texture">
         <Header />
-        <main className="flex-grow">
+        <main className="flex-grow pt-24">
           <Router />
         </main>
         <Footer />
