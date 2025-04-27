@@ -875,13 +875,39 @@ export class DatabaseStorage implements IStorage {
       
       if (affirmationsList.length > 0) {
         // Insert affirmations
-        await db.insert(affirmations).values(
-          affirmationsList.map(a => ({
-            text: a.text,
-            category: a.category as any, // Need type conversion
-            isPremium: a.isPremium
-          }))
-        );
+        for (const a of affirmationsList) {
+          try {
+            // Map categories to valid enum values
+            let category: string = 'general';
+            
+            // Map common categories to our enum values
+            if (a.category === 'wealth' || a.category === 'money' || a.category === 'abundance') {
+              category = 'wealth';
+            } else if (a.category === 'health' || a.category === 'wellness') {
+              category = 'health';
+            } else if (a.category === 'love' || a.category === 'relationship' || a.category === 'self-love') {
+              category = 'love';
+            } else if (a.category === 'success' || a.category === 'achievement') {
+              category = 'success';
+            } else if (a.category === 'career' || a.category === 'work' || a.category === 'job') {
+              category = 'career';
+            } else if (a.category === 'motivation' || a.category === 'inspiration') {
+              category = 'motivation';
+            } else if (a.category === 'confidence' || a.category === 'self-esteem') {
+              category = 'confidence';
+            } else if (a.category === 'gratitude' || a.category === 'appreciation') {
+              category = 'gratitude';
+            }
+            
+            await db.insert(affirmations).values({
+              text: a.text,
+              category: category as any,
+              isPremium: a.isPremium || false
+            });
+          } catch (error) {
+            console.error(`Error inserting affirmation: ${a.text}`, error);
+          }
+        }
       }
     } catch (error) {
       console.error('Error loading affirmations data:', error);
@@ -941,18 +967,22 @@ export class DatabaseStorage implements IStorage {
       
       if (articlesList.length > 0) {
         // Insert articles
-        await db.insert(articles).values(
-          articlesList.map(a => ({
-            title: a.title,
-            excerpt: a.excerpt,
-            content: a.content,
-            image: a.image,
-            category: a.category,
-            date: new Date(a.date),
-            readTime: a.readTime,
-            isPremium: a.isPremium
-          }))
-        );
+        for (const a of articlesList) {
+          try {
+            await db.insert(articles).values({
+              title: a.title,
+              excerpt: a.excerpt,
+              content: a.content,
+              image: a.image,
+              category: a.category,
+              date: new Date().toISOString().split('T')[0],
+              readTime: a.readTime,
+              isPremium: a.isPremium
+            });
+          } catch (error) {
+            console.error(`Error inserting article "${a.title}":`, error);
+          }
+        }
       }
     } catch (error) {
       console.error('Error loading articles data:', error);
@@ -964,7 +994,7 @@ export class DatabaseStorage implements IStorage {
         content: "Afirmacje to potężne narzędzie, które pomaga w przeprogramowaniu podświadomości i zmianie negatywnych wzorców myślowych na pozytywne. Regularne praktykowanie afirmacji może prowadzić do głębokich zmian w Twoim życiu, od poprawy samopoczucia po przyciąganie lepszych okoliczności i możliwości.",
         image: "/images/article1.jpg",
         category: "afirmacje",
-        date: new Date(),
+        date: new Date().toISOString().split('T')[0],
         readTime: 5,
         isPremium: false
       });
@@ -985,17 +1015,27 @@ export class DatabaseStorage implements IStorage {
       
       if (horoscopesList.length > 0) {
         // Insert horoscopes
-        await db.insert(horoscopes).values(
-          horoscopesList.map(h => ({
-            sign: h.sign,
-            date: new Date(),
-            general: h.general,
-            love: h.love,
-            career: h.career,
-            health: h.health,
-            lucky: h.lucky as any
-          }))
-        );
+        for (const h of horoscopesList) {
+          try {
+            const today = new Date().toISOString().split('T')[0];
+            
+            await db.insert(horoscopes).values({
+              sign: h.sign,
+              date: today,
+              general: h.general,
+              love: h.love,
+              career: h.career,
+              health: h.health,
+              lucky: h.lucky || {
+                numbers: ['7', '12', '28'],
+                colors: ['złoty', 'czerwony'],
+                times: ['10:00', '15:00', '20:00']
+              }
+            });
+          } catch (error) {
+            console.error(`Error inserting horoscope for ${h.sign}:`, error);
+          }
+        }
       }
     } catch (error) {
       console.error('Error loading horoscopes data:', error);
@@ -1010,7 +1050,7 @@ export class DatabaseStorage implements IStorage {
       for (const sign of zodiacSigns) {
         await db.insert(horoscopes).values({
           sign,
-          date: new Date(),
+          date: new Date().toISOString().split('T')[0],
           general: `Dzisiejszy dzień przyniesie ci nowe możliwości. Bądź otwarty na zmiany.`,
           love: `W sferze miłości czeka cię miła niespodzianka.`,
           career: `W pracy skup się na najważniejszych zadaniach.`,
