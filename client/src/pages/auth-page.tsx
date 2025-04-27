@@ -127,12 +127,54 @@ export default function AuthPage() {
       <div className="flex flex-col md:flex-row w-full max-w-6xl rounded-xl overflow-hidden shadow-2xl">
         {/* Left panel - Form */}
         <div className="w-full md:w-1/2 bg-white dark:bg-gray-950 p-8">
-          <div className="mb-10 text-center">
+          <div className="mb-10 text-center relative">
+            <div className="absolute top-0 right-0">
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="ghost" size="icon" className="text-amber-600 hover:text-amber-800">
+                    <Globe className="h-5 w-5" />
+                    <span className="sr-only">Change language</span>
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="end" className="bg-white dark:bg-gray-900 border border-amber-200 dark:border-amber-800">
+                  <DropdownMenuItem
+                    onClick={() => changeLanguage('pl')}
+                    className={`cursor-pointer ${language === 'pl' ? 'text-amber-600 font-medium' : 'hover:text-amber-600'}`}
+                  >
+                    Polski
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={() => changeLanguage('en')}
+                    className={`cursor-pointer ${language === 'en' ? 'text-amber-600 font-medium' : 'hover:text-amber-600'}`}
+                  >
+                    English
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={() => changeLanguage('de')}
+                    className={`cursor-pointer ${language === 'de' ? 'text-amber-600 font-medium' : 'hover:text-amber-600'}`}
+                  >
+                    Deutsch
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={() => changeLanguage('fr')}
+                    className={`cursor-pointer ${language === 'fr' ? 'text-amber-600 font-medium' : 'hover:text-amber-600'}`}
+                  >
+                    Français
+                  </DropdownMenuItem>
+                  <DropdownMenuItem
+                    onClick={() => changeLanguage('es')}
+                    className={`cursor-pointer ${language === 'es' ? 'text-amber-600 font-medium' : 'hover:text-amber-600'}`}
+                  >
+                    Español
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </div>
             <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-500 to-amber-600">
               Aurum Affirmations
             </h1>
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-              Twoja droga do wewnętrznej transformacji
+              {t('home.subtitle')}
             </p>
           </div>
 
@@ -322,7 +364,7 @@ export default function AuthPage() {
                     />
                   </svg>
                 </div>
-                <p>Codzienne afirmacje dla transformacji życia</p>
+                <p>{t('features.affirmations')}</p>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="bg-amber-500 rounded-full p-1">
@@ -339,7 +381,7 @@ export default function AuthPage() {
                     />
                   </svg>
                 </div>
-                <p>Szczegółowe analizy horoskopowe</p>
+                <p>{t('features.horoscope')}</p>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="bg-amber-500 rounded-full p-1">
@@ -356,7 +398,7 @@ export default function AuthPage() {
                     />
                   </svg>
                 </div>
-                <p>Indywidualne prognozy numerologiczne</p>
+                <p>{t('features.numerology')}</p>
               </div>
             </div>
           </div>

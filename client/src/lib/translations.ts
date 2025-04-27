@@ -28,7 +28,13 @@ export type TranslationKey =
   | 'auth.loginSuccess'
   | 'auth.registerSuccess'
   | 'auth.loginError'
-  | 'auth.registerError';
+  | 'auth.registerError'
+  | 'auth.appTagline'
+  
+  // Features
+  | 'features.affirmations'
+  | 'features.horoscope'
+  | 'features.numerology';
 
 type TranslationsType = {
   [key in LanguageCode]: {
@@ -66,6 +72,12 @@ export const translations: TranslationsType = {
     'auth.registerSuccess': 'Twoje konto zostało pomyślnie utworzone.',
     'auth.loginError': 'Nieprawidłowy email lub hasło. Spróbuj ponownie.',
     'auth.registerError': 'Nie można utworzyć konta. Spróbuj ponownie.',
+    'auth.appTagline': 'Twoja droga do wewnętrznej transformacji',
+    
+    // Features
+    'features.affirmations': 'Codzienne afirmacje dla transformacji życia',
+    'features.horoscope': 'Szczegółowe analizy horoskopowe',
+    'features.numerology': 'Indywidualne prognozy numerologiczne',
   },
   
   en: {
@@ -97,6 +109,12 @@ export const translations: TranslationsType = {
     'auth.registerSuccess': 'Your account has been successfully created.',
     'auth.loginError': 'Invalid email or password. Please try again.',
     'auth.registerError': 'Unable to create account. Please try again.',
+    'auth.appTagline': 'Your path to inner transformation',
+    
+    // Features
+    'features.affirmations': 'Daily affirmations for life transformation',
+    'features.horoscope': 'Detailed horoscope analyses',
+    'features.numerology': 'Personalized numerology forecasts',
   },
   
   de: {
@@ -128,6 +146,12 @@ export const translations: TranslationsType = {
     'auth.registerSuccess': 'Dein Konto wurde erfolgreich erstellt.',
     'auth.loginError': 'Ungültige E-Mail oder Passwort. Bitte versuche es erneut.',
     'auth.registerError': 'Konto konnte nicht erstellt werden. Bitte versuche es erneut.',
+    'auth.appTagline': 'Dein Weg zur inneren Transformation',
+    
+    // Features
+    'features.affirmations': 'Tägliche Affirmationen für Lebenstransformation',
+    'features.horoscope': 'Detaillierte Horoskopanalysen',
+    'features.numerology': 'Personalisierte numerologische Prognosen',
   },
   
   fr: {
@@ -159,6 +183,12 @@ export const translations: TranslationsType = {
     'auth.registerSuccess': 'Votre compte a été créé avec succès.',
     'auth.loginError': 'Email ou mot de passe invalide. Veuillez réessayer.',
     'auth.registerError': 'Impossible de créer un compte. Veuillez réessayer.',
+    'auth.appTagline': 'Votre chemin vers la transformation intérieure',
+    
+    // Features
+    'features.affirmations': 'Affirmations quotidiennes pour transformer votre vie',
+    'features.horoscope': 'Analyses astrologiques détaillées',
+    'features.numerology': 'Prévisions numérologiques personnalisées',
   },
   
   es: {
@@ -190,5 +220,11 @@ export const translations: TranslationsType = {
     'auth.registerSuccess': 'Tu cuenta ha sido creada correctamente.',
     'auth.loginError': 'Email o contraseña inválidos. Por favor, inténtalo de nuevo.',
     'auth.registerError': 'No se puede crear la cuenta. Por favor, inténtalo de nuevo.',
+    'auth.appTagline': 'Tu camino hacia la transformación interior',
+    
+    // Features
+    'features.affirmations': 'Afirmaciones diarias para transformar tu vida',
+    'features.horoscope': 'Análisis astrológicos detallados',
+    'features.numerology': 'Pronósticos numerológicos personalizados',
   }
 };
