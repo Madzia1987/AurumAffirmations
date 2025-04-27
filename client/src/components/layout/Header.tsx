@@ -1,11 +1,21 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Sparkles } from 'lucide-react';
+import { Sparkles, User, LogIn } from 'lucide-react';
+import { useAuth } from '@/hooks/use-auth';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
+import { 
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger 
+} from '@/components/ui/dropdown-menu';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
+  const { user, logoutMutation } = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -103,7 +113,7 @@ const Header = () => {
                 </div>
               </Link>
             </li>
-            <li className="md:ml-6">
+            <li className="md:ml-2">
               <Link href="/premium">
                 <div 
                   className={`block py-3 px-5 text-white 
@@ -119,6 +129,58 @@ const Header = () => {
                 </div>
               </Link>
             </li>
+            
+            {user ? (
+              <li className="md:ml-4">
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <div 
+                      className="flex items-center py-3 px-5 md:px-2 cursor-pointer text-amber-50 hover:text-amber-400 transition-colors duration-200"
+                      onClick={closeMenu}
+                    >
+                      <Avatar className="h-8 w-8 border border-amber-500/50">
+                        <AvatarFallback className="bg-gradient-to-br from-amber-400 to-amber-700 text-white text-sm">
+                          {user.username?.charAt(0).toUpperCase() || "U"}
+                        </AvatarFallback>
+                      </Avatar>
+                    </div>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent className="bg-gray-900 border border-amber-800/30">
+                    <div className="px-3 py-2 text-sm text-amber-400 font-medium">
+                      {user.username || "Użytkownik"}
+                    </div>
+                    <DropdownMenuSeparator className="bg-amber-800/30" />
+                    <Link href="/profile">
+                      <DropdownMenuItem className="text-amber-50 hover:text-amber-400 cursor-pointer focus:bg-gray-800 focus:text-amber-400">
+                        <User className="mr-2 h-4 w-4" />
+                        <span>Mój profil</span>
+                      </DropdownMenuItem>
+                    </Link>
+                    <DropdownMenuSeparator className="bg-amber-800/30" />
+                    <DropdownMenuItem 
+                      onClick={() => logoutMutation.mutate()}
+                      className="text-amber-50 hover:text-amber-400 cursor-pointer focus:bg-gray-800 focus:text-amber-400"
+                    >
+                      <LogIn className="mr-2 h-4 w-4" />
+                      <span>Wyloguj się</span>
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </li>
+            ) : (
+              <li className="md:ml-4">
+                <Link href="/auth">
+                  <div
+                    className="block py-3 px-5 text-amber-50 hover:bg-gray-800 md:hover:bg-transparent md:hover:text-amber-400
+                    transition-colors duration-200 cursor-pointer flex items-center"
+                    onClick={closeMenu}
+                  >
+                    <LogIn className="h-4 w-4 mr-1" />
+                    <span>Zaloguj</span>
+                  </div>
+                </Link>
+              </li>
+            )}
           </ul>
         </nav>
       </div>
