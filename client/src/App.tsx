@@ -15,6 +15,7 @@ import AuthPage from "@/pages/auth-page";
 import ProfilePage from "@/pages/profile-page";
 import { ProtectedRoute } from "./lib/protected-route";
 import { AuthProvider } from "./hooks/use-auth";
+import { LanguageProvider } from "./hooks/use-language";
 import { queryClient } from "./lib/queryClient";
 
 function Router() {
@@ -58,16 +59,18 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <TooltipProvider>
-          <div className="flex flex-col min-h-screen gold-texture">
-            <Header />
-            <main className="flex-grow pt-24">
-              <Router />
-            </main>
-            <Footer />
-            <Toaster />
-          </div>
-        </TooltipProvider>
+        <LanguageProvider>
+          <TooltipProvider>
+            <div className="flex flex-col min-h-screen gold-texture">
+              <Header />
+              <main className="flex-grow pt-24">
+                <Router />
+              </main>
+              <Footer />
+              <Toaster />
+            </div>
+          </TooltipProvider>
+        </LanguageProvider>
       </AuthProvider>
     </QueryClientProvider>
   );

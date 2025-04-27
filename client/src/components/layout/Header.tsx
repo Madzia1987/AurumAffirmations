@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
 import { Sparkles, User, LogIn, Globe } from 'lucide-react';
 import { useAuth } from '@/hooks/use-auth';
+import { useLanguage } from '@/hooks/use-language';
+import { LanguageCode } from '@/lib/translations';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { 
   DropdownMenu,
@@ -16,7 +18,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [location] = useLocation();
   const [scrolled, setScrolled] = useState(false);
-  const [language, setLanguage] = useState('pl'); // domyślny język: polski
+  const { language, setLanguage, t } = useLanguage();
   const { user, logoutMutation } = useAuth();
 
   useEffect(() => {
@@ -42,9 +44,8 @@ const Header = () => {
   };
 
   // Funkcja obsługująca zmianę języka
-  const changeLanguage = (lang: string) => {
+  const changeLanguage = (lang: LanguageCode) => {
     setLanguage(lang);
-    // Tutaj możemy dodać logikę zmiany języka w całej aplikacji
     closeMenu();
   };
 
@@ -93,7 +94,7 @@ const Header = () => {
                   transition-colors duration-200 ${location === '/' ? 'font-bold text-amber-400' : ''} cursor-pointer relative group`}
                   onClick={closeMenu}
                 >
-                  Home
+                  {t('nav.home')}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
                 </div>
               </Link>
@@ -105,7 +106,7 @@ const Header = () => {
                   transition-colors duration-200 ${location === '/horoscope' ? 'font-bold text-amber-400' : ''} cursor-pointer relative group`}
                   onClick={closeMenu}
                 >
-                  Horoskop
+                  {t('nav.horoscope')}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-300 group-hover:w-full"></span>
                 </div>
               </Link>
