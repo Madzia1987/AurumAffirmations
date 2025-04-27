@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 import DailyCard from './DailyCard';
 import { Sparkles } from 'lucide-react';
-import diamondBgImage from '@assets/1745453267353.png';
+import diamondBgImage from '@assets/file_00000000a1d86243a19cc31ead66b830.png';
 import { useLanguage } from '@/hooks/use-language';
 
 const HomeBanner = () => {

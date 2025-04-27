@@ -173,14 +173,13 @@ export default function PremiumSection() {
                 </CardContent>
                 
                 <CardFooter className="pt-6 pb-8">
-                  <Button 
+                  <button 
                     onClick={() => handlePlanSelect(id)}
                     className={`w-full py-6 rounded-xl group transition-all duration-300 ${
                       isFeatured 
                         ? 'bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white shadow-lg shadow-amber-500/20 hover:shadow-amber-500/40' 
                         : 'bg-white text-amber-800 border border-amber-200 hover:border-amber-400 hover:bg-amber-50'
                     }`}
-                    variant={isFeatured ? 'default' : 'outline'}
                   >
                     <div className="flex items-center justify-center">
                       <span>Wybierz Plan</span>
@@ -191,7 +190,7 @@ export default function PremiumSection() {
                         <path d="m12 5 7 7-7 7"></path>
                       </svg>
                     </div>
-                  </Button>
+                  </button>
                 </CardFooter>
               </Card>
             );
