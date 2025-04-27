@@ -26,6 +26,14 @@ import {
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 import { useLanguage } from "@/hooks/use-language";
+import { Globe } from "lucide-react";
+import { LanguageCode } from "@/lib/translations";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 // Login Schema
 const loginSchema = z.object({
@@ -45,7 +53,11 @@ export default function AuthPage() {
   const { user, loginMutation, registerMutation } = useAuth();
   const [, navigate] = useLocation();
   const { toast } = useToast();
-  const { t } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
+  
+  const changeLanguage = (lang: LanguageCode) => {
+    setLanguage(lang);
+  };
 
   // If user is already logged in, redirect to home page
   if (user) {
@@ -188,7 +200,7 @@ export default function AuthPage() {
                         className="w-full bg-gradient-to-r from-amber-500 to-amber-700 hover:from-amber-600 hover:to-amber-800 text-white"
                         disabled={loginMutation.isPending}
                       >
-                        {loginMutation.isPending ? "Logowanie..." : "Zaloguj się"}
+                        {loginMutation.isPending ? t('auth.loginBtn') + "..." : t('auth.loginBtn')}
                       </Button>
                     </form>
                   </Form>
@@ -196,7 +208,7 @@ export default function AuthPage() {
                 <CardFooter className="flex flex-col space-y-2">
                   <div className="text-sm text-center">
                     <a href="#" className="text-amber-600 hover:text-amber-800">
-                      Zapomniałeś hasła?
+                      {t('auth.forgotPassword')}
                     </a>
                   </div>
                 </CardFooter>
@@ -236,7 +248,7 @@ export default function AuthPage() {
                         name="email"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Email</FormLabel>
+                            <FormLabel>{t('auth.email')}</FormLabel>
                             <FormControl>
                               <Input
                                 placeholder="twoj@email.com"
@@ -253,7 +265,7 @@ export default function AuthPage() {
                         name="password"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Hasło</FormLabel>
+                            <FormLabel>{t('auth.password')}</FormLabel>
                             <FormControl>
                               <Input
                                 placeholder="********"
@@ -271,8 +283,8 @@ export default function AuthPage() {
                         disabled={registerMutation.isPending}
                       >
                         {registerMutation.isPending
-                          ? "Rejestracja..."
-                          : "Zarejestruj się"}
+                          ? t('auth.registerBtn') + "..."
+                          : t('auth.registerBtn')}
                       </Button>
                     </form>
                   </Form>
@@ -289,11 +301,10 @@ export default function AuthPage() {
           
           <div className="z-10 text-center">
             <h2 className="text-4xl font-bold mb-6 text-amber-300">
-              Odkryj swój wewnętrzny potencjał
+              {t('home.title1')}
             </h2>
             <p className="text-lg mb-8 text-amber-100">
-              Uzyskaj dostęp do ekskluzywnych treści, codziennych afirmacji,
-              szczegółowych horoskopów i profesjonalnych analiz numerologicznych.
+              {t('home.subtitle')}
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
