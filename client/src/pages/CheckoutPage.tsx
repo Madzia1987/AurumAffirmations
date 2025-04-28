@@ -12,13 +12,25 @@ const CheckoutPage = () => {
   const { isPremium, refetchPremiumStatus } = usePremium();
   const { toast } = useToast();
   const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
+  const [selectedPlan, setSelectedPlan] = useState<string>('monthly');
   
   useEffect(() => {
     // Set page title
     document.title = 'Checkout - Aurum Affirmations';
     
-    // Validate plan
-    if (!plan || !PREMIUM_PLANS[plan as keyof typeof PREMIUM_PLANS]) {
+    // Get plan from URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const planFromUrl = params.get('plan');
+    
+    if (planFromUrl && PREMIUM_PLANS[planFromUrl as keyof typeof PREMIUM_PLANS]) {
+      setSelectedPlan(planFromUrl);
+    } else if (plan && PREMIUM_PLANS[plan as keyof typeof PREMIUM_PLANS]) {
+      setSelectedPlan(plan);
+    } else if (!plan && !planFromUrl) {
+      // Set default plan if none provided
+      setSelectedPlan('monthly');
+    } else {
+      // Invalid plan
       toast({
         title: "Nieprawidłowy plan",
         description: "Wybrany plan nie istnieje.",
@@ -57,7 +69,7 @@ const CheckoutPage = () => {
       <CheckoutModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
-        plan={plan || 'monthly'}
+        plan={selectedPlan}
         onSuccess={handlePaymentSuccess}
       />
       
