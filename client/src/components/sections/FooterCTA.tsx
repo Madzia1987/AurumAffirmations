@@ -11,10 +11,8 @@ const FooterCTA = () => {
           Dołącz do tysięcy kobiet, które odkryły swoją wewnętrzną moc i przyciągają obfitość każdego dnia.
         </p>
         
-        <Link href="/premium">
-          <a className="inline-block bg-white/90 backdrop-blur-sm text-[#9a7a1a] font-bold py-4 px-10 rounded-full shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-[#d4af37]/30">
-            <span className="gold-text-gradient">Dołącz do Aurum Premium</span>
-          </a>
+        <Link href="/premium" className="inline-block bg-white/90 backdrop-blur-sm text-[#9a7a1a] font-bold py-4 px-10 rounded-full shadow-xl hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 border border-[#d4af37]/30">
+          <span className="gold-text-gradient">Dołącz do Aurum Premium</span>
         </Link>
         
         <div className="mt-8 flex justify-center space-x-6">

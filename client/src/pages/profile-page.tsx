@@ -31,11 +31,8 @@ export default function ProfilePage() {
   const { toast } = useToast();
   const [activeTab, setActiveTab] = useState("dashboard");
 
-  // If user is not logged in, redirect to auth page
-  if (!user) {
-    navigate("/auth");
-    return null;
-  }
+  // Przekierowanie użytkownika zostanie obsłużone przez komponent ProtectedRoute
+  // Nie używamy wczesnego return, aby zapobiec błędowi "Rendered fewer hooks than expected"
 
   // Fetch user's data
   const { data: dailyAffirmation } = useApi<Affirmation>({

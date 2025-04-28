@@ -89,10 +89,8 @@ const FeaturesSection = () => {
             <div className="p-6">
               <h3 className="font-playfair text-xl font-semibold mb-3">Treści Premium</h3>
               <p className="text-gray-600 mb-4">Pełne pakiety afirmacji, rytuały i zaawansowane analizy numerologiczne.</p>
-              <Link href="/premium">
-                <a className="inline-block text-gold hover:text-burgundy font-semibold transition-colors">
-                  Kup dostęp <i className="fas fa-long-arrow-alt-right ml-1"></i>
-                </a>
+              <Link href="/premium" className="inline-block text-gold hover:text-burgundy font-semibold transition-colors">
+                Kup dostęp <i className="fas fa-long-arrow-alt-right ml-1"></i>
               </Link>
             </div>
           </div>
