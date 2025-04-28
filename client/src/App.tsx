@@ -63,7 +63,10 @@ function App() {
           <TooltipProvider>
             <div className="flex flex-col min-h-screen bg-white">
               <Header />
-              <main className="flex-grow pt-24">
+              <div className="flex justify-center mt-24 mb-4">
+                <img src="/assets/crystal.png" alt="Crystal" className="h-28 md:h-36" />
+              </div>
+              <main className="flex-grow">
                 <Router />
               </main>
               <Footer />
