@@ -61,7 +61,7 @@ function App() {
       <AuthProvider>
         <LanguageProvider>
           <TooltipProvider>
-            <div className="flex flex-col min-h-screen gold-texture">
+            <div className="flex flex-col min-h-screen bg-white">
               <Header />
               <main className="flex-grow pt-24">
                 <Router />

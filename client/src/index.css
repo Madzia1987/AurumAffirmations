@@ -222,22 +222,22 @@
 
 /* Nowe gradienty złota inspirowane przesłanymi obrazami */
 .luxury-gold-gradient-1 {
-  background: linear-gradient(to right, #d7b740, #f9e789, #d7b740);
+  background: white;
   background-size: 200% 100%;
 }
 
 .luxury-gold-gradient-2 {
-  background: linear-gradient(to right, #bb9a30, #e0c94e, #f5e382, #e0c94e, #bb9a30);
+  background: white;
   background-size: 200% 100%;
 }
 
 .luxury-gold-gradient-3 {
-  background: linear-gradient(135deg, #cc9933 0%, #e6c059 25%, #f9e789 50%, #e6c059 75%, #cc9933 100%);
+  background: white;
   background-size: 200% 100%;
 }
 
 .luxury-gold-gradient-vertical {
-  background: linear-gradient(to bottom, #d7b740, #f9e789, #d7b740);
+  background: white;
   background-size: 100% 200%;
 }
 
@@ -265,11 +265,11 @@
 }
 
 .premium-gold-banner {
-  background: linear-gradient(to right, #bb9a30, #e0c94e, #f5e382, #e0c94e, #bb9a30);
+  background: white;
   background-size: 200% 100%;
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  animation: gold-shimmer 3s infinite linear;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  animation: none;
 }
 
 @keyframes gold-shimmer {
