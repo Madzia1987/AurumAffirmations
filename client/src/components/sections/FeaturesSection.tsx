@@ -29,10 +29,8 @@ const FeaturesSection = () => {
             <div className="p-6">
               <h3 className="font-playfair text-xl font-semibold mb-3">Horoskop Dnia</h3>
               <p className="text-gray-600 mb-4">Poznaj codzienne przewidywania astralne dla swojego znaku zodiaku.</p>
-              <Link href="/horoscope">
-                <a className="inline-block text-gold hover:text-burgundy font-semibold transition-colors">
-                  Sprawdź teraz <i className="fas fa-long-arrow-alt-right ml-1"></i>
-                </a>
+              <Link href="/horoscope" className="inline-block text-gold hover:text-burgundy font-semibold transition-colors">
+                Sprawdź teraz <i className="fas fa-long-arrow-alt-right ml-1"></i>
               </Link>
             </div>
           </div>
@@ -62,10 +60,8 @@ const FeaturesSection = () => {
             <div className="p-6">
               <h3 className="font-playfair text-xl font-semibold mb-3">Numerologia</h3>
               <p className="text-gray-600 mb-4">Odkryj znaczenie liczb w swoim życiu i ich wpływ na twoją drogę.</p>
-              <Link href="/numerology">
-                <a className="inline-block text-gold hover:text-burgundy font-semibold transition-colors">
-                  Poznaj swoją liczbę <i className="fas fa-long-arrow-alt-right ml-1"></i>
-                </a>
+              <Link href="/numerology" className="inline-block text-gold hover:text-burgundy font-semibold transition-colors">
+                Poznaj swoją liczbę <i className="fas fa-long-arrow-alt-right ml-1"></i>
               </Link>
             </div>
           </div>
