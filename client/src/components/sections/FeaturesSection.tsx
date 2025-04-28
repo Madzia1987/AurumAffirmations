@@ -13,7 +13,7 @@ const FeaturesSection = () => {
               className="h-48 bg-cover bg-center" 
               style={{ backgroundImage: "url('https://images.unsplash.com/photo-1515942661900-94b3d1972591?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')" }}
             >
-              <div className="h-full w-full bg-burgundy bg-opacity-40 flex items-center justify-center">
+              <div className="h-full w-full bg-emerald-800 bg-opacity-40 flex items-center justify-center">
                 <i className="fas fa-star text-gold text-4xl"></i>
               </div>
             </div>
@@ -34,7 +34,7 @@ const FeaturesSection = () => {
               className="h-48 bg-cover bg-center" 
               style={{ backgroundImage: "url('https://images.unsplash.com/photo-1531051580877-6c2e343de05c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')" }}
             >
-              <div className="h-full w-full bg-burgundy bg-opacity-40 flex items-center justify-center">
+              <div className="h-full w-full bg-navy bg-opacity-40 flex items-center justify-center">
                 <i className="fas fa-infinity text-gold text-4xl"></i>
               </div>
             </div>

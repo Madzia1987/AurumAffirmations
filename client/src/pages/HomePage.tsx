@@ -5,6 +5,7 @@ import FeaturesSection from '@/components/sections/FeaturesSection';
 import ArticlePreview from '@/components/sections/ArticlePreview';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import FooterCTA from '@/components/sections/FooterCTA';
+import CrystalDivider from '@/components/sections/CrystalDivider';
 import { usePremium } from '@/hooks/use-premium';
 
 const HomePage = () => {
@@ -18,6 +19,7 @@ const HomePage = () => {
   return (
     <>
       <HomeBanner />
+      <CrystalDivider />
       <QuoteSection />
       <FeaturesSection />
       <ArticlePreview isPremium={isPremium} />
