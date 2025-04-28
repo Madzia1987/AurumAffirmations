@@ -9,13 +9,7 @@ const HomeBanner = () => {
   
   return (
     <section className="relative py-20 px-4 md:px-6 lg:px-8 min-h-[80vh] flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-gray-900/50 z-10"></div>
-      <img 
-        src={diamondBgImage} 
-        alt="Diamond background" 
-        className="absolute inset-0 w-full h-full object-cover object-center"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-900/80 via-gray-900/70 to-gray-900/90 z-20"></div>
+      <div className="absolute inset-0 bg-gray-900 z-10"></div>
       
       <div className="relative container mx-auto max-w-5xl z-30">
         <div className="text-center mb-16">
