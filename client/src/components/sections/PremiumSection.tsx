@@ -75,9 +75,9 @@ export default function PremiumSection() {
                 </CardContent>
                 
                 <CardFooter>
-                  <Button 
+                  <button 
                     onClick={() => setLocation(`/premium/${category.id}`)}
-                    className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white shadow-md shadow-amber-700/20 group-hover:shadow-lg group-hover:shadow-amber-700/30 transition-shadow"
+                    className="w-full py-3 px-4 rounded-lg bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white shadow-md shadow-amber-700/20 group-hover:shadow-lg group-hover:shadow-amber-700/30 transition-all duration-300 transform hover:-translate-y-1"
                   >
                     <div className="flex items-center justify-center">
                       <span>Przeglądaj treści</span>
@@ -86,7 +86,7 @@ export default function PremiumSection() {
                         <path d="m12 5 7 7-7 7"></path>
                       </svg>
                     </div>
-                  </Button>
+                  </button>
                 </CardFooter>
               </Card>
             ))}
