@@ -42,7 +42,7 @@ function CheckoutForm({ clientSecret, plan, onSuccess, onCancel }: CheckoutFormP
       const { error, paymentIntent } = await stripe.confirmPayment({
         elements,
         confirmParams: {
-          return_url: window.location.origin,
+          return_url: window.location.origin + '/premium',
         },
         redirect: 'if_required'
       });

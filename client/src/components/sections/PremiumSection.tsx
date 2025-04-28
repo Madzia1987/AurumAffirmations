@@ -31,7 +31,7 @@ export default function PremiumSection() {
 
   const handlePlanSelect = (plan: string) => {
     setSelectedPlan(plan);
-    setIsCheckoutOpen(true);
+    setLocation(`/premium/checkout?plan=${plan}`);
   };
 
   const handleCheckoutSuccess = () => {

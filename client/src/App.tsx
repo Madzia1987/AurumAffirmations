@@ -25,6 +25,7 @@ function Router() {
       <Route path="/horoscope" component={HoroscopePage} />
       <Route path="/numerology" component={NumerologyPage} />
       <Route path="/premium" component={PremiumPage} />
+      <Route path="/premium/checkout" component={CheckoutPage} />
       <Route path="/checkout/:plan" component={CheckoutPage} />
       <Route path="/auth" component={AuthPage} />
       <ProtectedRoute path="/profile" component={ProfilePage} />
