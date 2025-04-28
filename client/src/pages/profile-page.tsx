@@ -79,12 +79,12 @@ export default function ProfilePage() {
             <Avatar className="h-16 w-16 border-2 border-amber-500">
               <AvatarImage src="" />
               <AvatarFallback className="bg-gradient-to-br from-amber-400 to-amber-700 text-white text-xl">
-                {user.username?.charAt(0).toUpperCase() || "U"}
+                {user?.username?.charAt(0).toUpperCase() || "U"}
               </AvatarFallback>
             </Avatar>
             <div className="ml-4">
               <h1 className="text-2xl font-bold text-white">
-                Witaj, <span className="text-amber-400">{user.username || "Użytkowniku"}</span>!
+                Witaj, <span className="text-amber-400">{user?.username || "Użytkowniku"}</span>!
               </h1>
               <p className="text-gray-400">
                 {isPremium ? (
