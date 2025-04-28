@@ -19,6 +19,10 @@ const HomeBanner = () => {
             <div className="h-0.5 w-12 bg-amber-500"></div>
           </div>
           
+          <div className="flex justify-center mb-6">
+            <img src="/assets/crystal.png" alt="Crystal" className="h-16 md:h-24" />
+          </div>
+          
           <h1 className="font-serif text-4xl md:text-6xl font-bold mb-6 fade-in">
             <span className="block text-white">{t('home.title1')}</span>
             <span className="gold-text-gradient">{t('home.title2')}</span>
