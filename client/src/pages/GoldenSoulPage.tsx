@@ -86,7 +86,7 @@ export default function GoldenSoulPage() {
         {/* Polecane Kategorie Afirmacji */}
         <div className="mb-16">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-serif font-bold mb-2">Polecane Kategorie Afirmacji</h2>
+            <h2 className="text-2xl font-serif font-bold mb-2 bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 text-transparent bg-clip-text">Polecane Kategorie Afirmacji</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Odkryj nasze specjalne kolekcje afirmacji dostosowane do różnych obszarów Twojego życia. 
               Każda kategoria zawiera starannie dobrane afirmacje oraz praktyczny rytuał transformacyjny.
@@ -97,20 +97,25 @@ export default function GoldenSoulPage() {
             {CATEGORIES_LIST.slice(0, 3).map((category) => (
               <Card 
                 key={category.id}
-                className="overflow-hidden border-amber-100 hover:border-amber-300 hover:shadow-md transition-all cursor-pointer"
+                className="overflow-hidden border-gray-800 hover:border-amber-600 hover:shadow-lg transition-all cursor-pointer bg-gray-900"
                 onClick={() => setLocation(`/affirmations/${category.id}`)}
               >
                 <CardHeader className="pb-2">
                   <div className="flex items-center">
-                    <span className="text-3xl mr-3">{category.icon}</span>
-                    <CardTitle className="font-serif">{category.title}</CardTitle>
+                    <span 
+                      className={`text-3xl mr-3 ${category.iconClass} font-serif`} 
+                      style={{textShadow: '0 0 8px rgba(251, 191, 36, 0.7)'}}
+                    >
+                      {category.icon}
+                    </span>
+                    <CardTitle className="font-serif text-white">{category.title}</CardTitle>
                   </div>
                 </CardHeader>
                 <CardFooter className="pt-0">
                   <Button 
-                    variant="ghost" 
+                    variant="outline" 
                     size="sm"
-                    className="text-amber-600 hover:text-amber-800 hover:bg-amber-50 pl-1"
+                    className="border-amber-800 text-amber-400 hover:text-amber-300 hover:bg-gray-800 hover:border-amber-600 pl-1"
                   >
                     <span>Zobacz afirmacje</span>
                     <ArrowRight className="ml-1 h-4 w-4" />
@@ -123,7 +128,7 @@ export default function GoldenSoulPage() {
           <div className="flex justify-center mt-6">
             <Button 
               variant="outline"
-              className="border-amber-200 text-amber-700 hover:border-amber-300 hover:bg-amber-50"
+              className="border-amber-600 text-amber-400 hover:text-amber-300 hover:bg-gray-900 hover:border-amber-500"
               onClick={() => setLocation('/affirmation-categories')}
             >
               Zobacz wszystkie kategorie
@@ -134,22 +139,22 @@ export default function GoldenSoulPage() {
         
         {/* Afirmacje z API */}
         <div className="mb-10">
-          <h2 className="text-2xl font-serif font-bold mb-6 text-center">Dzisiejsze Afirmacje Złotej Duszy</h2>
+          <h2 className="text-2xl font-serif font-bold mb-6 text-center bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 text-transparent bg-clip-text">Dzisiejsze Afirmacje Złotej Duszy</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {affirmations && affirmations.length > 0 ? affirmations.map((affirmation: Affirmation) => (
-              <Card key={affirmation.id} className="overflow-hidden border-amber-100 hover:border-amber-200 transition-colors">
+              <Card key={affirmation.id} className="overflow-hidden border-gray-800 hover:border-amber-600 transition-colors bg-gray-900">
                 <CardContent className="p-6 flex flex-col h-full">
                   <div className="flex items-start mb-4">
-                    <Star className="text-amber-500 w-5 h-5 mt-1 mr-2 flex-shrink-0" />
-                    <p className="text-lg text-gray-800 leading-relaxed font-medium">{affirmation.text}</p>
+                    <Star className="text-amber-500 w-5 h-5 mt-1 mr-2 flex-shrink-0" style={{filter: 'drop-shadow(0 0 3px rgba(251, 191, 36, 0.5))'}} />
+                    <p className="text-lg text-gray-100 leading-relaxed font-medium">{affirmation.text}</p>
                   </div>
                   <div className="mt-auto pt-4 flex justify-end">
                     <Button 
-                      variant="ghost" 
+                      variant="outline" 
                       size="sm"
-                      className="text-amber-600 hover:text-amber-800 hover:bg-amber-50"
+                      className="border-amber-800 text-amber-400 hover:text-amber-300 hover:bg-gray-800 hover:border-amber-600"
                     >
-                      <Heart className="h-4 w-4 mr-1" />
+                      <Heart className="h-4 w-4 mr-1 text-amber-500" />
                       <span className="text-xs">Zapisz</span>
                     </Button>
                   </div>
@@ -157,7 +162,7 @@ export default function GoldenSoulPage() {
               </Card>
             )) : (
               <div className="col-span-3 text-center py-10">
-                <p className="text-gray-500">Trwa ładowanie afirmacji Złotej Duszy...</p>
+                <p className="text-gray-400">Trwa ładowanie afirmacji Złotej Duszy...</p>
               </div>
             )}
           </div>

@@ -32,6 +32,7 @@ function Router() {
       <Route path="/premium" component={PremiumPage} />
       <Route path="/premium-access" component={PremiumAccessPage} />
       <Route path="/golden-soul" component={GoldenSoulPage} />
+      <Route path="/golden-soul-affirmations" component={GoldenSoulPage} />
       <Route path="/rituals" component={RitualsPage} />
       <Route path="/affirmation-categories" component={AffirmationCategoriesPage} />
       <Route path="/affirmations/:categoryId" component={AffirmationCategoryPage} />

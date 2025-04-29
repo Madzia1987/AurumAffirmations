@@ -45,49 +45,49 @@ export default function AffirmationCategoriesPage() {
   }
 
   return (
-    <div className="min-h-[80vh] pt-12 pb-20 bg-white">
+    <div className="min-h-[80vh] pt-12 pb-20 bg-black">
       <div className="container px-4 mx-auto">
-        <div className="mb-8">
+        <div className="mb-8 text-center">
           <Button 
-            variant="ghost"
+            variant="outline"
             onClick={() => setLocation('/premium-access')}
-            className="mb-6 pl-1 text-amber-700 hover:text-amber-900 hover:bg-amber-50"
+            className="mb-6 pl-1 border-amber-600 text-amber-400 hover:text-amber-300 hover:bg-gray-900 hover:border-amber-500"
           >
             <ChevronLeft className="mr-1 h-4 w-4" />
             Powrót do Premium
           </Button>
           
-          <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-tight mb-3">
-            Kategorie Afirmacji
+          <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-tight mb-3 bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 text-transparent bg-clip-text">
+            Ekskluzywne Kategorie Afirmacji
           </h1>
-          <p className="text-gray-600 max-w-3xl">
-            Wybierz kategorię afirmacji, która najbardziej odpowiada Twoim potrzebom. 
-            Każda kategoria zawiera starannie dobrane afirmacje oraz praktyczny rytuał, 
-            który pomoże Ci głębiej zintegrować te pozytywne przekonania.
+          <p className="text-gray-300 max-w-3xl mx-auto">
+            Wybierz kategorię afirmacji, która najbardziej rezonuje z Twoją duszą. 
+            Każda kategoria zawiera starannie dobrane, luksusowe afirmacje oraz elegancki rytuał, 
+            który pomoże Ci głębiej zintegrować te transformujące przekonania.
           </p>
         </div>
         
-        <Separator className="my-8 bg-amber-200" />
+        <Separator className="my-8 bg-gradient-to-r from-gray-800 via-amber-500 to-gray-800" />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {CATEGORIES_LIST.map((category) => (
             <Card 
               key={category.id} 
-              className="overflow-hidden border-amber-100 hover:border-amber-300 hover:shadow-md transition-all cursor-pointer"
+              className="overflow-hidden border border-gray-800 hover:border-amber-600 hover:shadow-lg transition-all cursor-pointer bg-gray-900"
               onClick={() => setLocation(`/affirmations/${category.id}`)}
             >
               <CardContent className="p-6 flex flex-col h-full">
                 <div className="flex items-center mb-4">
-                  <span className="text-3xl mr-3">{category.icon}</span>
-                  <h2 className="text-xl font-serif font-medium">{category.title}</h2>
+                  <span className={`text-3xl mr-3 ${category.iconClass} font-serif`} style={{textShadow: '0 0 5px rgba(251, 191, 36, 0.5)'}}>{category.icon}</span>
+                  <h2 className="text-xl font-serif font-medium text-white">{category.title}</h2>
                 </div>
                 <div className="mt-auto pt-4 flex justify-end">
                   <Button 
-                    variant="ghost" 
+                    variant="outline" 
                     size="sm"
-                    className="text-amber-600 hover:text-amber-800 hover:bg-amber-50"
+                    className="border-amber-800 text-amber-400 hover:text-amber-300 hover:bg-gray-800 hover:border-amber-600"
                   >
-                    <Star className="h-4 w-4 mr-1" />
+                    <Star className="h-4 w-4 mr-1 text-amber-500" />
                     <span className="text-xs">Zobacz</span>
                   </Button>
                 </div>

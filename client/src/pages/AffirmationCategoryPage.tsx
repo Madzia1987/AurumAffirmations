@@ -64,45 +64,52 @@ export default function AffirmationCategoryPage() {
   }
 
   return (
-    <div className="min-h-[80vh] pt-12 pb-20 bg-white">
+    <div className="min-h-[80vh] pt-12 pb-20 bg-black">
       <div className="container px-4 mx-auto">
-        <div className="mb-8">
+        <div className="mb-8 text-center">
           <Button 
-            variant="ghost"
+            variant="outline"
             onClick={() => setLocation('/affirmation-categories')}
-            className="mb-6 pl-1 text-amber-700 hover:text-amber-900 hover:bg-amber-50"
+            className="mb-6 pl-1 border-amber-600 text-amber-400 hover:text-amber-300 hover:bg-gray-900 hover:border-amber-500"
           >
             <ChevronLeft className="mr-1 h-4 w-4" />
             Powrót do kategorii
           </Button>
           
-          <div className="flex items-center mb-3">
-            {categoryInfo && <span className="text-4xl mr-3">{categoryInfo.icon}</span>}
-            <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-tight">
+          <div className="flex items-center justify-center mb-4">
+            {categoryInfo && (
+              <span 
+                className={`text-4xl mr-3 ${categoryInfo.iconClass} font-serif`} 
+                style={{textShadow: '0 0 8px rgba(251, 191, 36, 0.7)'}}
+              >
+                {categoryInfo.icon}
+              </span>
+            )}
+            <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-tight bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 text-transparent bg-clip-text">
               {category.title}
             </h1>
           </div>
-          <p className="text-gray-600 max-w-3xl">
+          <p className="text-gray-300 max-w-3xl mx-auto">
             {category.introduction}
           </p>
         </div>
         
-        <Separator className="my-8 bg-amber-200" />
+        <Separator className="my-8 bg-gradient-to-r from-gray-800 via-amber-500 to-gray-800" />
         
         <div className="grid grid-cols-1 gap-6 max-w-4xl mx-auto">
           {category.affirmations.map((affirmation, index) => (
-            <Card key={index} className="overflow-hidden border-amber-100 hover:border-amber-200 transition-colors">
+            <Card key={index} className="overflow-hidden border-gray-800 hover:border-amber-600 transition-colors bg-gray-900">
               <CardContent className="p-6 flex items-start">
-                <Star className="text-amber-500 w-5 h-5 mt-1 mr-3 flex-shrink-0" />
-                <p className="text-lg text-gray-800 leading-relaxed font-medium">{affirmation}</p>
+                <Star className="text-amber-500 w-5 h-5 mt-1 mr-3 flex-shrink-0" style={{filter: 'drop-shadow(0 0 3px rgba(251, 191, 36, 0.5))'}} />
+                <p className="text-lg text-gray-100 leading-relaxed font-medium">{affirmation}</p>
               </CardContent>
             </Card>
           ))}
         </div>
         
-        <div className="mt-12 max-w-4xl mx-auto bg-amber-50 rounded-lg p-6 border border-amber-100">
-          <h2 className="text-2xl font-serif font-medium mb-4 text-amber-800">Rytuał</h2>
-          <div className="prose max-w-none text-gray-700">
+        <div className="mt-12 max-w-4xl mx-auto bg-gray-900 rounded-lg p-6 border border-gray-800 shadow-lg">
+          <h2 className="text-2xl font-serif font-medium mb-4 text-amber-400">Rytuał</h2>
+          <div className="max-w-none text-gray-300">
             {category.ritual.split('.').map((sentence, index) => (
               sentence.trim() ? (
                 <p key={index} className="mb-2">{sentence.trim() + '.'}</p>

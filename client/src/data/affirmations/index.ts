@@ -20,11 +20,11 @@ export const AFFIRMATION_CATEGORIES: Record<string, AffirmationCategory> = {
 };
 
 export const CATEGORIES_LIST = [
-  { id: 'love-yourself', title: LOVE_YOURSELF.title, icon: '💖' },
-  { id: 'self-confidence', title: SELF_CONFIDENCE.title, icon: '💎' },
-  { id: 'business-success', title: BUSINESS_SUCCESS.title, icon: '🌠' },
-  { id: 'abundance', title: ABUNDANCE.title, icon: '💰' },
-  { id: 'divine-power', title: DIVINE_POWER.title, icon: '✨' },
+  { id: 'love-yourself', title: LOVE_YOURSELF.title, icon: '♥', iconClass: 'text-amber-500' },
+  { id: 'self-confidence', title: SELF_CONFIDENCE.title, icon: '♦', iconClass: 'text-amber-500' },
+  { id: 'business-success', title: BUSINESS_SUCCESS.title, icon: '★', iconClass: 'text-amber-500' },
+  { id: 'abundance', title: ABUNDANCE.title, icon: '✧', iconClass: 'text-amber-500' },
+  { id: 'divine-power', title: DIVINE_POWER.title, icon: '✵', iconClass: 'text-amber-500' },
 ];
 
 export {
