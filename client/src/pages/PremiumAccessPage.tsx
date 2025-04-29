@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'wouter';
 import { usePremium } from '@/hooks/use-premium';
 import PremiumDashboard from '@/components/premium/PremiumDashboard';
-import { Sparkles, Crown, BookOpen, Star, Calendar, Hourglass, ArrowRight } from 'lucide-react';
+import { Sparkles, Crown, BookOpen, Star, Calendar, Hourglass, ArrowRight, Moon, Gem, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
@@ -102,6 +102,58 @@ export default function PremiumAccessPage() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Afirmacje Złotej Duszy Card */}
+          <Card className="bg-white border border-amber-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <CardHeader className="pb-4">
+              <div className="w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center mb-4">
+                <Heart className="h-6 w-6 text-amber-600" />
+              </div>
+              <CardTitle className="font-serif text-2xl">Afirmacje Złotej Duszy</CardTitle>
+              <CardDescription>Ekskluzywna kolekcja porannych i wieczornych afirmacji</CardDescription>
+            </CardHeader>
+            <CardContent className="pt-0 pb-6">
+              <p className="text-gray-600">
+                Odkryj tę wyjątkową kolekcję afirmacji, która pomoże Ci przejść transformację wewnętrzną.
+                Z każdym oddechem przyjmuj złote światło obfitości, które naturalnie płynie w Tobie.
+              </p>
+            </CardContent>
+            <CardFooter className="pt-0">
+              <Button 
+                onClick={() => setLocation('/golden-soul')} 
+                className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700"
+              >
+                <span>Odkryj afirmacje złotej duszy</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </CardFooter>
+          </Card>
+          
+          {/* Rytuały i Medytacje Card */}
+          <Card className="bg-white border border-amber-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <CardHeader className="pb-4">
+              <div className="w-12 h-12 bg-amber-50 rounded-full flex items-center justify-center mb-4">
+                <Moon className="h-6 w-6 text-amber-600" />
+              </div>
+              <CardTitle className="font-serif text-2xl">Rytuały i Medytacje</CardTitle>
+              <CardDescription>Transformujące praktyki dla codziennego życia</CardDescription>
+            </CardHeader>
+            <CardContent className="pt-0 pb-6">
+              <p className="text-gray-600">
+                Odkryj potężne rytuały poranne i wieczorne oraz głębokie medytacje, które pomogą
+                Ci wejść na wyższy poziom świadomości i połączyć się z Twoją złotą energią.
+              </p>
+            </CardContent>
+            <CardFooter className="pt-0">
+              <Button 
+                onClick={() => setLocation('/rituals')} 
+                className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700"
+              >
+                <span>Poznaj rytuały i medytacje</span>
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </CardFooter>
+          </Card>
+          
           {/* Premium Affirmations Card */}
           <Card className="bg-white border border-amber-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
             <CardHeader className="pb-4">

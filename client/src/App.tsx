@@ -12,6 +12,8 @@ import NumerologyPage from "@/pages/NumerologyPage";
 import PremiumPage from "@/pages/PremiumPage";
 import PremiumAccessPage from "@/pages/PremiumAccessPage";
 import CheckoutPage from "@/pages/CheckoutPage";
+import GoldenSoulPage from "@/pages/GoldenSoulPage";
+import RitualsPage from "@/pages/RitualsPage";
 import AuthPage from "@/pages/auth-page";
 import ProfilePage from "@/pages/profile-page";
 import { ProtectedRoute } from "./lib/protected-route";
@@ -27,6 +29,8 @@ function Router() {
       <Route path="/numerology" component={NumerologyPage} />
       <Route path="/premium" component={PremiumPage} />
       <Route path="/premium-access" component={PremiumAccessPage} />
+      <Route path="/golden-soul" component={GoldenSoulPage} />
+      <Route path="/rituals" component={RitualsPage} />
       <Route path="/premium/checkout" component={CheckoutPage} />
       <Route path="/checkout/:plan" component={CheckoutPage} />
       <Route path="/auth" component={AuthPage} />
