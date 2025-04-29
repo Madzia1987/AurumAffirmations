@@ -27,7 +27,7 @@ export default function PackageSelector({ onCheckoutSuccess }: PackageSelectorPr
   const [, setLocation] = useLocation();
 
   const handlePlanSelect = (plan: string) => {
-    setLocation(`/premium/checkout?plan=${plan}`);
+    setLocation(`/checkout/${plan}`);
   };
 
   return (

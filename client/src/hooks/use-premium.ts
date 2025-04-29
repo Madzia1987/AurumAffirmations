@@ -36,7 +36,7 @@ export const usePremium = () => {
           description: "Ciesz się pełnym dostępem do premium treści Aurum Affirmations!",
         });
         
-        // Redirect to premium dashboard after successful purchase
+        // Redirect to premium-access page after successful purchase
         if (window.location.pathname.includes('/checkout')) {
           window.location.href = '/premium-access';
         }
