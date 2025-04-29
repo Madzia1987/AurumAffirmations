@@ -7,6 +7,7 @@ import { useToast } from '@/hooks/use-toast';
 import { ChevronLeft, Sunrise, Sunset, Sparkles } from 'lucide-react';
 import { Card, CardContent, CardTitle, CardDescription } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useApi } from '@/hooks/use-api';
 
 interface Ritual {
   id: number;
@@ -23,62 +24,16 @@ export default function RitualsPage() {
   const { toast } = useToast();
   const [activeTab, setActiveTab] = useState('ritual');
   
-  // Mock data until we set up the API endpoint
-  const rituals: Ritual[] = [
-    {
-      id: 1,
-      title: "Poranny Rytuał Złotej Kobiecości",
-      content: "Budząc się, pozwól sobie na moment ciszy. Poczuj, jak twoje ciało obejmuje ciepło pościeli. Weź trzy głębokie oddechy, wyobrażając sobie, jak z każdym wdechem wlewasz do swojego ciała złote światło miłości i obfitości.\n\nPołóż dłoń na sercu i szepnij do siebie: \"Dzień dobry, ukochana. Dzisiaj celebrujemy nasze wspólne podróżowanie. Oczywiście, że wszystko już jest dobrze.\"\n\nWstając z łóżka, pozwól swoim stopom dotknąć ziemi z wdzięcznością. Każdy krok, który dziś wykonasz, jest krokiem w stronę twojego najwyższego dobra.\n\nPrzed lustrem podaruj sobie szczery uśmiech, spotykając swoją duszę w odbiciu. Jesteś doskonała w swojej niepowtarzalności.",
-      category: "morning",
-      type: "ritual",
-      isPremium: true
-    },
-    {
-      id: 2,
-      title: "Wieczorny Rytuał Wdzięczności",
-      content: "Wieczorem, kiedy dzień dobiega końca, stwórz dla siebie przestrzeń spokoju. Zapal świecę symbolizującą światło twojej duszy.\n\nZamknij oczy i pozwól sobie przypomnieć trzy momenty z dzisiejszego dnia, za które czujesz wdzięczność. Poczuj, jak każde z tych wspomnień wypełnia cię złotym ciepłem.\n\nSzepnij do siebie: \"Dziękuję ci, dniu, za wszystkie dary. Dziękuję ci, ciało, za noszenie mnie przez te doświadczenia. Oczywiście, że jestem bezpieczna w swoim istnieniu.\"\n\nOtul się miłością jak najdelikatniejszym kocem, wiedząc, że nawet we śnie twoja dusza pracuje na rzecz twojego najwyższego dobra.",
-      category: "evening",
-      type: "ritual",
-      isPremium: true
-    },
-    {
-      id: 3,
-      title: "Codzienny Rytuał Złotego Blasku",
-      content: "Znajdź pięć minut każdego poranka, by napełnić się swoim własnym światłem. Stań przy oknie, pozwalając promykom słońca (lub nawet pochmurnej poświacie) dotknąć twojej skóry.\n\nRozprzestrzeń ramiona jak skrzydła i wyobraź sobie, że z twojego serca wypływa złota energia, owijając się wokół ciebie jak kokon światła. Oczywiście, że jesteś miłością w swojej najczystszej formie.\n\nPowiedz na głos: \"Jestem otwarta na przyjmowanie wszystkich darów, które dzisiaj do mnie płyną. Jestem gotowa dostrzegać cuda w codzienności.\"",
-      category: "morning",
-      type: "ritual",
-      isPremium: true
-    },
-    {
-      id: 4,
-      title: "Rytuał Księżycowej Kąpieli",
-      content: "Podczas pełni księżyca (choć każda faza księżyca ma swoją moc), przygotuj sobie kąpiel z solą morską i kilkoma kroplami ulubionego olejku.\n\nWchodząc do wody, wyobraź sobie, że zanurzasz się w srebrnym świetle księżyca, które oczyszcza każdą komórkę twojego ciała z napięć i trosk.\n\nSzepnij do wody: \"Zmywam wszystko, co nie jest miłością. Oczywiście, że wszystko już jest dobrze.\"",
-      category: "evening",
-      type: "ritual",
-      isPremium: true
-    },
-    {
-      id: 5,
-      title: "Medytacja Złotego Serca",
-      content: "Usiądź wygodnie, z plecami naturalnie wyprostowanymi. Zamknij oczy i skieruj uwagę na swój oddech.\n\nWyobraź sobie, że w centrum twojej klatki piersiowej pulsuje złote światło. Z każdym wdechem staje się ono jaśniejsze, z każdym wydechem rozszerza się, wypełniając całe twoje ciało.\n\nPowtarzaj w myślach: \"Jestem bezpieczna w swoim sercu. Jestem domem dla siebie. Jestem ukochana przez samo życie.\"\n\nPozwól temu złotemu światłu wypełnić każdy zakamarek twojego istnienia, przynosząc ukojenie, pewność i spokój. Oczywiście, że jesteś miłością.",
-      category: "meditation",
-      type: "meditation",
-      isPremium: true
-    },
-    {
-      id: 6,
-      title: "Medytacja Wizualizacyjna \"Ogród Duszy\"",
-      content: "Zamknij oczy i wyobraź sobie, że stoisz przed bramą do magicznego ogrodu – twojego własnego ogrodu duszy.\n\nOtwórz tę bramę i wejdź do środka. Co widzisz? Jakie kolory, zapachy, dźwięki cię otaczają? Czy są tam kwiaty, drzewa, może strumyk?\n\nZnajdź miejsce, które przyciąga cię najbardziej i usiądź tam. Poczuj, jak ziemia pod tobą wspiera cię i karmi swoją energią. Oczywiście, że jesteś bezpieczna w tym ogrodzie swojej duszy.\n\nW tym miejscu możesz zadać pytanie swojemu wewnętrznemu przewodnikowi. Odpowiedź może przyjść jako słowa, obrazy, uczucia. Zaufaj temu, co otrzymujesz.",
-      category: "meditation",
-      type: "meditation",
-      isPremium: true
-    }
-  ];
+  // Fetch rituals from the API
+  const { data: rituals, isLoading: isLoadingRituals } = useApi<Ritual[]>({
+    url: '/api/rituals',
+    initialData: [],
+  });
   
   // Filter rituals by type
-  const morningRituals = rituals.filter(r => r.category === 'morning' && r.type === 'ritual');
-  const eveningRituals = rituals.filter(r => r.category === 'evening' && r.type === 'ritual');
-  const meditations = rituals.filter(r => r.type === 'meditation');
+  const morningRituals = rituals?.filter((r: Ritual) => r.category === 'morning' && r.type === 'ritual') || [];
+  const eveningRituals = rituals?.filter((r: Ritual) => r.category === 'evening' && r.type === 'ritual') || [];
+  const meditations = rituals?.filter((r: Ritual) => r.type === 'meditation') || [];
   
   useEffect(() => {
     // Set page title
@@ -155,13 +110,13 @@ export default function RitualsPage() {
                 </h2>
                 
                 <div className="space-y-6">
-                  {morningRituals.map((ritual) => (
+                  {morningRituals.map((ritual: Ritual) => (
                     <Card key={ritual.id} className="overflow-hidden">
                       <CardContent className="p-6">
                         <CardTitle className="text-xl font-serif mb-2">{ritual.title}</CardTitle>
                         <CardDescription className="mb-4">Rytuał poranny</CardDescription>
                         <div className="prose max-w-none">
-                          {ritual.content.split('\n\n').map((paragraph, i) => (
+                          {ritual.content.split('\n\n').map((paragraph: string, i: number) => (
                             <p key={i} className="mb-4 text-gray-700 leading-relaxed">{paragraph}</p>
                           ))}
                         </div>
@@ -178,13 +133,13 @@ export default function RitualsPage() {
                 </h2>
                 
                 <div className="space-y-6">
-                  {eveningRituals.map((ritual) => (
+                  {eveningRituals.map((ritual: Ritual) => (
                     <Card key={ritual.id} className="overflow-hidden">
                       <CardContent className="p-6">
                         <CardTitle className="text-xl font-serif mb-2">{ritual.title}</CardTitle>
                         <CardDescription className="mb-4">Rytuał wieczorny</CardDescription>
                         <div className="prose max-w-none">
-                          {ritual.content.split('\n\n').map((paragraph, i) => (
+                          {ritual.content.split('\n\n').map((paragraph: string, i: number) => (
                             <p key={i} className="mb-4 text-gray-700 leading-relaxed">{paragraph}</p>
                           ))}
                         </div>
@@ -203,13 +158,13 @@ export default function RitualsPage() {
                 </h2>
                 
                 <div className="space-y-6">
-                  {meditations.map((meditation) => (
+                  {meditations.map((meditation: Ritual) => (
                     <Card key={meditation.id} className="overflow-hidden">
                       <CardContent className="p-6">
                         <CardTitle className="text-xl font-serif mb-2">{meditation.title}</CardTitle>
                         <CardDescription className="mb-4">Medytacja</CardDescription>
                         <div className="prose max-w-none">
-                          {meditation.content.split('\n\n').map((paragraph, i) => (
+                          {meditation.content.split('\n\n').map((paragraph: string, i: number) => (
                             <p key={i} className="mb-4 text-gray-700 leading-relaxed">{paragraph}</p>
                           ))}
                         </div>

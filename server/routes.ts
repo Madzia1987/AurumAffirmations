@@ -76,6 +76,82 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.status(500).json({ message: "Error fetching daily affirmation: " + error.message });
     }
   });
+  
+  // Get all affirmations with optional category filter
+  app.get("/api/affirmations", async (req, res) => {
+    try {
+      const category = req.query.category as string;
+      const isPremiumChecked = await storage.checkPremiumStatus(req.user?.id || 0);
+      
+      // Read directly from the JSON file
+      const fs = require('fs').promises;
+      const path = require('path');
+      const affirmationsPath = path.join(process.cwd(), 'public', 'data', 'affirmations.json');
+      const affirmationsData = await fs.readFile(affirmationsPath, 'utf-8');
+      let affirmations = JSON.parse(affirmationsData);
+      
+      // Filter by category if provided
+      if (category) {
+        affirmations = affirmations.filter(
+          (a: any) => a.category === category
+        );
+      }
+      
+      // If user is not premium, filter out premium affirmations
+      if (!isPremiumChecked) {
+        affirmations = affirmations.filter(
+          (a: any) => !a.isPremium
+        );
+      }
+      
+      res.json(affirmations);
+    } catch (error: any) {
+      console.error('Error fetching affirmations:', error);
+      res.status(500).json({ error: 'Failed to fetch affirmations' });
+    }
+  });
+  
+  // Get all rituals with optional category/type filter
+  app.get("/api/rituals", async (req, res) => {
+    try {
+      const category = req.query.category as string;
+      const type = req.query.type as string;
+      const isPremiumChecked = await storage.checkPremiumStatus(req.user?.id || 0);
+      
+      // Read directly from the JSON file
+      const fs = require('fs').promises;
+      const path = require('path');
+      const ritualsPath = path.join(process.cwd(), 'public', 'data', 'rituals.json');
+      const ritualsData = await fs.readFile(ritualsPath, 'utf-8');
+      let rituals = JSON.parse(ritualsData);
+      
+      // Filter by category if provided
+      if (category) {
+        rituals = rituals.filter(
+          (r: any) => r.category === category
+        );
+      }
+      
+      // Filter by type if provided
+      if (type) {
+        rituals = rituals.filter(
+          (r: any) => r.type === type
+        );
+      }
+      
+      // If user is not premium, filter out premium rituals
+      if (!isPremiumChecked) {
+        rituals = rituals.filter(
+          (r: any) => !r.isPremium
+        );
+      }
+      
+      res.json(rituals);
+    } catch (error: any) {
+      console.error('Error fetching rituals:', error);
+      res.status(500).json({ error: 'Failed to fetch rituals' });
+    }
+  });
 
   // Daily quotes
   app.get("/api/daily-quote", async (req, res) => {

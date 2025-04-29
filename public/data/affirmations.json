@@ -1,254 +1,182 @@
 [
   {
     "id": 1,
-    "text": "Jestem magnesem na bogactwo i obfitość. Przyciągam do siebie wszystko, czego potrzebuję i pragnę.",
-    "category": "wealth",
+    "text": "Jestem magnesem na bogactwo i obfitość.",
+    "category": "abundance",
     "isPremium": false
   },
   {
-    "id": 31,
-    "text": "Z każdym oddechem przyjmuję złote światło obfitości, które naturalnie płynie we mnie. Jestem bezpieczna w swojej wewnętrznej mocy.",
-    "category": "morning",
-    "isPremium": true
-  },
-  {
-    "id": 32,
-    "text": "Moje serce jest skarbnicą miłości. Oczywiście, że jestem miłością w każdej swojej komórce.",
-    "category": "morning",
-    "isPremium": true
-  },
-  {
-    "id": 33,
-    "text": "Dzisiaj przypominam sobie o mojej wrodzonej wartości. Nie muszę na nią pracować – ona po prostu jest, jak oddech, jak bicie serca.",
-    "category": "morning",
-    "isPremium": true
-  },
-  {
-    "id": 34,
-    "text": "Jestem koroną stworzenia, niosąca w sobie całą mądrość wszechświata. Oczywiście, że wszystko już jest dobrze.",
-    "category": "morning",
-    "isPremium": true
-  },
-  {
-    "id": 35,
-    "text": "Moja kobieca energia jest źródłem niewyczerpanej mocy. Pozwalam jej przepływać swobodnie, tworząc życie, które kocham.",
-    "category": "morning",
-    "isPremium": true
-  },
-  {
-    "id": 36,
-    "text": "Jestem magnesem dla wszystkiego, co wspaniałe. Dobro płynie do mnie bez wysiłku, bo taka jest natura mojej duszy.",
-    "category": "morning",
-    "isPremium": true
-  },
-  {
-    "id": 37,
-    "text": "Moje ciało jest świątynią mojej duszy. Traktuję je z czułością i wdzięcznością, bo oczywiście, że jestem bezpieczna w sobie.",
-    "category": "morning",
-    "isPremium": true
-  },
-  {
-    "id": 38,
-    "text": "Dziękuję za ten dzień pełen doświadczeń. Każde z nich wzbogaciło mnie i wzmocniło moją wewnętrzną światłość.",
-    "category": "evening",
-    "isPremium": true
-  },
-  {
-    "id": 39,
-    "text": "Otulam się złotym światłem miłości, wiedząc, że oczywiście, wszystko już jest dobrze.",
-    "category": "evening",
-    "isPremium": true
-  },
-  {
-    "id": 40,
-    "text": "Odpuszczam wszystko, co nie służy mojemu najwyższemu dobru. Moje serce wie, że jestem zawsze prowadzona.",
-    "category": "evening",
-    "isPremium": true
-  },
-  {
-    "id": 41,
-    "text": "Sen przynosi mi odnowienie i głębokie połączenie z moją intuicją. Oczywiście, że jestem bezpieczna, także w nocy.",
-    "category": "evening",
-    "isPremium": true
-  },
-  {
-    "id": 42,
-    "text": "Jestem wdzięczna za każdą obfitość, która wypełnia moje życie. Rozpoznaję ją z łatwością, bo obfitość jest moim naturalnym stanem.",
-    "category": "evening",
-    "isPremium": true
-  },
-  {
     "id": 2,
-    "text": "Każdego dnia, pod każdym względem, staję się coraz lepsza i bogatsza.",
-    "category": "wealth",
+    "text": "Moje ciało jest pełne energii i zdrowia.",
+    "category": "health",
     "isPremium": false
   },
   {
     "id": 3,
-    "text": "Moje życie wypełnione jest obfitością. Pieniądze przychodzą do mnie łatwo i regularnie.",
-    "category": "wealth",
+    "text": "Zasługuję na miłość i szacunek.",
+    "category": "love",
     "isPremium": false
   },
   {
     "id": 4,
-    "text": "Kocham siebie bezwarunkowo i akceptuję każdą część mojej istoty.",
-    "category": "self-love",
+    "text": "Każdego dnia osiągam swoje cele z łatwością.",
+    "category": "success",
     "isPremium": false
   },
   {
     "id": 5,
-    "text": "Z każdym oddechem wypełniam się coraz większą pewnością siebie.",
-    "category": "confidence",
+    "text": "Jestem chroniona i bezpieczna.",
+    "category": "protection",
     "isPremium": false
   },
   {
     "id": 6,
-    "text": "Zasługuję na sukces, bogactwo i spełnienie wszystkich moich pragnień.",
-    "category": "wealth",
+    "text": "Moja kariera rozwija się pomyślnie.",
+    "category": "career",
     "isPremium": false
   },
   {
     "id": 7,
-    "text": "Jestem potężną kreatorką swojego życia i przeznaczenia.",
-    "category": "confidence",
+    "text": "Przyciągam do siebie właściwych ludzi.",
+    "category": "relationships",
     "isPremium": false
   },
   {
     "id": 8,
-    "text": "Promieniuję pewnością siebie i przyciągam do siebie pozytywnych ludzi.",
-    "category": "confidence",
+    "text": "Moje serce jest pełne wdzięczności.",
+    "category": "gratitude",
     "isPremium": false
   },
   {
     "id": 9,
-    "text": "Mój biznes rozwija się i przynosi mi satysfakcję oraz obfitość.",
-    "category": "business",
+    "text": "Zasługuję na finansową obfitość, która do mnie płynie.",
+    "category": "abundance",
     "isPremium": false
   },
   {
     "id": 10,
-    "text": "Jestem wdzięczna za wszystkie pieniądze, które do mnie płyną.",
-    "category": "wealth",
+    "text": "Mam w sobie siłę, by pokonać wszystkie przeszkody.",
+    "category": "strength",
     "isPremium": false
   },
   {
     "id": 11,
-    "text": "Moja wartość jest niezależna od opinii innych ludzi.",
-    "category": "self-love",
-    "isPremium": false
+    "text": "Z każdym oddechem przyjmuję złote światło obfitości, które wypełnia każdą komórkę mojego ciała.",
+    "category": "golden-soul",
+    "isPremium": true
   },
   {
     "id": 12,
-    "text": "Mój umysł jest skupiony na obfitości i bogactwie.",
-    "category": "mindset",
-    "isPremium": false
+    "text": "Oczywiście, że jestem godna bogactwa i luksusu, które do mnie płyną.",
+    "category": "golden-soul",
+    "isPremium": true
   },
   {
     "id": 13,
-    "text": "Jestem godna wszystkiego, co najlepsze i życie mi to dostarcza.",
-    "category": "self-love",
-    "isPremium": false
+    "text": "Jestem boginią obfitości w ludzkiej formie, a wszystko, czego dotykam, zamienia się w złoto.",
+    "category": "golden-soul",
+    "isPremium": true
   },
   {
     "id": 14,
-    "text": "Z każdym dniem przyciągam do siebie coraz więcej pieniędzy i możliwości.",
-    "category": "wealth",
-    "isPremium": false
+    "text": "Z każdym wydechem uwalniam strach i wątpliwości, otwierając przestrzeń dla złotego przepływu dobrobytu.",
+    "category": "golden-soul",
+    "isPremium": true
   },
   {
     "id": 15,
-    "text": "Moje podświadomość jest zaprogramowana na sukces i obfitość.",
-    "category": "mindset",
+    "text": "Moje złote serce przyciąga wszystko, czego potrzebuję, we właściwym czasie i we właściwy sposób.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 16,
-    "text": "Mam potężną moc manifestowania wszystkiego, czego pragnę w moim życiu.",
-    "category": "mindset",
+    "text": "Oczywiście, że jestem bezpieczna w swoim ciele i w swoim życiu.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 17,
-    "text": "Mój biznes przyciąga idealnych klientów, którzy doceniają moją wartość.",
-    "category": "business",
+    "text": "Moja esencja jest czysta, jasna i cenna jak złoto.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 18,
-    "text": "Kiedy dbam o siebie i swoje potrzeby, mogę lepiej służyć innym.",
-    "category": "self-love",
+    "text": "Każda komórka mojego ciała wibruje na częstotliwości miłości, światła i złotej obfitości.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 19,
-    "text": "Moje ciało jest świątynią mojej duszy i traktuję je z miłością i szacunkiem.",
-    "category": "self-love",
+    "text": "Jestem otwarta na przyjmowanie wszystkich darów wszechświata z wdzięcznością i radością.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 20,
-    "text": "Jestem potężną manifestacją boskiej kobiecości.",
-    "category": "self-love",
+    "text": "Mój wewnętrzny blask przyciąga do mnie ludzi, sytuacje i możliwości, które są dla mnie dobre.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 21,
-    "text": "Jestem magnesem na wielkie możliwości i lukratywne kontrakty.",
-    "category": "business",
+    "text": "Oczywiście, że moje ciało jest świątynią, którą kocham i szanuję.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 22,
-    "text": "Doświadczam coraz większego sukcesu z każdym projektem, którego się podejmuję.",
-    "category": "business",
+    "text": "Jestem bezpieczna w swoim złotym sercu, które jest domem dla mojej duszy.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 23,
-    "text": "Moja pewność siebie jest niezachwiana, niezależnie od okoliczności.",
-    "category": "confidence",
+    "text": "Wszystko, co potrzebuję wiedzieć, przychodzi do mnie we właściwym czasie.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 24,
-    "text": "Pieniądze płyną do mnie z różnych źródeł, często w nieoczekiwany sposób.",
-    "category": "wealth",
+    "text": "Oczywiście, że zasługuję na miłość, radość i spełnienie, które do mnie płyną.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 25,
-    "text": "Każda komórka mojego ciała wibruje na częstotliwości bogactwa i obfitości.",
-    "category": "wealth",
+    "text": "Z każdym krokiem stąpam po ścieżce, która prowadzi mnie do mojego najwyższego dobra.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 26,
-    "text": "Myślę, działam i żyję jak milionerka, przyciągając tę rzeczywistość do siebie.",
-    "category": "mindset",
+    "text": "Oddycham głęboko i wiem, że jestem dokładnie tam, gdzie powinnam być.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 27,
-    "text": "Mój biznes jest kanałem, przez który przepływa obfitość do mojego życia.",
-    "category": "business",
+    "text": "Moje ciało emanuje złotym światłem, które leczy, chroni i przyciąga obfitość.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 28,
-    "text": "Jestem odważna i pewna siebie we wszystkich moich decyzjach finansowych.",
-    "category": "confidence",
+    "text": "Jestem jednością z moją złotą duszą, która zna moją prawdziwą wartość.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 29,
-    "text": "Każdy dzień jest nową szansą, by przyciągnąć do siebie więcej bogactwa.",
-    "category": "wealth",
+    "text": "Oczywiście, że wszystko już jest dobrze.",
+    "category": "golden-soul",
     "isPremium": true
   },
   {
     "id": 30,
-    "text": "Moje myśli kreują moją rzeczywistość. Myślę jak bilionerka, więc żyję jak bilionerka.",
-    "category": "mindset",
+    "text": "Życie bezpiecznie prowadzi mnie do spełnienia moich najgłębszych pragnień.",
+    "category": "golden-soul",
     "isPremium": true
   }
 ]

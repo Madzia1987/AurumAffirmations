@@ -46,5 +46,37 @@
     "category": "meditation",
     "type": "meditation",
     "isPremium": true
+  },
+  {
+    "id": 7,
+    "title": "Medytacja Słońca Wewnętrznego",
+    "content": "Usiądź lub połóż się w wygodnej pozycji i pozwól sobie na głęboki oddech, rozluźniając każdą część ciała od stóp po czubek głowy.\n\nWyobraź sobie, że w samym centrum twojego brzucha znajduje się małe, jasne słońce. Z każdym oddechem to słońce staje się jaśniejsze, cieplejsze, większe.\n\nPoczuj, jak jego ciepło rozchodzi się po całym twoim ciele, docierając do każdej komórki, przynosząc im energię i witalność.\n\nPowtarzaj w myślach: \"Jestem jak słońce – naturalnie promienieję ciepłem, światłem i miłością. To jest moja prawdziwa natura.\"",
+    "category": "meditation",
+    "type": "meditation",
+    "isPremium": true
+  },
+  {
+    "id": 8,
+    "title": "Rytuał Porannej Wdzięczności",
+    "content": "Jeszcze przed sprawdzeniem telefonu, tuż po przebudzeniu, połóż dłonie na swoim sercu i weź trzy głębokie oddechy.\n\nPomyśl o trzech rzeczach, za które jesteś wdzięczna w tym momencie. Mogą to być najprostsze sprawy: ciepło kołdry, zapach poranka, fakt, że oddychasz.\n\nPowiedz na głos: \"Dziękuję za ten nowy dzień i wszystkie możliwości, które niesie. Oczywiście, że jestem gotowa na przyjmowanie dobra.\"",
+    "category": "morning",
+    "type": "ritual",
+    "isPremium": false
+  },
+  {
+    "id": 9,
+    "title": "Wieczorny Rytuał Uwolnienia",
+    "content": "Przed snem zapisz na kartce papieru wszystkie troski, zmartwienia i napięcia, które niesiesz ze sobą po dniu.\n\nPrzeczytaj je na głos, a następnie powiedz: \"Uwalniam te wszystkie sprawy. Odkładam je na noc, wiedząc, że we śnie moja podświadomość znajdzie najlepsze rozwiązania.\"\n\nZgnij kartkę i odłóż ją pod poduszkę lub do szuflady. Wyobraź sobie, że wraz z tym gestem zdejmujesz z siebie ciężar, pozwalając sobie na regenerujący sen.",
+    "category": "evening",
+    "type": "ritual",
+    "isPremium": false
+  },
+  {
+    "id": 10,
+    "title": "Medytacja Uziemienia",
+    "content": "Wyjdź na zewnątrz i znajdź miejsce, gdzie możesz stanąć lub usiąść bezpośrednio na ziemi. Jeśli to niemożliwe, wyobraź sobie taki kontakt.\n\nZamknij oczy i poczuj, jak Twoje stopy (lub ciało) łączą się z ziemią. Wyobraź sobie, że wypuszczasz korzenie, które sięgają głęboko w glebę.\n\nZ każdym wdechem przyjmujesz stabilność i moc ziemi, z każdym wydechem uwalniasz wszystko, co niepotrzebne.\n\nPowtarzaj: \"Jestem bezpieczna i ugruntowana. Czerpię siłę z ziemi, na której stoję.\"",
+    "category": "meditation",
+    "type": "meditation",
+    "isPremium": false
   }
 ]
