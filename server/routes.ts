@@ -85,9 +85,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const category = req.query.category as string;
       const isPremiumChecked = await storage.checkPremiumStatus(req.user?.id || 0);
       
-      // Read directly from the JSON file
-      const affirmationsPath = path.join(process.cwd(), 'public', 'data', 'affirmations.json');
+      // Read directly from the JSON file using absolute path
+      const affirmationsPath = '/home/runner/workspace/public/data/affirmations.json';
+      console.log('Loading affirmations from:', affirmationsPath);
       const affirmationsData = await fs.readFile(affirmationsPath, 'utf-8');
+      console.log('Affirmations loaded, length:', affirmationsData.length);
       let affirmations = JSON.parse(affirmationsData);
       
       // Filter by category if provided
@@ -118,9 +120,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const type = req.query.type as string;
       const isPremiumChecked = await storage.checkPremiumStatus(req.user?.id || 0);
       
-      // Read directly from the JSON file
-      const ritualsPath = path.join(process.cwd(), 'public', 'data', 'rituals.json');
+      // Read directly from the JSON file using absolute path
+      const ritualsPath = '/home/runner/workspace/public/data/rituals.json';
+      console.log('Loading rituals from:', ritualsPath);
       const ritualsData = await fs.readFile(ritualsPath, 'utf-8');
+      console.log('Rituals loaded, length:', ritualsData.length);
       let rituals = JSON.parse(ritualsData);
       
       // Filter by category if provided
