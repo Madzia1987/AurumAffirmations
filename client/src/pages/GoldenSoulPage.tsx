@@ -136,7 +136,7 @@ export default function GoldenSoulPage() {
         <div className="mb-10">
           <h2 className="text-2xl font-serif font-bold mb-6 text-center">Dzisiejsze Afirmacje Złotej Duszy</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {affirmations.map((affirmation: Affirmation) => (
+            {affirmations && affirmations.length > 0 ? affirmations.map((affirmation: Affirmation) => (
               <Card key={affirmation.id} className="overflow-hidden border-amber-100 hover:border-amber-200 transition-colors">
                 <CardContent className="p-6 flex flex-col h-full">
                   <div className="flex items-start mb-4">
@@ -155,7 +155,11 @@ export default function GoldenSoulPage() {
                   </div>
                 </CardContent>
               </Card>
-            ))}
+            )) : (
+              <div className="col-span-3 text-center py-10">
+                <p className="text-gray-500">Trwa ładowanie afirmacji Złotej Duszy...</p>
+              </div>
+            )}
           </div>
         </div>
         

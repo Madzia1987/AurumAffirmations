@@ -1,17 +1,17 @@
 export const ABUNDANCE = {
-  title: "Obfitość Finansowa / Mentalność Bilionerki",
-  introduction: "Twoje bogactwo nie jest czymś zewnętrznym - jest naturalnym stanem twojej duszy, która sama w sobie jest nieskończoną obfitością. Zostałaś stworzona z tej samej energii, która formuje gwiazdy i planety - jak mogłabyś więc być stworzona do niedostatku? Twoja zdolność do przyciągania bogactwa jest tak naturalna jak zdolność Ziemi do przyciągania deszczu z chmur. Prawdziwe bogactwo już płynie w twoich żyłach.",
+  title: "Obfitość Finansowa",
+  introduction: "Obfitość to Twój naturalny stan. Wszechświat jest nieskończonym źródłem bogactwa i dobrobytu, a Ty jesteś godna, by czerpać z tego źródła bez ograniczeń. Twoje przekonania na temat pieniędzy kształtują Twoją rzeczywistość finansową. Te afirmacje pomogą Ci przeprogramować podświadomość i otworzyć kanały przepływu finansowej obfitości w Twoim życiu.",
   affirmations: [
-    "Jestem magnesem na fortunę, przyciągam bogactwo każdą komórką ciała.",
-    "Moje konto bankowe rośnie wykładniczo, odzwierciedlając moją wewnętrzną wartość.",
-    "Jestem bilionerką w swojej świadomości, co przejawia się w mojej rzeczywistości.",
-    "Pieniądze uwielbiają być w mojej obecności i mnożą się dla mnie bezwysiłkowo.",
-    "Mój umysł jest zaprogramowany na królewskie bogactwo i nieograniczoną obfitość.",
-    "Inwestuję z genialną intuicją, która mnoży moje bogactwo z każdą decyzją.",
-    "Zasługuję na astronomiczne bogactwo i przyjmuję je teraz z otwartymi ramionami.",
-    "Moja wartość netto rośnie, gdy śpię, odzwierciedlając mój wewnętrzny stan obfitości.",
-    "Moje bogactwo pozwala mi wpływać na świat w głęboki i transformujący sposób.",
-    "Jestem wcieleniem boskiej obfitości i materialnej doskonałości."
+    "Jestem magnesem na bogactwo i obfitość we wszystkich formach.",
+    "Pieniądze płyną do mnie łatwo i nieustannie, z wielu różnych źródeł.",
+    "Mój stosunek do pieniędzy jest zdrowy i pozytywny - akceptuję je z radością i wdzięcznością.",
+    "Z każdym dniem moja finansowa inteligencja rośnie, a wraz z nią mój majątek.",
+    "Jestem godna finansowej obfitości i pozwalam sobie na jej otrzymywanie.",
+    "Moja wartość nie ma limitu, a moje przychody odzwierciedlają tę prawdę.",
+    "Z lekkością zarządzam dużymi sumami pieniędzy, inwestując mądrze i z rozwagą.",
+    "Jestem otwarta na niespodziewane możliwości zwiększenia mojej finansowej obfitości.",
+    "Wszystkie moje finansowe decyzje prowadzą do wzrostu mojego bogactwa i bezpieczeństwa.",
+    "Z wdzięcznością akceptuję bogactwo, które wszechświat nieustannie mi oferuje."
   ],
-  ritual: "Stań wyprostowana z dłońmi złożonymi przed sobą, jak gdybyś trzymała w nich kulę energii. Poczuj, jak między twoimi dłońmi tworzy się ciepła, złota energia obfitości. Z każdym oddechem ta kula staje się większa, jaśniejsza, bardziej intensywna. Gdy poczujesz, że jest naładowana twoją intencją, powiedz: \"Aktywuję teraz swoją boską obfitość. Jestem kanałem dla kosmicznego bogactwa. Pieniądze są przyciągane do mnie jak metal do magnesu. Jestem bogata.\" Zakończ, rozchylając dłonie i pozwalając złotej energii obfitości rozprzestrzenić się na całe twoje pole energetyczne."
+  ritual: "Codziennie rano, przed rozpoczęciem dnia, weź do ręki banknot o najwyższym nominale, jaki posiadasz. Trzymaj go w obu dłoniach przez minutę, z pełną obecnością i szacunkiem. Wyobraź sobie, jak energia obfitości przepływa z banknotu do Twoich rąk i rozprzestrzenia się po całym ciele. Powiedz: 'Dziękuję za tę manifestację obfitości. Jestem świadoma, że pieniądze to tylko forma energii, która swobodnie przepływa w moim życiu. Dziś otwieram się na otrzymywanie większej obfitości.' Następnie umieść banknot w specjalnym miejscu - może to być portfel, pudełko, czy konkretna kieszeń. To Twój 'magnes obfitości', który przez cały dzień będzie przyciągał do Ciebie więcej finansowej energii."
 };

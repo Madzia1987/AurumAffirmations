@@ -1,17 +1,17 @@
 export const BUSINESS_SUCCESS = {
   title: "Sukces w Biznesie",
-  introduction: "Twój biznesowy geniusz jest naturalnym przedłużeniem twojej kobiecej intuicji i kreatywności. Nosisz w sobie wszystkie strategie, wizje i innowacje, które świat potrzebuje właśnie teraz. Twój sukces nie jest przypadkiem - jest manifestacją twojej boskiej zdolności do tworzenia z niczego, do widzenia możliwości tam, gdzie inni widzą przeszkody. Jesteś urodzoną liderką, wizjonerką, pionierką nowej ekonomii serca.",
+  introduction: "Twoja ścieżka biznesowa jest manifestacją Twojej wewnętrznej mocy i wizji. Każda wielka firma zaczyna się od wielkiej myśli, od odważnego marzenia. Te afirmacje zaprogramują Twój umysł na nieograniczony sukces, otwierając drzwi do obfitości, rozpoznawalności i wpływu w świecie biznesu.",
   affirmations: [
-    "Jestem urodzoną wizjonerką biznesu, a świat potrzebuje moich darów.",
-    "Moje decyzje biznesowe są natchnione najwyższą mądrością i intuicją.",
-    "Pieniądze naturalnie płyną do mnie, odpowiadając na wartość, którą tworzę.",
-    "Prowadzę swój biznes z pewnością i klarownością najwyższej klasy CEO.",
-    "Moje kobiece podejście do biznesu jest moją największą przewagą.",
-    "Każda moja biznesowa wizja materializuje się z niezwykłą precyzją.",
-    "Przyciągam idealnych klientów, partnerów i możliwości z lekkością.",
-    "Mój biznes rośnie w doskonałej harmonii z moim najwyższym dobrem.",
-    "Kieruję imperium z gracją, mądrością i niezachwianą determinacją.",
-    "Moja kobieca intuicja jest moim najcenniejszym biznesowym aktywem."
+    "Moja wyjątkowa wartość przekłada się na wyjątkowe zyski w biznesie.",
+    "Z każdą decyzją biznesową kieruję się głęboką intuicją i jasną wizją.",
+    "Przyciągam idealnych klientów, partnerów i możliwości z łatwością i wdziękiem.",
+    "Mój biznes rozrasta się organicznie, docierając do ludzi na całym świecie.",
+    "Zarządzam swoim biznesem z doskonałą równowagą między stanowczością a elastycznością.",
+    "Moje pomysły są cenne, unikalne i niezwykle potrzebne na rynku.",
+    "Każde wyzwanie biznesowe przekształcam w złotą szansę na innowację i wzrost.",
+    "Pomnażam swoje dochody, jednocześnie pomnażając wartość, którą oferuję światu.",
+    "Mój biznes jest magnetycznym hub-em pozytywnej energii, przyciągającym obfitość.",
+    "Zasługuję na wielki sukces i przyjmuję go z otwartymi ramionami."
   ],
-  ritual: "Przed ważnym spotkaniem czy decyzją biznesową, znajdź ciche miejsce i usiądź prosto jak królowa na tronie. Połóż dłonie na kolanach, dłońmi do góry w geście przyjmowania. Zamknij oczy i wyobraź sobie, że twoja korona czakra otwiera się jak złoty kwiat, łącząc cię z kosmiczną mądrością biznesową. Powiedz: \"Aktywuję teraz swoją biznesową genialność. Wszelka mądrość, strategia i intuicja, której potrzebuję, przepływa przeze mnie. Jestem ucieleśnieniem sukcesu.\" Zakończ, delikatnie stukając palcem wskazującym w środek czoła - aktywując swoją trzecie oko biznesowej wizji."
+  ritual: "W pierwszą minutę każdego dnia pracy, zanim sprawdzisz e-maile czy telefon, usiądź prosto przy swoim biurku. Połóż dłonie na blacie i zamknij oczy. Wykonaj trzy głębokie oddechy. Następnie wyobraź sobie siebie jako potężnego kreatora swojego biznesu. Zobacz swoją firmę rozwijającą się w idealny, harmonijny sposób. Poczuj dreszcz ekscytacji na myśl o możliwościach tego dnia. Powiedz na głos: 'Dziś tworzę wyjątkową wartość i osiągam wyjątkowe wyniki. Mój biznes kwitnie, a ja kwitnę wraz z nim.' Otwórz oczy i rozpocznij dzień z tym poczuciem pewności i celu."
 };
