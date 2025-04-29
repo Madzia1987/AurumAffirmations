@@ -7,6 +7,8 @@ import { insertUserSchema, insertSubscriptionSchema } from "@shared/schema";
 import { z } from "zod";
 import { setupAuth, verifyToken } from "./auth";
 import jwt from "jsonwebtoken";
+import { promises as fs } from 'fs';
+import path from 'path';
 
 // Klucz tajny do JWT
 const JWT_SECRET = process.env.JWT_SECRET || "aurum-affirmations-secret-key";
@@ -84,8 +86,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const isPremiumChecked = await storage.checkPremiumStatus(req.user?.id || 0);
       
       // Read directly from the JSON file
-      const fs = require('fs').promises;
-      const path = require('path');
       const affirmationsPath = path.join(process.cwd(), 'public', 'data', 'affirmations.json');
       const affirmationsData = await fs.readFile(affirmationsPath, 'utf-8');
       let affirmations = JSON.parse(affirmationsData);
@@ -119,8 +119,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const isPremiumChecked = await storage.checkPremiumStatus(req.user?.id || 0);
       
       // Read directly from the JSON file
-      const fs = require('fs').promises;
-      const path = require('path');
       const ritualsPath = path.join(process.cwd(), 'public', 'data', 'rituals.json');
       const ritualsData = await fs.readFile(ritualsPath, 'utf-8');
       let rituals = JSON.parse(ritualsData);
