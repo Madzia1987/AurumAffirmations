@@ -5,8 +5,9 @@ import { useApi } from '@/hooks/use-api';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
-import { ChevronLeft, Star, Crown, Heart } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+import { ChevronLeft, Star, Crown, Heart, ArrowRight } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { CATEGORIES_LIST } from '../data/affirmations';
 
 interface Affirmation {
   id: number;
@@ -82,40 +83,102 @@ export default function GoldenSoulPage() {
         
         <Separator className="my-8 bg-amber-200" />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {affirmations.map((affirmation: Affirmation) => (
-            <Card key={affirmation.id} className="overflow-hidden border-amber-100 hover:border-amber-200 transition-colors">
-              <CardContent className="p-6 flex flex-col h-full">
-                <div className="flex items-start mb-4">
-                  <Star className="text-amber-500 w-5 h-5 mt-1 mr-2 flex-shrink-0" />
-                  <p className="text-lg text-gray-800 leading-relaxed font-medium">{affirmation.text}</p>
-                </div>
-                <div className="mt-auto pt-4 flex justify-end">
+        {/* Polecane Kategorie Afirmacji */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-serif font-bold mb-2">Polecane Kategorie Afirmacji</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Odkryj nasze specjalne kolekcje afirmacji dostosowane do różnych obszarów Twojego życia. 
+              Każda kategoria zawiera starannie dobrane afirmacje oraz praktyczny rytuał transformacyjny.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {CATEGORIES_LIST.slice(0, 3).map((category) => (
+              <Card 
+                key={category.id}
+                className="overflow-hidden border-amber-100 hover:border-amber-300 hover:shadow-md transition-all cursor-pointer"
+                onClick={() => setLocation(`/affirmations/${category.id}`)}
+              >
+                <CardHeader className="pb-2">
+                  <div className="flex items-center">
+                    <span className="text-3xl mr-3">{category.icon}</span>
+                    <CardTitle className="font-serif">{category.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardFooter className="pt-0">
                   <Button 
                     variant="ghost" 
                     size="sm"
-                    className="text-amber-600 hover:text-amber-800 hover:bg-amber-50"
+                    className="text-amber-600 hover:text-amber-800 hover:bg-amber-50 pl-1"
                   >
-                    <Heart className="h-4 w-4 mr-1" />
-                    <span className="text-xs">Zapisz</span>
+                    <span>Zobacz afirmacje</span>
+                    <ArrowRight className="ml-1 h-4 w-4" />
                   </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="flex justify-center mt-6">
+            <Button 
+              variant="outline"
+              className="border-amber-200 text-amber-700 hover:border-amber-300 hover:bg-amber-50"
+              onClick={() => setLocation('/affirmation-categories')}
+            >
+              Zobacz wszystkie kategorie
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </div>
+        </div>
+        
+        {/* Afirmacje z API */}
+        <div className="mb-10">
+          <h2 className="text-2xl font-serif font-bold mb-6 text-center">Dzisiejsze Afirmacje Złotej Duszy</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {affirmations.map((affirmation: Affirmation) => (
+              <Card key={affirmation.id} className="overflow-hidden border-amber-100 hover:border-amber-200 transition-colors">
+                <CardContent className="p-6 flex flex-col h-full">
+                  <div className="flex items-start mb-4">
+                    <Star className="text-amber-500 w-5 h-5 mt-1 mr-2 flex-shrink-0" />
+                    <p className="text-lg text-gray-800 leading-relaxed font-medium">{affirmation.text}</p>
+                  </div>
+                  <div className="mt-auto pt-4 flex justify-end">
+                    <Button 
+                      variant="ghost" 
+                      size="sm"
+                      className="text-amber-600 hover:text-amber-800 hover:bg-amber-50"
+                    >
+                      <Heart className="h-4 w-4 mr-1" />
+                      <span className="text-xs">Zapisz</span>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
         
         <div className="mt-12 text-center">
           <p className="text-gray-600 italic mb-6">
             "Z każdym oddechem, przyjmuję złote światło mojej duszy. Oczywiście, że wszystko już jest dobrze."
           </p>
-          <Button 
-            variant="outline" 
-            className="border-amber-200 text-amber-700 hover:border-amber-300 hover:bg-amber-50"
-            onClick={() => setLocation('/rituals')}
-          >
-            Zobacz również Rytuały i Medytacje
-          </Button>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button 
+              variant="outline" 
+              className="border-amber-200 text-amber-700 hover:border-amber-300 hover:bg-amber-50"
+              onClick={() => setLocation('/rituals')}
+            >
+              Zobacz również Rytuały i Medytacje
+            </Button>
+            <Button 
+              variant="default" 
+              className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700"
+              onClick={() => setLocation('/affirmation-categories')}
+            >
+              Odkryj Kategorie Afirmacji Premium
+            </Button>
+          </div>
         </div>
       </div>
     </div>
