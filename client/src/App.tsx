@@ -73,12 +73,12 @@ function App() {
       <AuthProvider>
         <LanguageProvider>
           <TooltipProvider>
-            <div className="flex flex-col min-h-screen bg-white">
+            <div className="flex flex-col min-h-screen">
               <Header />
               <main className="flex-grow">
                 <Router />
               </main>
-              <Footer />
+              <Footer className="bg-white" />
               <Toaster />
             </div>
           </TooltipProvider>
