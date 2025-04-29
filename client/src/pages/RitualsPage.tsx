@@ -24,9 +24,9 @@ export default function RitualsPage() {
   const { toast } = useToast();
   const [activeTab, setActiveTab] = useState('ritual');
   
-  // Fetch rituals from the API
+  // Fetch rituals from the API with force_premium to always get premium content
   const { data: rituals, isLoading: isLoadingRituals } = useApi<Ritual[]>({
-    url: '/api/rituals',
+    url: '/api/rituals?force_premium=true',
     initialData: [],
   });
   

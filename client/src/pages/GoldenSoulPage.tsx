@@ -22,7 +22,7 @@ export default function GoldenSoulPage() {
   
   // Fetch affirmations from the API with golden-soul category
   const { data: affirmations, isLoading: isLoadingAffirmations } = useApi<Affirmation[]>({
-    url: '/api/affirmations?category=golden-soul',
+    url: '/api/affirmations?category=golden-soul&force_premium=true',
     initialData: [],
   });
   
