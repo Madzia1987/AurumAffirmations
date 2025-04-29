@@ -220,6 +220,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/check-premium", async (req, res) => {
     try {
       let userId: number | undefined;
+      let subscription = undefined;
       
       // Jeśli użytkownik jest zalogowany, użyj jego ID
       if (req.user) {
@@ -230,9 +231,61 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
       
       const isPremium = await storage.checkPremiumStatus(userId || 1);
-      res.json({ isPremium });
+      
+      // Get subscription details if user is logged in
+      if (userId) {
+        const userSubscription = await storage.getSubscriptionByUserId(userId);
+        if (userSubscription) {
+          subscription = {
+            active: isPremium,
+            status: isPremium ? 'active' : 'inactive',
+            plan: userSubscription.planId,
+            startDate: userSubscription.createdAt.toISOString(),
+            endDate: userSubscription.expiresAt ? userSubscription.expiresAt.toISOString() : undefined
+          };
+        }
+      }
+      
+      res.json({ isPremium, subscription });
     } catch (error: any) {
       res.status(500).json({ message: "Error checking premium status: " + error.message });
+    }
+  });
+  
+  // Get user profile with subscription details
+  app.get("/api/user/me", verifyToken, async (req, res) => {
+    try {
+      if (!req.user) {
+        return res.status(401).json({ message: "Unauthorized" });
+      }
+      
+      const userId = req.user.id;
+      const isPremium = await storage.checkPremiumStatus(userId);
+      const subscription = await storage.getSubscriptionByUserId(userId);
+      
+      // Prepare subscription details 
+      let subscriptionDetails = null;
+      if (subscription) {
+        subscriptionDetails = {
+          id: subscription.id,
+          planId: subscription.planId,
+          active: isPremium,
+          status: isPremium ? 'active' : 'inactive',
+          startDate: subscription.createdAt.toISOString(),
+          endDate: subscription.expiresAt ? subscription.expiresAt.toISOString() : undefined
+        };
+      }
+      
+      // Return user with subscription details
+      res.json({
+        id: req.user.id,
+        username: req.user.username,
+        email: req.user.email,
+        subscription: subscriptionDetails,
+        isPremium
+      });
+    } catch (error: any) {
+      res.status(500).json({ message: "Error fetching user profile: " + error.message });
     }
   });
 

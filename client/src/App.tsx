@@ -10,6 +10,7 @@ import HomePage from "@/pages/HomePage";
 import HoroscopePage from "@/pages/HoroscopePage";
 import NumerologyPage from "@/pages/NumerologyPage";
 import PremiumPage from "@/pages/PremiumPage";
+import PremiumAccessPage from "@/pages/PremiumAccessPage";
 import CheckoutPage from "@/pages/CheckoutPage";
 import AuthPage from "@/pages/auth-page";
 import ProfilePage from "@/pages/profile-page";
@@ -25,6 +26,7 @@ function Router() {
       <Route path="/horoscope" component={HoroscopePage} />
       <Route path="/numerology" component={NumerologyPage} />
       <Route path="/premium" component={PremiumPage} />
+      <Route path="/premium-access" component={PremiumAccessPage} />
       <Route path="/premium/checkout" component={CheckoutPage} />
       <Route path="/checkout/:plan" component={CheckoutPage} />
       <Route path="/auth" component={AuthPage} />
