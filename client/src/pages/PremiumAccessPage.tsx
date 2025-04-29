@@ -31,9 +31,9 @@ export default function PremiumAccessPage() {
   
   if (isLoading) {
     return (
-      <div className="min-h-[80vh] flex flex-col items-center justify-center p-6">
-        <div className="animate-spin w-12 h-12 border-4 border-amber-500 border-t-transparent rounded-full mb-6"></div>
-        <h2 className="text-2xl font-serif">Sprawdzanie uprawnień...</h2>
+      <div className="min-h-[80vh] flex flex-col items-center justify-center p-6 bg-white">
+        <div className="animate-spin w-12 h-12 border-4 border-amber-500 border-t-transparent rounded-full mb-6" style={{filter: 'drop-shadow(0 0 3px rgba(251, 191, 36, 0.3))'}}></div>
+        <h2 className="text-2xl font-serif text-gray-700">Sprawdzanie uprawnień...</h2>
       </div>
     );
   }
@@ -119,7 +119,7 @@ export default function PremiumAccessPage() {
             </CardContent>
             <CardFooter className="pt-0">
               <Button 
-                onClick={() => setLocation('/golden-soul')} 
+                onClick={() => setLocation('/golden-soul-affirmations')} 
                 className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700"
               >
                 <span>Odkryj afirmacje złotej duszy</span>
