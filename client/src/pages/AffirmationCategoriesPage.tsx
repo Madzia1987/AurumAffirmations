@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { useToast } from '@/hooks/use-toast';
 import { ChevronLeft, Star } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { CATEGORIES_LIST } from '../../public/data/affirmations';
+import { CATEGORIES_LIST } from '../data/affirmations';
 
 export default function AffirmationCategoriesPage() {
   const [, setLocation] = useLocation();

@@ -171,10 +171,10 @@ export default function PremiumAccessPage() {
             </CardContent>
             <CardFooter className="pt-0">
               <Button 
-                onClick={() => setLocation('/affirmations')} 
+                onClick={() => setLocation('/affirmation-categories')} 
                 className="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700"
               >
-                <span>Zobacz afirmacje</span>
+                <span>Zobacz kategorie afirmacji</span>
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </CardFooter>

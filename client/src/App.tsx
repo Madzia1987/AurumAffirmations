@@ -16,6 +16,8 @@ import GoldenSoulPage from "@/pages/GoldenSoulPage";
 import RitualsPage from "@/pages/RitualsPage";
 import AuthPage from "@/pages/auth-page";
 import ProfilePage from "@/pages/profile-page";
+import AffirmationCategoriesPage from "@/pages/AffirmationCategoriesPage";
+import AffirmationCategoryPage from "@/pages/AffirmationCategoryPage";
 import { ProtectedRoute } from "./lib/protected-route";
 import { AuthProvider } from "./hooks/use-auth";
 import { LanguageProvider } from "./hooks/use-language";
@@ -31,6 +33,8 @@ function Router() {
       <Route path="/premium-access" component={PremiumAccessPage} />
       <Route path="/golden-soul" component={GoldenSoulPage} />
       <Route path="/rituals" component={RitualsPage} />
+      <Route path="/affirmation-categories" component={AffirmationCategoriesPage} />
+      <Route path="/affirmations/:categoryId" component={AffirmationCategoryPage} />
       <Route path="/premium/checkout" component={CheckoutPage} />
       <Route path="/checkout/:plan" component={CheckoutPage} />
       <Route path="/auth" component={AuthPage} />
