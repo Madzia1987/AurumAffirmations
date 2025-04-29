@@ -83,7 +83,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.get("/api/affirmations", async (req, res) => {
     try {
       const category = req.query.category as string;
-      const isPremiumChecked = await storage.checkPremiumStatus(req.user?.id || 0);
+      const forcePremium = req.query.force_premium === 'true';
+      
+      // Determine premium status either by user check or by force parameter
+      let isPremiumChecked = await storage.checkPremiumStatus(req.user?.id || 0);
+      if (forcePremium) {
+        isPremiumChecked = true;
+        console.log('Force premium mode activated for affirmations');
+      }
+      
+      console.log('Premium status for affirmations:', isPremiumChecked);
       
       // Read directly from the JSON file using absolute path
       const affirmationsPath = '/home/runner/workspace/public/data/affirmations.json';
@@ -92,11 +101,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.log('Affirmations loaded, length:', affirmationsData.length);
       let affirmations = JSON.parse(affirmationsData);
       
+      console.log('Total affirmations found:', affirmations.length);
+      
       // Filter by category if provided
       if (category) {
         affirmations = affirmations.filter(
           (a: any) => a.category === category
         );
+        console.log(`Filtered by category ${category}, count:`, affirmations.length);
       }
       
       // If user is not premium, filter out premium affirmations
@@ -104,6 +116,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         affirmations = affirmations.filter(
           (a: any) => !a.isPremium
         );
+        console.log('Filtered out premium, final count:', affirmations.length);
+      } else {
+        console.log('Premium user, showing all affirmations:', affirmations.length);
       }
       
       res.json(affirmations);
@@ -118,7 +133,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const category = req.query.category as string;
       const type = req.query.type as string;
-      const isPremiumChecked = await storage.checkPremiumStatus(req.user?.id || 0);
+      const forcePremium = req.query.force_premium === 'true';
+      
+      // Determine premium status either by user check or by force parameter
+      let isPremiumChecked = await storage.checkPremiumStatus(req.user?.id || 0);
+      if (forcePremium) {
+        isPremiumChecked = true;
+        console.log('Force premium mode activated for rituals');
+      }
+      
+      console.log('Premium status for rituals:', isPremiumChecked);
       
       // Read directly from the JSON file using absolute path
       const ritualsPath = '/home/runner/workspace/public/data/rituals.json';
@@ -127,11 +151,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.log('Rituals loaded, length:', ritualsData.length);
       let rituals = JSON.parse(ritualsData);
       
+      console.log('Total rituals found:', rituals.length);
+      
       // Filter by category if provided
       if (category) {
         rituals = rituals.filter(
           (r: any) => r.category === category
         );
+        console.log(`Filtered by category ${category}, count:`, rituals.length);
       }
       
       // Filter by type if provided
@@ -139,6 +166,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         rituals = rituals.filter(
           (r: any) => r.type === type
         );
+        console.log(`Filtered by type ${type}, count:`, rituals.length);
       }
       
       // If user is not premium, filter out premium rituals
@@ -146,6 +174,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         rituals = rituals.filter(
           (r: any) => !r.isPremium
         );
+        console.log('Filtered out premium rituals, final count:', rituals.length);
+      } else {
+        console.log('Premium user, showing all rituals:', rituals.length);
       }
       
       res.json(rituals);
