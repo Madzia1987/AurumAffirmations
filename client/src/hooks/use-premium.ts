@@ -2,8 +2,17 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { getQueryFn } from '@/lib/queryClient';
 import { useToast } from './use-toast';
 
+export interface SubscriptionStatus {
+  active: boolean;
+  status: 'active' | 'inactive' | 'trialing' | 'cancelled' | 'expired';
+  plan?: string;
+  startDate?: string;
+  endDate?: string;
+}
+
 interface PremiumStatusResponse {
   isPremium: boolean;
+  subscription?: SubscriptionStatus;
 }
 
 export const usePremium = () => {
@@ -26,6 +35,11 @@ export const usePremium = () => {
           title: "Premium aktywowano",
           description: "Ciesz się pełnym dostępem do premium treści Aurum Affirmations!",
         });
+        
+        // Redirect to premium dashboard after successful purchase
+        if (window.location.pathname.includes('/checkout')) {
+          window.location.href = '/premium-access';
+        }
       }
       
       return result.data?.isPremium || false;
@@ -35,10 +49,23 @@ export const usePremium = () => {
     }
   };
 
+  // Get user subscription details
+  const getUserSubscription = (): SubscriptionStatus | undefined => {
+    return data?.subscription;
+  };
+
+  // Check if subscription is active
+  const hasActiveSubscription = (): boolean => {
+    return Boolean(data?.subscription?.active);
+  };
+
   return {
     isPremium: data?.isPremium || false,
     isLoading,
     error,
+    subscription: data?.subscription,
+    hasActiveSubscription: hasActiveSubscription(),
+    getUserSubscription,
     refetchPremiumStatus,
   };
 };
