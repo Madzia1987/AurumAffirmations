@@ -44,9 +44,9 @@ export default function GoldenSoulPage() {
   
   if (isLoading || isLoadingAffirmations) {
     return (
-      <div className="min-h-[80vh] flex flex-col items-center justify-center p-6">
-        <div className="animate-spin w-12 h-12 border-4 border-amber-500 border-t-transparent rounded-full mb-6"></div>
-        <h2 className="text-2xl font-serif">Ładowanie afirmacji złotej duszy...</h2>
+      <div className="min-h-[80vh] flex flex-col items-center justify-center p-6 bg-black">
+        <div className="animate-spin w-12 h-12 border-4 border-amber-500 border-t-transparent rounded-full mb-6" style={{filter: 'drop-shadow(0 0 8px rgba(251, 191, 36, 0.5))'}}></div>
+        <h2 className="text-2xl font-serif text-gray-200">Ładowanie afirmacji złotej duszy...</h2>
       </div>
     );
   }
@@ -56,38 +56,38 @@ export default function GoldenSoulPage() {
   }
 
   return (
-    <div className="min-h-[80vh] pt-12 pb-20 bg-white">
+    <div className="min-h-[80vh] pt-12 pb-20 bg-black">
       <div className="container px-4 mx-auto">
-        <div className="mb-8">
+        <div className="mb-8 text-center">
           <Button 
-            variant="ghost"
+            variant="outline"
             onClick={() => setLocation('/premium-access')}
-            className="mb-6 pl-1 text-amber-700 hover:text-amber-900 hover:bg-amber-50"
+            className="mb-6 pl-1 border-amber-600 text-amber-400 hover:text-amber-300 hover:bg-gray-900 hover:border-amber-500"
           >
             <ChevronLeft className="mr-1 h-4 w-4" />
             Powrót do Premium
           </Button>
           
-          <div className="flex items-center mb-3">
-            <Crown className="text-amber-500 w-6 h-6 mr-2" />
-            <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-tight">
+          <div className="flex items-center justify-center mb-3">
+            <Crown className="text-amber-500 w-7 h-7 mr-3" style={{filter: 'drop-shadow(0 0 5px rgba(251, 191, 36, 0.7))'}} />
+            <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-tight bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 text-transparent bg-clip-text">
               Afirmacje Złotej Duszy
             </h1>
           </div>
-          <p className="text-gray-600 max-w-3xl">
+          <p className="text-gray-300 max-w-3xl mx-auto">
             Poniższe afirmacje zostały stworzone by pomóc Ci połączyć się z Twoją wewnętrzną złotą 
             energią i przywołać do Twojego życia dostatek, obfitość i spełnienie. 
             Czytaj je codziennie rano i wieczorem, pozwalając by ich energia przepłynęła przez Twoje myśli i serce.
           </p>
         </div>
         
-        <Separator className="my-8 bg-amber-200" />
+        <Separator className="my-8 bg-gradient-to-r from-gray-800 via-amber-500 to-gray-800" />
         
         {/* Polecane Kategorie Afirmacji */}
         <div className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-2xl font-serif font-bold mb-2 bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400 text-transparent bg-clip-text">Polecane Kategorie Afirmacji</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-gray-300 max-w-2xl mx-auto">
               Odkryj nasze specjalne kolekcje afirmacji dostosowane do różnych obszarów Twojego życia. 
               Każda kategoria zawiera starannie dobrane afirmacje oraz praktyczny rytuał transformacyjny.
             </p>
@@ -169,20 +169,20 @@ export default function GoldenSoulPage() {
         </div>
         
         <div className="mt-12 text-center">
-          <p className="text-gray-600 italic mb-6">
+          <p className="text-gray-300 italic mb-6 text-lg">
             "Z każdym oddechem, przyjmuję złote światło mojej duszy. Oczywiście, że wszystko już jest dobrze."
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button 
               variant="outline" 
-              className="border-amber-200 text-amber-700 hover:border-amber-300 hover:bg-amber-50"
+              className="border-amber-600 text-amber-400 hover:text-amber-300 hover:bg-gray-900 hover:border-amber-500"
               onClick={() => setLocation('/rituals')}
             >
               Zobacz również Rytuały i Medytacje
             </Button>
             <Button 
               variant="default" 
-              className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700"
+              className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-gray-900 font-medium"
               onClick={() => setLocation('/affirmation-categories')}
             >
               Odkryj Kategorie Afirmacji Premium

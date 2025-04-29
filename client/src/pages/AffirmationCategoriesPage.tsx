@@ -33,9 +33,9 @@ export default function AffirmationCategoriesPage() {
   
   if (isLoading) {
     return (
-      <div className="min-h-[80vh] flex flex-col items-center justify-center p-6">
-        <div className="animate-spin w-12 h-12 border-4 border-amber-500 border-t-transparent rounded-full mb-6"></div>
-        <h2 className="text-2xl font-serif">Ładowanie kategorii afirmacji...</h2>
+      <div className="min-h-[80vh] flex flex-col items-center justify-center p-6 bg-black">
+        <div className="animate-spin w-12 h-12 border-4 border-amber-500 border-t-transparent rounded-full mb-6" style={{filter: 'drop-shadow(0 0 8px rgba(251, 191, 36, 0.5))'}}></div>
+        <h2 className="text-2xl font-serif text-gray-200">Ładowanie kategorii afirmacji...</h2>
       </div>
     );
   }
