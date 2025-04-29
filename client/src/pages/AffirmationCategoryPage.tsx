@@ -35,8 +35,11 @@ export default function AffirmationCategoryPage() {
       document.title = `${category.title} - Aurum Affirmations`;
     }
     
+    // Check localStorage first (for override testing)
+    const premiumOverride = localStorage.getItem('premium_override') === 'true';
+    
     // Redirect non-premium users
-    if (!isLoading && !isPremium) {
+    if (!isLoading && !isPremium && !premiumOverride) {
       toast({
         title: "Brak dostępu do premium",
         description: "Ta strona jest dostępna tylko dla użytkowników premium.",
@@ -55,7 +58,8 @@ export default function AffirmationCategoryPage() {
     );
   }
   
-  if (!isPremium) {
+  const premiumOverride = localStorage.getItem('premium_override') === 'true';
+  if (!isPremium && !premiumOverride) {
     return null; // Will redirect in useEffect
   }
 

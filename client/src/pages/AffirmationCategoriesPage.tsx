@@ -17,8 +17,11 @@ export default function AffirmationCategoriesPage() {
     // Set page title
     document.title = 'Kategorie Afirmacji - Aurum Affirmations';
     
+    // Check localStorage first (for override testing)
+    const premiumOverride = localStorage.getItem('premium_override') === 'true';
+    
     // Redirect non-premium users
-    if (!isLoading && !isPremium) {
+    if (!isLoading && !isPremium && !premiumOverride) {
       toast({
         title: "Brak dostępu do premium",
         description: "Ta strona jest dostępna tylko dla użytkowników premium.",
