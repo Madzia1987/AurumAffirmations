@@ -73,16 +73,20 @@ const HoroscopeSection = ({ isPremium = false }) => {
               <div className="relative">
                 <select 
                   id="zodiacSign" 
-                  className="block w-full pl-4 pr-10 py-3 text-base rounded-md focus:outline-none focus:ring-[#06a0c2] focus:border-[#06a0c2] shadow-inner bg-white/10 text-white border-2 border-[#06a0c2]/50"
+                  className="block w-full pl-4 pr-10 py-3 text-base rounded-md focus:outline-none focus:ring-[#06a0c2] focus:border-[#06a0c2] shadow-inner bg-[rgba(6,73,99,0.8)] text-white border-2 border-[#06a0c2]/50"
                   value={selectedSign}
                   onChange={handleSignChange}
                   style={{
                     backdropFilter: 'blur(5px)',
-                    boxShadow: "0 0 10px rgba(6, 160, 194, 0.3), inset 0 0 5px rgba(255, 255, 255, 0.1)"
+                    boxShadow: "0 0 10px rgba(6, 160, 194, 0.3), inset 0 0 5px rgba(255, 255, 255, 0.1)",
+                    color: "white"
                   }}
                 >
                   {ZODIAC_SIGNS.map(sign => (
-                    <option key={sign.id} value={sign.id}>
+                    <option key={sign.id} value={sign.id} style={{
+                      backgroundColor: "#064963",
+                      color: "white"
+                    }}>
                       {sign.name} ({sign.dateRange})
                     </option>
                   ))}
