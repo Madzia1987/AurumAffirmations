@@ -27,38 +27,45 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
+    <section className="py-16 mermaid-holographic relative overflow-hidden">
+      <div className="absolute inset-0 holographic-scales"></div>
+      <div className="absolute inset-0 bg-sparkles"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-serif font-bold text-amber-800 mb-4">Co Mówią Nasze Użytkowniczki</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-serif font-bold text-white gold-highlight mb-4">Co Mówią Nasze Użytkowniczki</h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto">
             Dołącz do tysięcy kobiet, które już zmieniły swoje życie dzięki Aurum Affirmations
           </p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="border border-amber-100 shadow-sm hover:shadow-md transition-all">
-              <CardContent className="pt-6">
-                <div className="mb-4 text-amber-500">
-                  <QuoteIcon className="h-8 w-8" />
+            <div key={testimonial.id} className="rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:shadow-xl hover:-translate-y-1 relative">
+              <div className="absolute inset-0 holographic-scales opacity-30 premium-gold"></div>
+              <div className="absolute inset-0 bg-black/70"></div>
+              <div className="p-6 relative z-10">
+                <div className="mb-4 text-[#d4af37]">
+                  <svg className="h-8 w-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 8.688C3 7.96 3.033 7.136 3.768 6.944C9.95 5.027 10.896 11.042 10.896 11.042V13.5C10.896 14.328 10.823 15 10 15H5.5C4.678 15 4 14.328 4 13.5V9.459H3V8.688Z" fill="currentColor"/>
+                    <path d="M14 8.688C14 7.96 14.033 7.136 14.768 6.944C20.95 5.027 21.896 11.042 21.896 11.042V13.5C21.896 14.328 21.823 15 21 15H16.5C15.678 15 15 14.328 15 13.5V9.459H14V8.688Z" fill="currentColor"/>
+                  </svg>
                 </div>
-                <blockquote className="text-gray-700 mb-6 italic leading-relaxed">
+                <blockquote className="text-white/90 mb-6 italic leading-relaxed">
                   "{testimonial.quote}"
                 </blockquote>
                 <div className="flex items-center">
-                  <div className="h-12 w-12 rounded-full overflow-hidden mr-4 bg-amber-100">
+                  <div className="h-12 w-12 rounded-full overflow-hidden mr-4 bg-[#d4af37]/20 border border-[#d4af37]/30">
                     {testimonial.image && (
                       <img src={testimonial.image} alt={testimonial.author} className="h-full w-full object-cover" />
                     )}
                   </div>
                   <div>
-                    <div className="font-semibold text-amber-800">{testimonial.author}</div>
-                    <div className="text-sm text-gray-500">{testimonial.role}</div>
+                    <div className="font-semibold text-[#d4af37] gold-highlight">{testimonial.author}</div>
+                    <div className="text-sm text-white/70">{testimonial.role}</div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>
