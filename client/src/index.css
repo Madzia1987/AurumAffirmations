@@ -447,45 +447,95 @@
   animation: gradient 8s ease infinite;
 }
 
-/* Efekt syrenkowej gwiazdki */
-.mermaid-star {
+/* Efekt luksusowego diamenciku */
+.luxury-gem-container {
   position: relative;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.mermaid-star::before {
-  content: '';
+.luxury-gem-glow {
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at center,
+    rgba(212, 175, 55, 0.9) 0%,
+    rgba(212, 175, 55, 0.4) 30%,
+    rgba(6, 160, 194, 0.3) 60%,
+    rgba(6, 160, 194, 0.1) 80%,
+    transparent 100%
+  );
+  filter: blur(2px);
+  z-index: -1;
+  animation: gem-glow 4s ease-in-out infinite alternate;
+}
+
+.pearl-shine {
+  position: relative;
+  z-index: 10;
+  animation: diamond-shine 3s ease-in-out infinite;
+}
+
+.pearl-shine::after {
+  content: "";
   position: absolute;
   top: -30%;
   left: -30%;
   right: -30%;
   bottom: -30%;
-  background: 
-    repeating-radial-gradient(
-      circle at center,
-      rgba(212, 175, 55, 0.15) 0%,
-      rgba(212, 175, 55, 0.1) 1px,
-      rgba(6, 160, 194, 0.15) 2px,
-      rgba(6, 160, 194, 0.1) 3px,
-      rgba(212, 175, 55, 0.1) 4px
-    );
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0) 30%
+  );
   border-radius: 50%;
-  opacity: 0.7;
-  z-index: -1;
-  animation: mermaid-sparkle 3s ease-in-out infinite alternate;
+  opacity: 0.6;
+  z-index: 15;
+  pointer-events: none;
+  animation: pearl-highlight 4s ease-in-out infinite alternate;
 }
 
-@keyframes mermaid-sparkle {
+@keyframes gem-glow {
   0% { 
-    opacity: 0.4;
-    transform: scale(1); 
+    opacity: 0.5;
+    transform: scale(1);
   }
   50% { 
-    opacity: 0.7;
-    transform: scale(1.1); 
+    opacity: 0.8;
+    transform: scale(1.2);
   }
   100% { 
-    opacity: 0.4;
-    transform: scale(1); 
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+@keyframes diamond-shine {
+  0% {
+    filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.7));
+  }
+  50% {
+    filter: drop-shadow(0 0 7px rgba(212, 175, 55, 0.9));
+  }
+  100% {
+    filter: drop-shadow(0 0 3px rgba(212, 175, 55, 0.7));
+  }
+}
+
+@keyframes pearl-highlight {
+  0% {
+    opacity: 0.3;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.2) rotate(45deg);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1) rotate(0deg);
   }
 }
 

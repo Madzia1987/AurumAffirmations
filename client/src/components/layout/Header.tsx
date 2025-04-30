@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'wouter';
-import { Sparkles, User, LogIn, Globe } from 'lucide-react';
+import { Sparkles, User, LogIn, Globe, Diamond, Crown, GemIcon } from 'lucide-react';
 import { useAuth } from '@/hooks/use-auth';
 import { useLanguage } from '@/hooks/use-language';
 import { LanguageCode } from '@/lib/translations';
@@ -63,16 +63,18 @@ const Header = () => {
             <div className="gold-text-gradient font-serif font-bold text-2xl md:text-3xl cursor-pointer flex items-center">
               <span className="mr-1">Aurum</span> 
               <span className="font-light italic">Affirmations</span>
-              <div className="relative ml-1 mermaid-star">
-                <div className="absolute inset-0 rounded-full animate-pulse" 
+              <div className="relative ml-1 luxury-gem-container">
+                <div className="absolute inset-0 luxury-gem-glow"></div>
+                <div className="absolute inset-0 holographic-scales opacity-60"></div>
+                <div className="absolute inset-0 bg-sparkles opacity-40"></div>
+                <div className="absolute inset-0 animate-pulse" 
                      style={{
-                       background: 'radial-gradient(circle at center, rgba(212, 175, 55, 0.7) 0%, rgba(212, 175, 55, 0.3) 50%, rgba(212, 175, 55, 0) 70%)', 
-                       filter: 'blur(2px)',
-                       transform: 'scale(1.2)'
+                       background: 'radial-gradient(circle at center, rgba(212, 175, 55, 0.5) 0%, rgba(212, 175, 55, 0.3) 40%, rgba(212, 175, 55, 0) 70%)', 
+                       filter: 'blur(3px)',
+                       transform: 'scale(1.3)'
                      }}>
                 </div>
-                <div className="absolute inset-0 holographic-scales opacity-60 rounded-full"></div>
-                <Sparkles className="h-5 w-5 text-[#d4af37] relative z-10 filter drop-shadow-[0_0_3px_rgba(212,175,55,0.7)]" />
+                <Diamond className="h-5 w-5 text-[#d4af37] relative z-10 filter drop-shadow-[0_0_5px_rgba(212,175,55,0.9)] pearl-shine" />
               </div>
             </div>
           </Link>
