@@ -13,7 +13,7 @@ const FeaturesSection = () => {
               className="h-48 bg-cover bg-center" 
               style={{ backgroundImage: "url('https://images.unsplash.com/photo-1515942661900-94b3d1972591?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')" }}
             >
-              <div className="h-full w-full bg-emerald-800 bg-opacity-40 flex items-center justify-center">
+              <div className="h-full w-full bg-black bg-opacity-60 flex items-center justify-center">
                 <svg className="w-10 h-10 text-amber-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77" fill="url(#paint0_linear)" />
@@ -41,7 +41,7 @@ const FeaturesSection = () => {
               className="h-48 bg-cover bg-center" 
               style={{ backgroundImage: "url('https://images.unsplash.com/photo-1531051580877-6c2e343de05c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')" }}
             >
-              <div className="h-full w-full bg-navy bg-opacity-40 flex items-center justify-center">
+              <div className="h-full w-full bg-black bg-opacity-60 flex items-center justify-center">
                 <svg className="w-10 h-10 text-amber-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M18.178 8C19.909 8 21.41 6.664 21.41 4.97C21.41 3.276 19.909 2 18.178 2C16.446 2 15 3.276 15 4.97C15 6.664 16.446 8 18.178 8Z" fill="currentColor" />
                   <path d="M5.822 22C7.554 22 9 20.724 9 19.03C9 17.336 7.554 16 5.822 16C4.091 16 2.59 17.336 2.59 19.03C2.59 20.724 4.091 22 5.822 22Z" fill="currentColor" />
@@ -72,7 +72,7 @@ const FeaturesSection = () => {
               className="h-48 bg-cover bg-center" 
               style={{ backgroundImage: "url('https://images.unsplash.com/photo-1589758438368-0ad531db3366?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60')" }}
             >
-              <div className="h-full w-full bg-gold bg-opacity-40 flex items-center justify-center">
+              <div className="h-full w-full bg-black bg-opacity-70 flex items-center justify-center">
                 <svg className="w-10 h-10 text-white" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2L8 6L4 2L2 8L12 22L22 8L20 2L16 6L12 2Z" fill="currentColor" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" />
                   <path d="M12 2L8 6L4 2L2 8L12 22" fill="url(#crown_paint)" />

@@ -61,8 +61,8 @@ const HoroscopeSection = ({ isPremium = false }) => {
           <p className="max-w-2xl mx-auto text-white/80 font-medium">Odkryj, co gwiazdy przygotowały dla Ciebie dzisiaj.</p>
         </div>
         
-        <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 border border-[#d4af37]/30 relative overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-1 luxury-gold-gradient-2"></div>
+        <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 border border-gray-200 relative overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#111] via-[#d4af37] to-[#111]"></div>
           
           {/* Zodiac Sign Selector */}
           <div className="mb-8 relative z-10">
@@ -70,9 +70,13 @@ const HoroscopeSection = ({ isPremium = false }) => {
             <div className="relative">
               <select 
                 id="zodiacSign" 
-                className="block w-full pl-4 pr-10 py-3 text-base border-[#d4af37] border-2 rounded-md focus:outline-none focus:ring-[#d4af37] focus:border-[#d4af37] bg-white/90 shadow-inner"
+                className="block w-full pl-4 pr-10 py-3 text-base border-gray-300 border rounded-md focus:outline-none focus:ring-[#333] focus:border-[#333] bg-white/90 shadow-inner"
                 value={selectedSign}
                 onChange={handleSignChange}
+                style={{
+                  borderColor: "#333",
+                  boxShadow: "0 0 5px rgba(0, 0, 0, 0.1)"
+                }}
               >
                 {ZODIAC_SIGNS.map(sign => (
                   <option key={sign.id} value={sign.id}>
@@ -80,7 +84,7 @@ const HoroscopeSection = ({ isPremium = false }) => {
                   </option>
                 ))}
               </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-[#d4af37]">
+              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-700">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
@@ -94,7 +98,10 @@ const HoroscopeSection = ({ isPremium = false }) => {
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#d4af37]"></div>
             </div>
           ) : (
-            <div id="horoscopeResult" className="p-6 border border-[#d4af37]/20 rounded-lg luxury-gold-shine">
+            <div id="horoscopeResult" className="p-6 border border-gray-200 rounded-lg shadow-lg" 
+                 style={{
+                   background: "linear-gradient(135deg, #f8fcff 0%, #f0f8ff 100%)"
+                 }}>
               <div className="flex items-center mb-6">
                 <div className="mr-4 rounded-full p-3 shadow-lg" 
                      style={{
@@ -112,14 +119,18 @@ const HoroscopeSection = ({ isPremium = false }) => {
               </div>
               
               <div className="space-y-6">
-                <div className="rounded-lg p-4 bg-gradient-to-r from-[#f7f2e2] to-[#f9f6eb] border border-[#d4af37]/10 shadow-sm">
-                  <h4 className="font-medium text-[#bb9a30] mb-2 text-lg">Ogólna charakterystyka dnia:</h4>
+                <div className="rounded-lg p-4 bg-white border border-gray-200 shadow-sm">
+                  <h4 className="font-medium text-gray-900 mb-2 text-lg border-b border-[#d4af37]/30 pb-2 inline-flex items-center">
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#d4af37] to-[#a17d1a] pr-1">Ogólna charakterystyka dnia:</span>
+                  </h4>
                   <p className="mb-4 text-gray-800">{horoscope.general}</p>
                 </div>
                 
                 {/* Free Preview Content */}
-                <div className="rounded-lg p-4 bg-gradient-to-r from-[#f7f2e2] to-[#f9f6eb] border border-[#d4af37]/10 shadow-sm">
-                  <h4 className="font-medium text-[#bb9a30] mb-2 text-lg">Miłość:</h4>
+                <div className="rounded-lg p-4 bg-white border border-gray-200 shadow-sm">
+                  <h4 className="font-medium text-gray-900 mb-2 text-lg border-b border-[#d4af37]/30 pb-2 inline-flex items-center">
+                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#d4af37] to-[#a17d1a] pr-1">Miłość:</span>
+                  </h4>
                   <p className="text-gray-800">{horoscope.love}</p>
                 </div>
                 
