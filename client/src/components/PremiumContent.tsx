@@ -56,12 +56,17 @@ export default function PremiumContent({
         )}
 
         {premiumContent.bulletPoints && premiumContent.bulletPoints.length > 0 && (
-          <div className="premium-gold-banner rounded-lg p-6 border border-white/20 relative z-10 shadow-lg">
+          <div className="rounded-lg p-6 relative z-10 shadow-lg" 
+              style={{
+                background: 'linear-gradient(135deg, #d4af37 0%, #f9d774 50%, #d4af37 100%)',
+                border: '1px solid rgba(255, 215, 0, 0.5)',
+                boxShadow: '0 0 15px rgba(255, 215, 0, 0.5)'
+              }}>
             <ul className="space-y-2">
               {premiumContent.bulletPoints.map((point, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="text-white mr-2">✦</span>
-                  <span className="text-white/90">{point}</span>
+                  <span className="text-gray-900 font-bold mr-2">✦</span>
+                  <span className="text-gray-900 font-medium">{point}</span>
                 </li>
               ))}
             </ul>
@@ -76,8 +81,12 @@ export default function PremiumContent({
       <Card className="overflow-hidden luxury-gold-shine border border-[#d4af37]/30 shadow-lg">
         <div className="absolute inset-0 bg-gradient-to-br from-[#3a2f0b] to-[#1a140a] opacity-95"></div>
         <div className="p-6 md:p-8 text-center relative z-10">
-          <div className="w-16 h-16 premium-gold-banner rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-            <LockIcon className="h-8 w-8 text-white" />
+          <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg"
+            style={{
+              background: 'linear-gradient(135deg, #d4af37 0%, #f9d774 50%, #d4af37 100%)',
+              boxShadow: '0 0 15px rgba(255, 215, 0, 0.5)'
+            }}>
+            <LockIcon className="h-8 w-8 text-gray-900" />
           </div>
           
           <h3 className="text-xl md:text-2xl font-bold gold-text-gradient mb-4">
@@ -91,7 +100,14 @@ export default function PremiumContent({
           <div className="space-y-3 md:space-y-0 md:space-x-4 flex flex-col md:flex-row justify-center">
             <Button
               onClick={() => navigate("/premium")}
-              className="gold-btn flex items-center justify-center text-[#3a2f0b] font-bold py-2.5 px-6 rounded-full relative overflow-hidden"
+              className="flex items-center justify-center font-bold py-2.5 px-6 rounded-full relative overflow-hidden"
+              style={{
+                background: 'linear-gradient(135deg, #d4af37 0%, #f9d774 50%, #d4af37 100%)',
+                color: '#3a2f0b',
+                boxShadow: '0 0 15px rgba(255, 215, 0, 0.5)',
+                textShadow: '0 0 5px rgba(255, 255, 255, 0.5)',
+                border: '1px solid rgba(255, 215, 0, 0.8)'
+              }}
             >
               <SparklesIcon className="h-4 w-4 mr-2" />
               <span>Wybierz Plan Premium</span>
@@ -100,7 +116,13 @@ export default function PremiumContent({
             <Button
               onClick={() => navigate("/auth")}
               variant="outline"
-              className="bg-transparent border-2 border-[#d4af37] text-[#d4af37] hover:bg-[#d4af37]/10 font-medium rounded-full"
+              className="bg-transparent border-2 font-medium rounded-full"
+              style={{
+                borderColor: '#d4af37',
+                color: '#d4af37',
+                boxShadow: '0 0 10px rgba(255, 215, 0, 0.3)',
+                textShadow: '0 0 5px rgba(255, 215, 0, 0.3)'
+              }}
             >
               Zaloguj się
             </Button>
