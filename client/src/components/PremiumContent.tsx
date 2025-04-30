@@ -103,17 +103,21 @@ export default function PremiumContent({
           <div className="space-y-3 md:space-y-0 md:space-x-4 flex flex-col md:flex-row justify-center">
             <Button
               onClick={() => navigate("/premium")}
-              className="flex items-center justify-center font-bold py-2.5 px-6 rounded-full relative overflow-hidden"
+              className="flex items-center justify-center font-bold py-3 px-7 rounded-full relative overflow-hidden luxury-button"
               style={{
-                background: 'linear-gradient(135deg, #d4af37 0%, #f9d774 50%, #d4af37 100%)',
-                color: '#3a2f0b',
-                boxShadow: '0 0 15px rgba(255, 215, 0, 0.5)',
-                textShadow: '0 0 5px rgba(255, 255, 255, 0.5)',
-                border: '1px solid rgba(255, 215, 0, 0.8)'
+                background: 'linear-gradient(135deg, #073b5a 0%, #06a0c2 50%, #073b5a 100%)',
+                backgroundSize: '200% 100%',
+                color: 'white',
+                boxShadow: '0 0 20px rgba(6, 160, 194, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.3)',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+                animation: 'gold-shimmer 3s ease infinite'
               }}
             >
-              <SparklesIcon className="h-4 w-4 mr-2" />
-              <span>Wybierz Plan Premium</span>
+              <SparklesIcon className="h-5 w-5 mr-2 animate-pulse" />
+              <span className="relative">
+                <span className="relative z-10">Dołącz do Aurum Premium</span>
+                <span className="absolute inset-0 opacity-40 gold-shine-overlay"></span>
+              </span>
             </Button>
             
             <Button

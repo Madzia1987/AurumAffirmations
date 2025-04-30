@@ -91,66 +91,93 @@ const NumerologySection = ({ isPremium = false }) => {
   };
   
   return (
-    <section id="numerology" className="py-12 px-4 md:px-6 lg:px-8 luxury-gold-gradient-3">
+    <section id="numerology" className="py-12 px-4 md:px-6 lg:px-8 mermaid-holographic">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="font-playfair text-4xl font-bold text-center mb-8 text-[#3a2f0b] drop-shadow-sm">Numerologia</h2>
+        <h2 className="font-playfair text-4xl font-bold text-center mb-8 text-white drop-shadow-md">Numerologia</h2>
         <div className="text-center mb-10">
-          <p className="max-w-2xl mx-auto text-[#3a2f0b] font-medium">Odkryj znaczenie liczb w swoim życiu i jak wpływają na Twoją codzienność.</p>
+          <p className="max-w-2xl mx-auto text-white/90 font-medium">Odkryj znaczenie liczb w swoim życiu i jak wpływają na Twoją codzienność.</p>
         </div>
 
-        <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-xl overflow-hidden border border-[#d4af37]/30 relative">
+        <div className="bg-[rgba(6,90,140,0.15)] backdrop-blur-sm rounded-lg shadow-xl overflow-hidden border border-[rgba(6,160,194,0.3)] relative">
           <div className="absolute top-0 left-0 right-0 h-1 luxury-gold-gradient-1"></div>
           <div className="p-6 md:p-8">
             {/* Daily Number */}
-            <div className="text-center mb-12">
-              <h3 className="font-playfair text-2xl mb-4 text-[#bb9a30]">Liczba Dnia</h3>
+            <div className="text-center mb-12 relative z-10">
+              <h3 className="font-playfair text-2xl mb-4 text-white gold-highlight">Liczba Dnia</h3>
               
               {isLoading ? (
                 <div className="flex justify-center items-center py-6">
-                  <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-[#d4af37]"></div>
+                  <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-[#06a0c2]"></div>
                 </div>
               ) : (
                 <>
-                  <div className="inline-block rounded-full premium-gold-banner w-20 h-20 flex items-center justify-center mb-5 shadow-lg">
-                    <span className="text-white text-3xl font-bold">{dailyNumber}</span>
+                  <div className="inline-block rounded-full w-20 h-20 flex items-center justify-center mb-5 shadow-lg relative" 
+                       style={{
+                         background: 'radial-gradient(circle, #06a0c2 0%, #073b5a 100%)',
+                         boxShadow: '0 0 25px rgba(6, 160, 194, 0.6), inset 0 0 15px rgba(255, 255, 255, 0.3)',
+                         animation: 'pulse 2s infinite alternate'
+                       }}>
+                    <div className="absolute inset-0 rounded-full holographic-scales"></div>
+                    <span className="text-white text-3xl font-bold relative z-10">{dailyNumber}</span>
                   </div>
-                  <p className="max-w-md mx-auto text-gray-800">{dailyMeaning}</p>
+                  <p className="max-w-md mx-auto text-white/90 leading-relaxed">{dailyMeaning}</p>
                 </>
               )}
             </div>
             
             {/* Name Numerology Calculator */}
-            <div className="mb-12 p-6 bg-[#fdfbf5] rounded-lg shadow-sm border border-[#d4af37]/10 luxury-gold-shine">
-              <h3 className="font-playfair text-2xl mb-6 text-center text-[#bb9a30]">Odkryj Numerologię Swojego Imienia</h3>
-              
-              <div className="max-w-md mx-auto">
-                <div className="mb-4">
-                  <label htmlFor="nameInput" className="block text-sm font-medium text-gray-700 mb-2">Wpisz swoje imię:</label>
-                  <input 
-                    type="text" 
-                    id="nameInput" 
-                    className="w-full px-4 py-3 border-2 border-[#d4af37] focus:border-[#bb9a30] focus:ring-[#e6c059] rounded-md shadow-inner bg-white/90" 
-                    placeholder="Np. Anna"
-                    value={nameInput}
-                    onChange={handleNameInputChange}
-                  />
-                </div>
+            <div className="mb-12 rounded-lg shadow-lg relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#064963] to-[#06a0c2] opacity-70"></div>
+              <div className="absolute inset-0 holographic-scales"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#06a0c2]/20 to-transparent"></div>
+              <div className="p-6 relative z-10">
+                <h3 className="font-playfair text-2xl mb-6 text-center text-white gold-highlight">Odkryj Numerologię Swojego Imienia</h3>
                 
-                <button 
-                  className="w-full gold-btn py-3 px-4 rounded-md text-[#3a2f0b] font-semibold"
-                  onClick={calculateName}
-                  disabled={nameLoading}
-                >
-                  {nameLoading ? (
-                    <span className="flex items-center justify-center">
-                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-[#3a2f0b]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                      </svg>
-                      Obliczanie...
-                    </span>
-                  ) : "Oblicz wartość numerologiczną"}
-                </button>
+                <div className="max-w-md mx-auto">
+                  <div className="mb-4">
+                    <label htmlFor="nameInput" className="block text-sm font-medium text-white mb-2">Wpisz swoje imię:</label>
+                    <input 
+                      type="text" 
+                      id="nameInput" 
+                      className="w-full px-4 py-3 border-2 border-[#06a0c2] focus:border-[#06a0c2] focus:ring-[#06a0c2] rounded-md shadow-inner bg-white/10 text-white placeholder-white/50" 
+                      placeholder="Np. Anna"
+                      value={nameInput}
+                      onChange={handleNameInputChange}
+                      style={{
+                        backdropFilter: 'blur(5px)'
+                      }}
+                    />
+                  </div>
+                  
+                  <button 
+                    className="w-full py-3 px-4 rounded-md font-semibold relative overflow-hidden luxury-button"
+                    onClick={calculateName}
+                    disabled={nameLoading}
+                    style={{
+                      background: 'linear-gradient(135deg, #06a0c2 0%, #064963 50%, #06a0c2 100%)',
+                      backgroundSize: '200% 100%',
+                      color: 'white',
+                      boxShadow: '0 0 20px rgba(6, 160, 194, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.3)',
+                      border: '1px solid rgba(255, 255, 255, 0.3)',
+                      animation: 'gold-shimmer 3s ease infinite'
+                    }}
+                  >
+                    {nameLoading ? (
+                      <span className="flex items-center justify-center">
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Obliczanie...
+                      </span>
+                    ) : (
+                      <span className="relative">
+                        <span className="relative z-10">Oblicz wartość numerologiczną</span>
+                        <span className="absolute inset-0 opacity-40 gold-shine-overlay"></span>
+                      </span>
+                    )}
+                  </button>
+                </div>
               </div>
               
               {/* Name Results */}
