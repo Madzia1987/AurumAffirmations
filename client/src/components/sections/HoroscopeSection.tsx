@@ -11,7 +11,9 @@ const HoroscopeSection = ({ isPremium = false }) => {
     sign: 'Baran',
     date: formatDate(new Date()),
     general: '',
-    love: ''
+    love: '',
+    career: '',
+    health: ''
   });
   const [isLoading, setIsLoading] = useState(true);
   
@@ -27,7 +29,9 @@ const HoroscopeSection = ({ isPremium = false }) => {
           sign: findSignName(selectedSign),
           date: formatDate(new Date()),
           general: 'Dzień pełen energii i optymizmu. Gwiazdy sprzyjają odważnym decyzjom i nowym przedsięwzięciom.',
-          love: 'W relacjach miłosnych czeka Cię dzisiaj niespodzianka. Otwórz się na nowe możliwości.'
+          love: 'W relacjach miłosnych czeka Cię dzisiaj niespodzianka. Otwórz się na nowe możliwości.',
+          career: 'Twoja kariera nabiera tempa. Możliwe nowe propozycje lub awans.',
+          health: 'Zadbaj o odpoczynek i zrównoważoną dietę. Energia gwiazd wspiera Twoje zdrowie.'
         });
       } finally {
         setIsLoading(false);
@@ -47,11 +51,14 @@ const HoroscopeSection = ({ isPremium = false }) => {
   };
   
   return (
-    <section id="horoscope" className="py-12 px-4 md:px-6 lg:px-8 luxury-gold-gradient-vertical">
+    <section id="horoscope" className="py-12 px-4 md:px-6 lg:px-8 bg-black">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="font-playfair text-4xl font-bold text-center mb-8 text-[#3a2f0b] drop-shadow-sm">Horoskop Dnia</h2>
+        <h2 className="font-playfair text-4xl font-bold text-center mb-8 text-[#d4af37] drop-shadow-sm" 
+            style={{textShadow: '0 0 10px rgba(212, 175, 55, 0.5)'}}>
+          Horoskop Dnia
+        </h2>
         <div className="text-center mb-10">
-          <p className="max-w-2xl mx-auto text-[#3a2f0b] font-medium">Odkryj, co gwiazdy przygotowały dla Ciebie dzisiaj.</p>
+          <p className="max-w-2xl mx-auto text-white/80 font-medium">Odkryj, co gwiazdy przygotowały dla Ciebie dzisiaj.</p>
         </div>
         
         <div className="bg-white rounded-lg shadow-xl p-6 md:p-8 border border-[#d4af37]/30 relative overflow-hidden">
@@ -89,8 +96,12 @@ const HoroscopeSection = ({ isPremium = false }) => {
           ) : (
             <div id="horoscopeResult" className="p-6 border border-[#d4af37]/20 rounded-lg luxury-gold-shine">
               <div className="flex items-center mb-6">
-                <div className="mr-4 premium-gold-banner rounded-full p-3 text-white shadow-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="mr-4 rounded-full p-3 shadow-lg" 
+                     style={{
+                       background: 'linear-gradient(135deg, #d4af37 0%, #f9d774 50%, #d4af37 100%)',
+                       boxShadow: '0 0 15px rgba(255, 215, 0, 0.5)'
+                     }}>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 </div>
