@@ -79,7 +79,7 @@ function App() {
               <main className="flex-grow">
                 <Router />
               </main>
-              <Footer className="bg-white" />
+              <Footer />
               <Toaster />
             </div>
           </TooltipProvider>
