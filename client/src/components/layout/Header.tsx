@@ -63,7 +63,17 @@ const Header = () => {
             <div className="gold-text-gradient font-serif font-bold text-2xl md:text-3xl cursor-pointer flex items-center">
               <span className="mr-1">Aurum</span> 
               <span className="font-light italic">Affirmations</span>
-              <Sparkles className="h-5 w-5 ml-1 text-amber-400" />
+              <div className="relative ml-1 mermaid-star">
+                <div className="absolute inset-0 rounded-full animate-pulse" 
+                     style={{
+                       background: 'radial-gradient(circle at center, rgba(212, 175, 55, 0.7) 0%, rgba(212, 175, 55, 0.3) 50%, rgba(212, 175, 55, 0) 70%)', 
+                       filter: 'blur(2px)',
+                       transform: 'scale(1.2)'
+                     }}>
+                </div>
+                <div className="absolute inset-0 holographic-scales opacity-60 rounded-full"></div>
+                <Sparkles className="h-5 w-5 text-[#d4af37] relative z-10 filter drop-shadow-[0_0_3px_rgba(212,175,55,0.7)]" />
+              </div>
             </div>
           </Link>
         </div>

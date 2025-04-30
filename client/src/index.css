@@ -447,6 +447,48 @@
   animation: gradient 8s ease infinite;
 }
 
+/* Efekt syrenkowej gwiazdki */
+.mermaid-star {
+  position: relative;
+}
+
+.mermaid-star::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  right: -30%;
+  bottom: -30%;
+  background: 
+    repeating-radial-gradient(
+      circle at center,
+      rgba(212, 175, 55, 0.15) 0%,
+      rgba(212, 175, 55, 0.1) 1px,
+      rgba(6, 160, 194, 0.15) 2px,
+      rgba(6, 160, 194, 0.1) 3px,
+      rgba(212, 175, 55, 0.1) 4px
+    );
+  border-radius: 50%;
+  opacity: 0.7;
+  z-index: -1;
+  animation: mermaid-sparkle 3s ease-in-out infinite alternate;
+}
+
+@keyframes mermaid-sparkle {
+  0% { 
+    opacity: 0.4;
+    transform: scale(1); 
+  }
+  50% { 
+    opacity: 0.7;
+    transform: scale(1.1); 
+  }
+  100% { 
+    opacity: 0.4;
+    transform: scale(1); 
+  }
+}
+
 .gold-btn-sm {
   background: linear-gradient(135deg, #d4af37 0%, #f9d77e 50%, #d4af37 100%);
   color: #2a1a05;
