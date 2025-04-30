@@ -128,19 +128,33 @@ const HoroscopeSection = ({ isPremium = false }) => {
               </div>
               
               <div className="space-y-6">
-                <div className="rounded-lg p-4 bg-white border border-gray-200 shadow-sm">
-                  <h4 className="font-medium text-gray-900 mb-2 text-lg border-b border-[#d4af37]/30 pb-2 inline-flex items-center">
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#d4af37] to-[#a17d1a] pr-1">Ogólna charakterystyka dnia:</span>
+                <div className="rounded-lg p-4 shadow-lg relative overflow-hidden" 
+                     style={{ background: 'rgba(6, 90, 140, 0.15)', backdropFilter: 'blur(5px)' }}>
+                  <div className="absolute inset-0 opacity-10"
+                       style={{ 
+                         background: 'radial-gradient(circle at center, rgba(6, 160, 194, 0.8) 0%, rgba(6, 90, 140, 0.2) 70%, transparent 100%)',
+                         backgroundSize: '20px 20px',
+                         animation: 'shimmer 3s linear infinite'
+                       }}></div>
+                  <h4 className="font-medium mb-2 text-lg pb-2 relative inline-flex items-center z-10">
+                    <span className="text-white font-bold text-shadow-sm">Ogólna charakterystyka dnia:</span>
                   </h4>
-                  <p className="mb-4 text-gray-800">{horoscope.general}</p>
+                  <p className="mb-4 text-white/90 relative z-10">{horoscope.general}</p>
                 </div>
                 
                 {/* Free Preview Content */}
-                <div className="rounded-lg p-4 bg-white border border-gray-200 shadow-sm">
-                  <h4 className="font-medium text-gray-900 mb-2 text-lg border-b border-[#d4af37]/30 pb-2 inline-flex items-center">
-                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#d4af37] to-[#a17d1a] pr-1">Miłość:</span>
+                <div className="rounded-lg p-4 shadow-lg relative overflow-hidden" 
+                     style={{ background: 'rgba(6, 90, 140, 0.15)', backdropFilter: 'blur(5px)' }}>
+                  <div className="absolute inset-0 opacity-10"
+                       style={{ 
+                         background: 'radial-gradient(circle at center, rgba(6, 160, 194, 0.8) 0%, rgba(6, 90, 140, 0.2) 70%, transparent 100%)',
+                         backgroundSize: '20px 20px',
+                         animation: 'shimmer 3s linear infinite'
+                       }}></div>
+                  <h4 className="font-medium mb-2 text-lg pb-2 relative inline-flex items-center z-10">
+                    <span className="text-white font-bold text-shadow-sm">Miłość:</span>
                   </h4>
-                  <p className="text-gray-800">{horoscope.love}</p>
+                  <p className="text-white/90 relative z-10">{horoscope.love}</p>
                 </div>
                 
                 {/* Premium Content */}
