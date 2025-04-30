@@ -103,12 +103,21 @@ const HoroscopeSection = ({ isPremium = false }) => {
                    color: "white"
                  }}>
               <div className="flex items-center mb-6">
-                <div className="mr-4 rounded-full p-3 shadow-lg" 
+                <div className="mr-4 rounded-full p-3 shadow-lg relative" 
                      style={{
-                       background: 'linear-gradient(135deg, #d4af37 0%, #f9d774 50%, #d4af37 100%)',
-                       boxShadow: '0 0 15px rgba(255, 215, 0, 0.5)'
+                       background: 'radial-gradient(circle, #faf5d4 0%, #d4af37 70%, #a17d1a 100%)',
+                       boxShadow: '0 0 25px rgba(212, 175, 55, 0.8), inset 0 0 15px rgba(255, 255, 255, 0.6)',
+                       animation: 'pulse 2s infinite alternate'
                      }}>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="absolute inset-0 rounded-full" 
+                       style={{
+                         background: 'radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 60%)',
+                         mixBlendMode: 'overlay'
+                       }} />
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-gray-900 relative z-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                       style={{
+                         filter: 'drop-shadow(0 0 2px rgba(255, 255, 255, 0.7))'
+                       }}>
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                   </svg>
                 </div>
@@ -140,9 +149,18 @@ const HoroscopeSection = ({ isPremium = false }) => {
                     isPremium={isPremium}
                     premiumContent={{
                       sections: [
-                        { title: 'Kariera i Finanse', content: horoscope.career || 'Szczegółowa analiza kariery i finansów na dziś.' },
-                        { title: 'Zdrowie i Energia', content: horoscope.health || 'Porady dotyczące zdrowia i energii na dzisiejszy dzień.' },
-                        { title: 'Szczęśliwe aspekty dnia', content: 'Szczęśliwe liczby, kolory i godziny na dzisiaj.' }
+                        { 
+                          title: 'Kariera i Finanse', 
+                          content: horoscope.career || 'Dziś możesz spodziewać się pozytywnych zmian w finansach. Bądź otwarty na nowe możliwości zarobkowe i nie bój się podejmować odważnych decyzji w karierze.' 
+                        },
+                        { 
+                          title: 'Zdrowie i Energia', 
+                          content: horoscope.health || 'Twoja energia jest dziś na wysokim poziomie. Wykorzystaj ją na aktywność fizyczną i regenerację umysłu. Zadbaj o odpowiednią ilość snu i nawodnienie.' 
+                        },
+                        { 
+                          title: 'Szczęśliwe aspekty dnia', 
+                          content: 'Twoje szczęśliwe liczby: 3, 7, 21\nKolory przynoszące powodzenie: złoty, niebieski\nNajlepsze godziny: 10:00, 15:30, 20:00' 
+                        }
                       ]
                     }}
                   />

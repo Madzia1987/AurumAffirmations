@@ -41,15 +41,16 @@ export default function PremiumContent({
         {premiumContent.sections && premiumContent.sections.length > 0 && (
           <div className="space-y-6">
             {premiumContent.sections.map((section, index) => (
-              <Card key={index} className="overflow-hidden relative shadow-lg border border-[#d4af37]/50 luxury-gold-shine">
-                <div className="absolute inset-0 luxury-gold-gradient-3 opacity-90"></div>
+              <Card key={index} className="overflow-hidden relative shadow-xl border border-[#d4af37]/50 luxury-gold-shine">
+                <div className="absolute inset-0 bg-gradient-to-b from-[#3a2f0b] to-[#1a140a] opacity-95"></div>
                 <CardHeader className="pb-2 relative z-10">
-                  <CardTitle className="text-xl text-white drop-shadow-sm font-bold">{section.title}</CardTitle>
+                  <CardTitle className="text-xl gold-text-gradient drop-shadow-sm font-bold">{section.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="pt-4 relative z-10">
-                  <p className="text-white/90 leading-relaxed">{section.content}</p>
+                  <p className="text-white/90 leading-relaxed whitespace-pre-line">{section.content}</p>
                 </CardContent>
-                <div className="absolute top-0 left-0 right-0 h-1 bg-white/50"></div>
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#d4af37] via-[#f9d774] to-[#d4af37]"></div>
+                <div className="absolute inset-0 pointer-events-none shine"></div>
               </Card>
             ))}
           </div>
