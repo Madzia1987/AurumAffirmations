@@ -35,6 +35,7 @@ function Router() {
       <Route path="/golden-soul-affirmations" component={GoldenSoulPage} />
       <Route path="/rituals" component={RitualsPage} />
       <Route path="/affirmation-categories" component={AffirmationCategoriesPage} />
+      <Route path="/affirmations" component={AffirmationCategoriesPage} />
       <Route path="/affirmations/:categoryId" component={AffirmationCategoryPage} />
       <Route path="/premium/checkout" component={CheckoutPage} />
       <Route path="/checkout/:plan" component={CheckoutPage} />
