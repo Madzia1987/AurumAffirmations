@@ -284,6 +284,96 @@
   }
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.mermaid-holographic {
+  background: linear-gradient(135deg, #073b5a 0%, #065a8c 25%, #06a0c2 50%, #065a8c 75%, #073b5a 100%);
+  background-size: 200% 200%;
+  animation: gradient 8s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+.mermaid-holographic::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.03) 10px,
+      rgba(255, 255, 255, 0.03) 20px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(255, 255, 255, 0.03) 10px,
+      rgba(255, 255, 255, 0.03) 20px
+    );
+  opacity: 1;
+  pointer-events: none;
+}
+
+.mermaid-holographic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-radial-gradient(
+      circle at 25% 25%,
+      transparent 5px,
+      rgba(6, 160, 194, 0.1) 8px,
+      rgba(6, 160, 194, 0.15) 9px,
+      transparent 9px
+    ),
+    repeating-radial-gradient(
+      circle at 75% 75%,
+      transparent 5px,
+      rgba(6, 90, 140, 0.1) 8px,
+      rgba(6, 90, 140, 0.15) 9px,
+      transparent 9px
+    ),
+    repeating-radial-gradient(
+      circle at 50% 50%,
+      transparent 5px,
+      rgba(255, 255, 255, 0.07) 10px,
+      rgba(6, 160, 194, 0.1) 11px,
+      transparent 11px
+    );
+  background-size: 50px 50px, 50px 50px, 30px 30px;
+  opacity: 0.3;
+  pointer-events: none;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 0%, 0% 0%, 0% 0%;
+  }
+  100% {
+    background-position: 50px 50px, 50px 50px, 30px 30px;
+  }
+}
+
 .luxury-card {
   background: white;
   border-radius: 0.75rem;

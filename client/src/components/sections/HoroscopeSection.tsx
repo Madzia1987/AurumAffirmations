@@ -98,9 +98,9 @@ const HoroscopeSection = ({ isPremium = false }) => {
               <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#d4af37]"></div>
             </div>
           ) : (
-            <div id="horoscopeResult" className="p-6 border border-gray-200 rounded-lg shadow-lg" 
+            <div id="horoscopeResult" className="p-6 border border-gray-200 rounded-lg shadow-lg mermaid-holographic" 
                  style={{
-                   background: "linear-gradient(135deg, #f8fcff 0%, #f0f8ff 100%)"
+                   color: "white"
                  }}>
               <div className="flex items-center mb-6">
                 <div className="mr-4 rounded-full p-3 shadow-lg" 
@@ -113,8 +113,8 @@ const HoroscopeSection = ({ isPremium = false }) => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-playfair text-2xl font-semibold text-[#3a2f0b]">{horoscope.sign}</h3>
-                  <p className="text-sm text-gray-600">{horoscope.date}</p>
+                  <h3 className="font-playfair text-2xl font-semibold text-white">{horoscope.sign}</h3>
+                  <p className="text-sm text-white/80">{horoscope.date}</p>
                 </div>
               </div>
               
